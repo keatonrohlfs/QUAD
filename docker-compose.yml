@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: quad_password # Change to a secure password
+      POSTGRES_USER: quad_user
+      POSTGRES_DB: quad_development
+
+  web:
+    build: .
+    command: bash -c "rm -f /quad/tmp/pids/server.pid && ./bin/rails server -b '0.0.0.0'"
+    volumes:
+      - .:/quad
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgresql://quad_user:quad_password@db/quad_development
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
