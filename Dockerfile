@@ -33,14 +33,13 @@ RUN bundle install
 COPY . .
 
 # Add a script to be executed every time the container starts
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # Make the script executable
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Set the entrypoint to use the script
 ENTRYPOINT ["docker-entrypoint.sh"]
-
 
 # Expose the port the server runs on
 EXPOSE 3000
