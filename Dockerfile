@@ -15,7 +15,7 @@ ENV RAILS_ENV=development \
 
 # Update and install dependencies
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential libpq-dev curl libvips42 postgresql-client git && \
+    apt-get install --no-install-recommends -y build-essential libpq-dev curl libvips42 postgresql-client git gnupg && \
     rm -rf /var/lib/apt/lists/* 
 
 # Install Yarn (optional, remove if not using Webpacker or Yarn packages)
@@ -33,7 +33,7 @@ RUN bundle install
 COPY . .
 
 # Add a script to be executed every time the container starts
-COPY bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # Make the script executable
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
