@@ -212,3 +212,34 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 1318)
 
 
+Started GET "/" for 192.168.65.1 at 2024-02-13 22:47:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 429.9ms | Allocations: 30104)
+Completed 200 OK in 504ms (Views: 449.5ms | ActiveRecord: 0.0ms | Allocations: 37745)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-02-13 22:47:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/login.html.erb within layouts/application
+  Rendered articles/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1185)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1422)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-13 22:47:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.0ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1158)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 1394)
+
+
