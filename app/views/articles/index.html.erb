@@ -1,32 +1,63 @@
 <html>
+
 <head>
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
 
-.login {background-color: #04AA6D;}
-.signup {background-color: #008CBA;}
+  <%= image_tag('alternate-logo.png', size: '100x100') %>
 
-</style>
 </head>
 
 <body>
-  <h1>QUAD</h1>
 
-  <button class="button login">
-    Login
-  </button>
+  <div id="menu">
+    <div id="menu-items">
+      <a href="/login" class="menu-item">Sign in</a>
+      <br> <br> <br>
+      <a href="/signup" class="menu-item">Create account</a>
+    </div>
+  </div>
 
-  <button class="button signup">
-    Create account
-  </button>
 </body>
+
+<style>
+
+  head {
+    align-items: center;
+  }
+
+  body {
+    background-color: #FFFAF3;
+    margin: 0px;
+  }
+
+  #menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-item {
+    color: #000000;
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-family: "Ibarra Real Nova", serif;
+
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: clamp(0.5rem, 1vw, 2rem) 0rem;
+
+    width: 8em;
+    background-color: #FFD7E9;
+    border-radius: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #menu-items {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+</style>
+
+</html>
