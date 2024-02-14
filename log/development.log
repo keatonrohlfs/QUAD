@@ -243,3 +243,205 @@ Processing by ArticlesController#signup as HTML
 Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 1394)
 
 
+Started GET "/signup" for 192.168.65.1 at 2024-02-13 23:17:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 1405)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 2105)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-13 23:17:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1203)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1497)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-14 20:36:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 1442)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 2332)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 20:36:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.6ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1218)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 1453)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-14 20:36:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1072)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 1306)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 20:39:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 0.9ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1538)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2241)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:13:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.9ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 1538)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 2238)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:20:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.5ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 1520)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 2219)
+
+
+Started GET "/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:20:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:25:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 0.8ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 439.3ms | Allocations: 30843)
+Completed 200 OK in 460ms (Views: 451.2ms | ActiveRecord: 0.0ms | Allocations: 35054)
+
+
+Started GET "/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:25:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:25:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1090)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1327)
+
+
+Started GET "/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:25:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:26:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.4ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1550)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 2250)
+
+
+Started GET "/app/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:26:12 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:26:12 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1090)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1325)
+
+
+Started GET "/app/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:26:12 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:28:31 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 2.8ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 527.6ms | Allocations: 31450)
+Completed 200 OK in 562ms (Views: 554.0ms | ActiveRecord: 0.0ms | Allocations: 35661)
+
+
+Started GET "/app/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:28:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:31:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 1.3ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 1526)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2226)
+
+
+Started GET "/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:31:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:31:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1132)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1369)
+
+
+Started GET "/images/Primary%20Logo%20-%20Black.png" for 192.168.65.1 at 2024-02-14 21:31:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/images/Primary%20Logo%20-%20Black.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-14 21:36:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 53.7ms | Allocations: 16208)
+  Rendered layout layouts/application.html.erb (Duration: 57.8ms | Allocations: 17400)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms | Allocations: 18099)
+
+
