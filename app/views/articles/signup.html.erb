@@ -63,41 +63,42 @@
 </head>
 <body>
     <div class="container">
-    <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
+        <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
         <h2>Create Account</h2>
-        <form>
-            <label for="first-name" class="required">First Name:</label>
-            <input type="text" id="first-name" name="first-name" required>
 
-            <label for="last-name" class="required">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" required>
+        <%= form_with model: User.new, local: true do |form| %>
+            <%= form.label :first_name, class: 'required' %>
+            <%= form.text_field :first_name, id: :user_first_name, required: true %>
 
-            <label for="email" class="required">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <%= form.label :last_name, class: 'required' %>
+            <%= form.text_field :last_name, id: :user_last_name, required: true %>
 
-            <label for="phone" class="required">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <%= form.label :email, class: 'required' %>
+            <%= form.email_field :email, id: :user_email, required: true %>
 
-            <label for="grad-year">Graduation Year:</label>
-            <input type="number" id="grad-year" name="grad-year">
+            <%= form.label :phone_number, 'Phone:', class: 'required' %>
+            <%= form.telephone_field :phone_number, id: :user_phone_number, required: true %>
 
-            <label for="sorority">Sorority:</label>
-            <input type="text" id="sorority" name="sorority">
+            <%= form.label :graduation_year, 'Graduation Year:' %>
+            <%= form.number_field :graduation_year, id: :user_graduation_year %>
 
-            <label for="social-media">Social Media:</label>
-            <input type="text" id="social-media" name="social-media">
+            <%= form.label :sorority, 'Sorority:' %>
+            <%= form.text_field :sorority, id: :user_sorority %>
 
-            <label for="profile-pic" class="required">Profile Picture:</label>
-            <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
+            <%= form.label :social_media, 'Social Media:' %>
+            <%= form.text_field :social_media, id: :user_social_media, required: true %>
 
-            <label for="username" class="required">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <%= form.label :profile_picture, 'Profile Picture:', class: 'required' %>
+            <%= form.file_field :profile_picture, id: :user_profile_picture, accept: 'image/*', required: true %>
 
-            <label for="password" class="required">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <%= form.label :username, class: 'required' %>
+            <%= form.text_field :username, id: :user_username, required: true %>
 
-            <input type="submit" value="Create Account">
-        </form>
+            <%= form.label :password, class: 'required' %>
+            <%= form.password_field :password, id: :user_password, required: true %>
+
+            <%= form.submit 'Create Account' %>
+        <% end %>
     </div>
 </body>
 </html>

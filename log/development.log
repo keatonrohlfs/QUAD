@@ -537,3 +537,134 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 88ms (Views: 79.1ms | ActiveRecord: 0.0ms | Allocations: 24577)
 
 
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:36:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 535)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 1503)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 1747)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:36:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 1513)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 1756)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:36:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1516)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 1759)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:36:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1507)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1746)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:36:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1513)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1752)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:36:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1504)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1743)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateUsers (20240219214140)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "email" character varying NOT NULL, "phone_number" character varying NOT NULL, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "graduation_year" integer, "sorority" character varying, "social_media" character varying NOT NULL, "profile_picture" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219214140') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:50:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 743)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 1959)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-19 21:50:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1522)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1762)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-19 21:50:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 29.9ms | Allocations: 8330)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 8421)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 8657)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/views/articles/signup.html.erb:69
+Started GET "/signup" for 192.168.65.1 at 2024-02-19 21:51:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/signup.html.erb within layouts/application
+  Rendered articles/signup.html.erb within layouts/application (Duration: 616.2ms | Allocations: 60698)
+  Rendered layout layouts/application.html.erb (Duration: 617.1ms | Allocations: 60824)
+Completed 500 Internal Server Error in 655ms (ActiveRecord: 8.3ms | Allocations: 64986)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000abe0>):
+    66:         <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
+    67:         <h2>Create Account</h2>
+    68: 
+    69:         <%= form_with model: User.new, local: true do |form| %>
+    70:             <%= form.label :first_name, class: 'required' %>
+    71:             <%= form.text_field :first_name, id: :user_first_name, required: true %>
+    72: 
+  
+app/views/articles/signup.html.erb:69
