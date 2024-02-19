@@ -6,9 +6,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_PASSWORD: quad_password # Change to a secure password
-      POSTGRES_USER: quad_user
-      POSTGRES_DB: quad_development
+      POSTGRES_PASSWORD: QUADMarket
+      POSTGRES_USER: QUADuser
+      POSTGRES_DB: QUADdb
 
   web:
     build: .
@@ -19,7 +19,7 @@ services:
       - "3000:3000"
     environment:
       RAILS_ENV: development
-      DATABASE_URL: postgresql://quad_user:quad_password@db/quad_development
+      DATABASE_URL: postgresql://QUADuser:QUADMarket@db/QUADdb
     depends_on:
       - db
 
