@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get "/signup", to: "users#new"
   post "/users", to: "users#create"
-  
+
   # Defines the root path route ("/")
-  root "users#index"
+  root "users#login"
 end
