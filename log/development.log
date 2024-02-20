@@ -668,3 +668,63 @@ ActionView::Template::Error (undefined method `users_path' for #<ActionView::Bas
     72: 
   
 app/views/articles/signup.html.erb:69
+Started GET "/signup" for 192.168.65.1 at 2024-02-20 04:28:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (Duration: 60.2ms | Allocations: 13089)
+  Rendered layout layouts/application.html.erb (Duration: 65.5ms | Allocations: 14156)
+Completed 200 OK in 70ms (Views: 62.8ms | ActiveRecord: 6.1ms | Allocations: 14895)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-20 04:28:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 730)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 1710)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 1946)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-02-20 04:28:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 1.0ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1254)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 1488)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-20 04:28:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2034)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2822)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3057)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-02-20 04:29:12 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1084)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 1318)
+
+
+Started GET "/signup" for 192.168.65.1 at 2024-02-20 04:29:16 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2040)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2828)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3062)
+
+
