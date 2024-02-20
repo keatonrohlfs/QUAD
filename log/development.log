@@ -998,3 +998,64 @@ FOREIGN KEY ("blob_id")
   [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3891601795866635445)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.65.1 at 2024-02-20 20:11:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 14.7ms | Allocations: 2907)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3851)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 4551)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-02-20 20:11:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-20 20:11:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (Duration: 41.7ms | Allocations: 10937)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 11803)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 3.7ms | Allocations: 12042)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-02-20 20:11:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started GET "/signup" for 192.168.65.1 at 2024-02-20 20:11:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2063)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2928)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3169)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-02-20 20:11:27 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started GET "/" for 192.168.65.1 at 2024-02-20 20:11:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2544)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3303)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3542)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-02-20 20:11:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
