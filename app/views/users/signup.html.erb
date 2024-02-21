@@ -86,6 +86,9 @@
             <%= form.label :password, class: 'required' %>
             <%= form.password_field :password, id: :user_password, required: true %>
 
+            <%= form.label :password_confirmation, 'Confirm Password:', class: 'required' %>
+            <%= form.password_field :password_confirmation, id: :user_password, required: true %>
+
             <%= form.submit "Sign Up" %>
         <% end %>
     </div>
