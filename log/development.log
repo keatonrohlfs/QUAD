@@ -1544,3 +1544,197 @@ puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
 puma (6.4.2) lib/puma/server.rb:464:in `process_client'
 puma (6.4.2) lib/puma/server.rb:245:in `block in run'
 puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.65.1 at 2024-02-21 04:39:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1838)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2229)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 2930)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-02-21 04:39:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started GET "/listing" for 192.168.65.1 at 2024-02-21 04:39:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#listing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/listing.html.erb within layouts/application
+  Rendered pages/listing.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2239)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2330)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2708)
+
+
+  
+ActionView::Template::Error (The asset "profile_placeholder.jpg" is not present in the asset pipeline.
+):
+    45: <body>
+    46:   <div class="header">
+    47:     <div class="profile-info">
+    48:       <%= image_tag 'profile_placeholder.jpg', alt: 'Profile image', style: 'border-radius: 50%; width: 50px; height: 50px;' %>
+    49:       <div>
+    50:         <p>Name</p>
+    51:         <p>Year</p>
+  
+app/views/pages/listing.html.erb:48
+Started GET "/listing" for 192.168.65.1 at 2024-02-21 04:50:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#listing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/listing.html.erb within layouts/application
+  Rendered pages/listing.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2125)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2217)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2897)
+
+
+  
+ActionView::Template::Error (The asset "profile_placeholder.png" is not present in the asset pipeline.
+):
+    45: <body>
+    46:   <div class="header">
+    47:     <div class="profile-info">
+    48:       <%= image_tag 'profile_placeholder.png', alt: 'Profile image', style: 'border-radius: 50%; width: 50px; height: 50px;' %>
+    49:       <div>
+    50:         <p>Name</p>
+    51:         <p>Year</p>
+  
+app/views/pages/listing.html.erb:48
+Started GET "/listing" for 192.168.65.1 at 2024-02-21 04:54:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 4 pending migrations:
+
+db/migrate/20240213210737_create_articles.rb
+db/migrate/20240219214140_create_users.rb
+db/migrate/20240220200814_create_listings.rb
+db/migrate/20240220201021_create_active_storage_tables.active_storage.rb
+
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for 192.168.65.1 at 2024-02-21 04:54:09 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-02-21 04:54:09.191327', '2024-02-21 04:54:09.191331') RETURNING "key"[0m
+Migrating to CreateArticles (20240213210737)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240213210737') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20240219214140)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "email" character varying NOT NULL, "phone_number" character varying NOT NULL, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "graduation_year" integer, "sorority" character varying, "social_media" character varying NOT NULL, "profile_picture" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219214140') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListings (20240220200814)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "title" character varying NOT NULL, "category" character varying NOT NULL, "size" character varying NOT NULL, "brand" character varying, "color" character varying, "new_with_tags" boolean DEFAULT FALSE, "style_tags" character varying[] DEFAULT '{}', "sell" boolean DEFAULT TRUE, "rent" boolean DEFAULT FALSE, "original_price" decimal, "listing_price" decimal, "rental_price" decimal, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_listings_on_user_id" ON "listings" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240220200814') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240220201021)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240220201021') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/listing" for 192.168.65.1 at 2024-02-21 04:54:09 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#listing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/listing.html.erb within layouts/application
+  Rendered pages/listing.html.erb within layouts/application (Duration: 338.7ms | Allocations: 44204)
+  Rendered layout layouts/application.html.erb (Duration: 339.1ms | Allocations: 44308)
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 0.0ms | Allocations: 45920)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sales_path' for #<ActionView::Base:0x0000000000ba40>):
+    55:     <div class="navigation">
+    56:       <!-- Assuming you have path helpers set up for these -->
+    57:       <a href="<%= listings_path %>">Listings</a>
+    58:       <a href="<%= sales_path %>">Sales</a>
+    59:       <a href="<%= rentals_path %>">Rentals</a>
+    60:     </div>
+    61:   </div>
+  
+app/views/pages/listing.html.erb:58
