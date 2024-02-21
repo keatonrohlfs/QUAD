@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   before_save :downcase_fields
 
-  validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@kcrimson\.ua\.edu\z/, message: "must be a crimson.ua.edu account" }, presence: true, uniqueness: true
+  validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@crimson\.ua\.edu\z/, message: "must be a crimson.ua.edu account" }, presence: true, uniqueness: true
   validates :username, :phone_number, presence: true, uniqueness: true
   validates:first_name, :last_name, presence: true
 
