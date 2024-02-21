@@ -6,7 +6,6 @@ class UsersController < ApplicationController
             redirect_to profilepic_path, alert: "Please check your email for confirmation instructions."
         else
             render :signup, status: :unprocessable_entity
-            @user.errors.full_messages
         end
     end
 
@@ -17,7 +16,7 @@ class UsersController < ApplicationController
         private
 
     def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :username, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :username, :password, :password_confirmation)
     end
     def profilepic 
     end
