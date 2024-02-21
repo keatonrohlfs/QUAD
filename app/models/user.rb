@@ -36,3 +36,6 @@ class User < ApplicationRecord
       self.username = username.downcase
     end
   end
+
+  
+

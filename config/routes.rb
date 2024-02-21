@@ -1,29 +1,20 @@
-class ConfirmationsController < ApplicationController
+=======
+Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  # Root route
+  root "users#login"
 
-    def create
-        @user = User.find_by(email: params[:user][:email].downcase)
-    
-      if @user.present? && @user.unconfirmed?
-        @user.send_confirmation_email!
-        redirect_to root_path, notice: "Check your email for confirmation instructions."
-      else
-        redirect_to new_confirmation_path, alert: "We could not find a user with that email or that email has already been confirmed."
-      end
-    end
+  # User routes for login and signup
+  get "/login", to: "users#login"
   
-    def edit
-      @user = User.find_signed(params[:confirmation_token], purpose: :confirm_email)
-  
-      if @user.present?
-        @user.confirm!
-        redirect_to root_path, notice: "Your account has been confirmed."
-      else
-        redirect_to new_confirmation_path, alert: "Invalid token."
-      end
-    end
-  
-    def email
-      @user = User.new
-    end
-  
-  end
+  # Sign-up process routes
+  get '/signup', to: 'users#signup'
+  post '/profilepic', to: 'users#profilepic'
+  post '/aboutyou', to: 'users#aboutyou'
+  post '/finalize', to: 'users#create'
+
+  # Listings resource
+  resources :listings
+end
+

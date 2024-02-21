@@ -65,13 +65,11 @@
     <div class="container">
         <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
         <h2>Set your profile picture</h2>
-
-        <%= form_with model: @user do |form| %>
-          <%= form.label :profile_picture, class: 'required' %>
-          <%= form.file_field :profile_picture, id: :user_profile_picture, accept: 'image/*', required: true %>
-
-          <%= form.submit 'Create Account' %>
-        <% end %>
+        <%= form_with model: @user, url: aboutyou_path, method: :post, local: true do |form| %>
+            <%= form.label :profile_picture %>
+            <%= form.file_field :profile_picture %>
+            <%= form.submit "Next" %>
+          <% end %>          
     </div>
 </body>
 </html>
