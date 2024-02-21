@@ -75,6 +75,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_201021) do
     t.string "phone_number", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
+    t.datetime "confirmed_at", precision: nil
+    t.datetime "datetime", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root "users#login"
 
   resources :listings
+  resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
 
 
 end
