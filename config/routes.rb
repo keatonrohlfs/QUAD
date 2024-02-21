@@ -1,22 +1,18 @@
 Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
-  # # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "/login", to: "users#login"
-
-  get "/signup", to: "users#signup"
-  post "/signup", to: "users#create"
-
-  get "/aboutyou", to: "users#aboutyou"
-
-  get "/profilepic", to: "users#profilepic"
-
-  # Defines the root path route ("/")
+  # Root route
   root "users#login"
 
+  # User routes for login and signup
+  get "/login", to: "users#login"
+  
+  # Sign-up process routes
+  get '/signup', to: 'users#signup'
+  post '/profilepic', to: 'users#profilepic'
+  post '/aboutyou', to: 'users#aboutyou'
+  post '/finalize', to: 'users#create'
+
+  # Listings resource
   resources :listings
-
-
 end

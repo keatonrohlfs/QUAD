@@ -65,32 +65,21 @@
     <div class="container">
         <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
         <h2>Create Account</h2>
-
-        <%= form_with model: @user, url:signup_path do |form| %>
-            <%= render partial: "shared/form_errors", locals: { object: form.object } %>
-            <%= form.label :first_name, class: 'required' %>
-            <%= form.text_field :first_name, id: :user_first_name, required: true %>
-
-            <%= form.label :last_name, class: 'required' %>
-            <%= form.text_field :last_name, id: :user_last_name, required: true %>
-
-            <%= form.label :email, class: 'required' %>
-            <%= form.email_field :email, id: :user_email, required: true %>
-
-            <%= form.label :phone_number, 'Phone:', class: 'required' %>
-            <%= form.telephone_field :phone_number, id: :user_phone_number, required: true %>
-
-            <%= form.label :username, class: 'required' %>
-            <%= form.text_field :username, id: :user_username, required: true %>
-
-            <%= form.label :password, class: 'required' %>
-            <%= form.password_field :password, id: :user_password, required: true %>
-
-            <%= form.label :password_confirmation, 'Confirm Password:', class: 'required' %>
-            <%= form.password_field :password_confirmation, id: :user_password, required: true %>
-
-            <%= form.submit "Sign Up" %>
-        <% end %>
+        <%= form_with model: @user, url: profilepic_path, method: :post, local: true do |form| %>
+            <%= form.label :first_name %>
+            <%= form.text_field :first_name %>
+            <%= form.label :last_name %>
+            <%= form.text_field :last_name %>
+            <%= form.label :email %>
+            <%= form.email_field :email %>
+            <%= form.label :username %>
+            <%= form.text_field :username %>
+            <%= form.label :password %>
+            <%= form.password_field :password %>
+            <%= form.label :password_confirmation, "Confirm Password" %>
+            <%= form.password_field :password_confirmation %>
+            <%= form.submit "Next" %>
+          <% end %>
     </div>
 </body>
 </html>

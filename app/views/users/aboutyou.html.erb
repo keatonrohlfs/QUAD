@@ -64,20 +64,14 @@
 <body>
     <div class="container">
         <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
-        <h2>Tell us more about you!</h2>
-
-        <%= form_with model: @user, url:aboutyou_path do |form| %>
-            <%= form.label :graduation_year, class: 'optional' %>
-            <%= form.text_field :graduation_year, id: :user_graduation_year, required: false %>
-
-            <%= form.label :sorority, class: 'optional' %>
-            <%= form.text_field :sorority, id: :user_sorority, required: false %>
-
-            <%= form.label :biography, class: 'optional' %>
-            <%= form.text_field :biography, id: :user_biography, required: false %>
-
-            <%= form.submit 'Continue' %>
-        <% end %>
+        <h2>Tell us more about you</h2>
+        <%= form_with model: @user, url: finalize_path, method: :post, local: true do |form| %>
+            <%= form.label :social_media %>
+            <%= form.text_field :social_media %>
+            <%= form.label :graduation_year %>
+            <%= form.number_field :graduation_year %>
+            <%= form.submit "Complete Sign Up" %>
+          <% end %>          
     </div>
 </body>
 </html>
