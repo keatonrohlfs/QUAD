@@ -50,15 +50,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_201021) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string "title"
-    t.string "category"
-    t.string "size"
+    t.string "title", null: false
+    t.string "category", null: false
+    t.string "size", null: false
     t.string "brand"
     t.string "color"
-    t.boolean "new_with_tags"
-    t.string "style_tags"
-    t.boolean "sell"
-    t.boolean "rent"
+    t.boolean "new_with_tags", default: false
+    t.string "style_tags", default: [], array: true
+    t.boolean "sell", default: true
+    t.boolean "rent", default: false
     t.decimal "original_price"
     t.decimal "listing_price"
     t.decimal "rental_price"

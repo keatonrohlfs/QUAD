@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   get "/signup", to: "users#new"
   post "/users", to: "users#create"
-
+  get '/login_success', to: 'pages#login_success'
+  get "/listing", to: "pages#listing"
+  
   # Defines the root path route ("/")
   root "users#login"
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listing Page</title>
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    .profile-info, .navigation {
+      display: flex;
+      align-items: center;
+    }
+    .navigation a {
+      padding: 10px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    .item {
+      border: 1px solid #dee2e6;
+      padding: 15px;
+    }
+    .highlight {
+      border: 2px solid #ffc107;
+    }
+    .footer {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="profile-info">
+      <%= image_tag 'profile_placeholder.jpg', alt: 'Profile image', style: 'border-radius: 50%; width: 50px; height: 50px;' %>
+      <div>
+        <p>Name</p>
+        <p>Year</p>
+        <p>Sorority</p>
+      </div>
+    </div>
+    <div class="navigation">
+      <!-- Assuming you have path helpers set up for these -->
+      <a href="<%= listings_path %>">Listings</a>
+      <a href="<%= sales_path %>">Sales</a>
+      <a href="<%= rentals_path %>">Rentals</a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-grid">
+      <% # Replace with actual items loop %>
+      <% 9.times do |i| %>
+        <div class="item <%= 'highlight' if i == 3 %>">
+          <!-- Item content here -->
+          <p>Item <%= i + 1 %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="footer">
+    <button onclick="alert('Add item clicked!')">+</button>
+    <button onclick="alert('Highlight clicked!')">Highlight</button>
+  </div>
+</body>
+</html>
