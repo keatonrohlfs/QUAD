@@ -5,6 +5,7 @@
     <%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
+    <p class="notice"><%= flash[:notice] %></p>
     <div class="login-container">
         <%= image_tag 'main-logo.png', alt: 'Quad Logo', class: 'logo' %> <!-- Replace 'quad-logo.png' with your actual logo image -->
         <h1>Welcome back to Quad</h1>
