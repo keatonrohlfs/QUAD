@@ -66,7 +66,8 @@
         <%= image_tag 'main-logo.png', alt: 'Logo', class: 'logo' %>
         <h2>Create Account</h2>
 
-        <%= form_with model: User.new, local: true do |form| %>
+        <%= form_with model: @user, url:signup_path do |form| %>
+
             <%= form.label :first_name, class: 'required' %>
             <%= form.text_field :first_name, id: :user_first_name, required: true %>
 
@@ -85,7 +86,10 @@
             <%= form.label :password, class: 'required' %>
             <%= form.password_field :password, id: :user_password, required: true %>
 
-            <%= form.submit 'Continue' %>
+            <%= form.label :password_confirmation, 'Confirm Password:', class: 'required' %>
+            <%= form.password_field :password_confirmation, id: :user_password, required: true %>
+
+            <%= form.submit "Sign Up" %>
         <% end %>
     </div>
 </body>

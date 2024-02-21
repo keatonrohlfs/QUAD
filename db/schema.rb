@@ -75,10 +75,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_201021) do
     t.string "phone_number", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.integer "graduation_year"
-    t.string "sorority"
-    t.string "social_media", null: false
-    t.string "profile_picture", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
