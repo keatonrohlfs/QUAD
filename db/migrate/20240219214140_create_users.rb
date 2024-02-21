@@ -7,10 +7,10 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :phone_number, null: false
       t.string :first_name, null: false
       t.string :last_name, null: false
-      t.integer :graduation_year
-      t.string :sorority
-      t.string :social_media, null: false
-      t.string :profile_picture, null: false
+      # t.integer :graduation_year
+      # t.string :sorority
+      # t.string :social_media, null: false
+      # t.string :profile_picture, null: false
 
       t.timestamps
     end

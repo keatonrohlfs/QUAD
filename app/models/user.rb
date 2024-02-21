@@ -1,7 +1,40 @@
 class User < ApplicationRecord
-    has_secure_password
-  
-    validates :username, :email, :phone_number, :first_name, :last_name, :social_media, :profile_picture, presence: true
-    validates :username, :email, uniqueness: true
+    
+
+  # CONFIRMATION_TOKEN_EXPIRATION = 10.minutes
+
+  has_secure_password
+
+  before_save :downcase_fields
+
+  validates :email, presence: true, uniqueness: true
+  validates :username, :phone_number, presence: true, uniqueness: true
+
+  validates:first_name, :last_name, presence: true
+
+  # def confirm!
+  #   update_columns(confirmed_at: Time.current)
+  # end
+
+  # def confirmed?
+  #   confirmed_at.present?
+  # end
+
+  # def generate_confirmation_token
+  #   signed_id expires_in: CONFIRMATION_TOKEN_EXPIRATION, purpose: :confirm_email
+  # end
+
+  # def unconfirmed?
+  #   !confirmed?
+  # end
+
+  private
+
+    def downcase_fields
+      self.email = email.downcase
+      self.first_name = first_name.downcase
+      self.last_name = last_name.downcase
+      self.username = username.downcase
+    end
   end
   

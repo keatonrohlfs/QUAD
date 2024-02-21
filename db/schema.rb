@@ -50,15 +50,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_201021) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string "title"
-    t.string "category"
-    t.string "size"
+    t.string "title", null: false
+    t.string "category", null: false
+    t.string "size", null: false
     t.string "brand"
     t.string "color"
-    t.boolean "new_with_tags"
-    t.string "style_tags"
-    t.boolean "sell"
-    t.boolean "rent"
+    t.boolean "new_with_tags", default: false
+    t.string "style_tags", default: [], array: true
+    t.boolean "sell", default: true
+    t.boolean "rent", default: false
     t.decimal "original_price"
     t.decimal "listing_price"
     t.decimal "rental_price"
@@ -75,10 +75,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_201021) do
     t.string "phone_number", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.integer "graduation_year"
-    t.string "sorority"
-    t.string "social_media", null: false
-    t.string "profile_picture", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
