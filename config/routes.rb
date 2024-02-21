@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "/login", to: "users#login"
   get "/signup", to: "users#signup"
+  get "/aboutyou", to: "users#aboutyou"
+  get "/profilepic", to: "users#profilepic"
 
   get "/signup", to: "users#new"
   post "/users", to: "users#create"
