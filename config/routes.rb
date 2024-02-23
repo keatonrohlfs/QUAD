@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "static_pages#home"
 
-  resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
+  
 
   post "sign_up", to: "users#create"
   get "sign_up", to: "users#new"
@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   delete "logout", to: "sessions#destroy"
   get "login", to: "sessions#new"
 
+  resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
 end
