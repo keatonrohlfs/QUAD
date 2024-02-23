@@ -1,14 +1,11 @@
 class User < ApplicationRecord
-    
-
   CONFIRMATION_TOKEN_EXPIRATION = 10.minutes
   PASSWORD_RESET_TOKEN_EXPIRATION = 10.minutes
   MAILER_FROM_EMAIL = "no-reply@example.com"
   attr_accessor :current_password
   
-
   has_secure_password
-  
+  has_secure_token :remember_token
 
   before_save :downcase_fields
   before_save :downcase_unconfirmed_email
@@ -67,7 +64,6 @@ class User < ApplicationRecord
   def unconfirmed_or_reconfirming?
     unconfirmed? || reconfirming?
   end
-end
 
   private
 
