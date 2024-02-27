@@ -5,7 +5,6 @@ class User < ApplicationRecord
   attr_accessor :current_password
   
   has_secure_password
-  has_secure_token :remember_token
 
   before_save :downcase_fields
   before_save :downcase_unconfirmed_email
@@ -14,6 +13,8 @@ class User < ApplicationRecord
   validates :username, :phone_number, presence: true, uniqueness: true
   validates:first_name, :last_name, presence: true
   validates :unconfirmed_email, format: {with: URI::MailTo::EMAIL_REGEXP, allow_blank: true}
+
+  has_many :active_sessions, dependent: :destroy
 
   def confirm!
     if unconfirmed_or_reconfirming?
@@ -65,17 +66,33 @@ class User < ApplicationRecord
     unconfirmed? || reconfirming?
   end
 
-  private
+  def self.authenticate_by(attributes)
+    passwords, identifiers = attributes.to_h.partition do |name, value|
+      !has_attribute?(name) && has_attribute?("#{name}_digest")
+    end.map(&:to_h)
 
+    raise ArgumentError, "One or more password arguments are required" if passwords.empty?
+    raise ArgumentError, "One or more finder arguments are required" if identifiers.empty?
+    if (record = find_by(identifiers))
+      record if passwords.count { |name, value| record.public_send(:"authenticate_#{name}", value) } == passwords.size
+    else
+      new(passwords)
+      nil
+    end
+  end
+
+  private
     def downcase_fields
       self.email = email.downcase
       self.first_name = first_name.downcase
       self.last_name = last_name.downcase
       self.username = username.downcase
     end
+
     def downcase_unconfirmed_email
       return if unconfirmed_email.nil?
       self.unconfirmed_email = unconfirmed_email.downcase
     end
+
   end
   
