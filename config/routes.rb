@@ -26,3 +26,5 @@ Rails.application.routes.draw do
     end
   end
 end
+
+resources :listings, only: [:new, :create, :show, :index]
