@@ -25,6 +25,5 @@ Rails.application.routes.draw do
       delete "destroy_all"
     end
   end
+  resources :listings, only: [:new, :create, :show, :index]
 end
-
-resources :listings, only: [:new, :create, :show, :index]
