@@ -10696,3 +10696,947 @@ Processing by ListingsController#new as HTML
 Completed 200 OK in 33ms (Views: 7.5ms | ActiveRecord: 3.1ms | Allocations: 32329)
 
 
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:45:15 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 9 pending migrations:
+
+db/migrate/20240213210737_create_articles.rb
+db/migrate/20240219214140_create_users.rb
+db/migrate/20240220200814_create_listings.rb
+db/migrate/20240220201021_create_active_storage_tables.active_storage.rb
+db/migrate/20240223042447_add_unconfirmed_email_to_users.rb
+db/migrate/20240223042929_add_remember_token_to_users.rb
+db/migrate/20240227003318_create_active_sessions.rb
+db/migrate/20240227003828_add_request_columns_to_active_sessions.rb
+db/migrate/20240227004536_move_remember_token_from_users_to_active_sessions.rb
+
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for 172.20.0.1 at 2024-03-19 23:45:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-03-19 23:45:17.935168', '2024-03-19 23:45:17.935174') RETURNING "key"[0m
+Migrating to CreateArticles (20240213210737)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240213210737') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20240219214140)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "email" character varying NOT NULL, "phone_number" character varying NOT NULL, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "confirmed_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219214140') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListings (20240220200814)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "title" character varying NOT NULL, "category" character varying NOT NULL, "size" character varying NOT NULL, "brand" character varying, "color" character varying, "new_with_tags" boolean DEFAULT FALSE, "style_tags" character varying[] DEFAULT '{}', "sell" boolean DEFAULT TRUE, "rent" boolean DEFAULT FALSE, "original_price" decimal, "listing_price" decimal, "rental_price" decimal, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_listings_on_user_id" ON "listings" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240220200814') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240220201021)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240220201021') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUnconfirmedEmailToUsers (20240223042447)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240223042447') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRememberTokenToUsers (20240223042929)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_token" character varying NOT NULL[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240223042929') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveSessions (20240227003318)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "active_sessions" ("id" bigserial primary key, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9bca355624"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_active_sessions_on_user_id" ON "active_sessions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227003318') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRequestColumnsToActiveSessions (20240227003828)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "active_sessions" ADD "user_agent" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "active_sessions" ADD "ip_address" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227003828') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to MoveRememberTokenFromUsersToActiveSessions (20240227004536)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "remember_token"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_sessions" ADD "remember_token" character varying NOT NULL[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_sessions_on_remember_token" ON "active_sessions" ("remember_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227004536') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:45:18 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering listings/index.html.erb within layouts/application
+  Rendered listings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 802)
+Completed 200 OK in 24ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 17738)
+
+
+Started GET "/listings" for 172.20.0.1 at 2024-03-19 23:47:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (Duration: 42.7ms | Allocations: 8016)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 8249)
+Completed 200 OK in 62ms (Views: 44.4ms | ActiveRecord: 2.9ms | Allocations: 29931)
+
+
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:48:51 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 646)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1947)
+
+
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:49:06 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ArgumentError (:to must respond to `action` or `call`, or it must be a String that includes '#'):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:49:23 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 622)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1915)
+
+
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:53:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 622)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1923)
+
+
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:53:08 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 256)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 736)
+
+
+Started GET "/sign_up" for 172.20.0.1 at 2024-03-19 23:53:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_form_errors.html.erb (Duration: 0.8ms | Allocations: 185)
+  Rendered users/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2686)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 2902)
+Completed 200 OK in 71ms (Views: 19.4ms | ActiveRecord: 7.4ms | Allocations: 17095)
+
+
+Started GET "/path-to-your-logo.png" for 172.20.0.1 at 2024-03-19 23:53:14 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/sign_up" for 172.20.0.1 at 2024-03-19 23:53:29 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Cole", "last_name"=>"Sullivan", "email"=>"acsullivan6@crimson.ua.edu", "phone_number"=>"6156317066", "username"=>"acsullivan6", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "acsullivan6"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "6156317066"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "first_name", "last_name", "confirmed_at", "created_at", "updated_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["username", "acsullivan6"], ["password_digest", "[FILTERED]"], ["email", "acsullivan6@crimson.ua.edu"], ["phone_number", "6156317066"], ["first_name", "cole"], ["last_name", "sullivan"], ["confirmed_at", nil], ["created_at", "2024-03-19 23:53:29.610227"], ["updated_at", "2024-03-19 23:53:29.610227"], ["unconfirmed_email", nil]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/confirmation.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 266)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.7ms | Allocations: 483)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/confirmation.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 156)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.4ms | Allocations: 348)
+UserMailer#confirmation: processed outbound mail in 9.3ms
+Delivered mail 65fa25799fa98_137a0-391@0ed4cd6a0495.mail (14.6ms)
+Date: Tue, 19 Mar 2024 23:53:29 +0000
+From: no-reply@example.com
+To: acsullivan6@crimson.ua.edu
+Message-ID: <65fa25799fa98_137a0-391@0ed4cd6a0495.mail>
+Subject: Confirmation Instructions
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65fa25799ed28_137a0-4f7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65fa25799ed28_137a0-4f7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmation Instructions
+
+http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowMzoyOS42MTNaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--23dc2336f33a26b877b719c242c1625f54273b65c8f125fa1bf72ecde9e0eb1b/edit
+
+
+----==_mimepart_65fa25799ed28_137a0-4f7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmation Instructions</h1>
+
+<a href="http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowMzoyOS42MTNaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--23dc2336f33a26b877b719c242c1625f54273b65c8f125fa1bf72ecde9e0eb1b/edit">Click here to confirm your email.</a>
+
+  </body>
+</html>
+
+----==_mimepart_65fa25799ed28_137a0-4f7--
+
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 268ms (ActiveRecord: 3.2ms | Allocations: 55138)
+
+
+Started GET "/login" for 172.20.0.1 at 2024-03-19 23:53:29 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1087)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1916)
+
+
+Started GET "/path-to-your-logo.png" for 172.20.0.1 at 2024-03-19 23:53:29 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/login" for 172.20.0.1 at 2024-03-19 23:53:34 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"acsullivan6@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+Redirected to http://0.0.0.0:3000/confirmations/new
+Completed 302 Found in 211ms (ActiveRecord: 0.7ms | Allocations: 1282)
+
+
+Started GET "/confirmations/new" for 172.20.0.1 at 2024-03-19 23:53:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ConfirmationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering confirmations/new.html.erb within layouts/application
+  Rendered confirmations/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 353)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 589)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1403)
+
+
+Started POST "/confirmations" for 172.20.0.1 at 2024-03-19 23:53:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ConfirmationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"acsullivan6@crimson.ua.edu"}, "commit"=>"Confirm Email"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/confirmations_controller.rb:5:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/confirmation.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.1ms | Allocations: 155)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/confirmation.text.erb within layouts/mailer (Duration: 0.4ms | Allocations: 49)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.8ms | Allocations: 146)
+UserMailer#confirmation: processed outbound mail in 8.6ms
+Delivered mail 65fa258210adf_137c8-16@0ed4cd6a0495.mail (3.0ms)
+Date: Tue, 19 Mar 2024 23:53:38 +0000
+From: no-reply@example.com
+To: acsullivan6@crimson.ua.edu
+Message-ID: <65fa258210adf_137c8-16@0ed4cd6a0495.mail>
+Subject: Confirmation Instructions
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65fa2582fac3_137c8-2a5";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65fa2582fac3_137c8-2a5
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmation Instructions
+
+http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowMzozOC4wNTdaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--27359345b9e0b3c11db5603f28bd052d1bba8fe3e9a888218a9155dfad96a3a8/edit
+
+
+----==_mimepart_65fa2582fac3_137c8-2a5
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmation Instructions</h1>
+
+<a href="http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowMzozOC4wNTdaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--27359345b9e0b3c11db5603f28bd052d1bba8fe3e9a888218a9155dfad96a3a8/edit">Click here to confirm your email.</a>
+
+  </body>
+</html>
+
+----==_mimepart_65fa2582fac3_137c8-2a5--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms | Allocations: 12373)
+
+
+Started GET "/" for 172.20.0.1 at 2024-03-19 23:53:38 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 257)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 771)
+
+
+Started GET "/sign_up" for 172.21.0.1 at 2024-03-19 23:53:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 9 pending migrations:
+
+db/migrate/20240213210737_create_articles.rb
+db/migrate/20240219214140_create_users.rb
+db/migrate/20240220200814_create_listings.rb
+db/migrate/20240220201021_create_active_storage_tables.active_storage.rb
+db/migrate/20240223042447_add_unconfirmed_email_to_users.rb
+db/migrate/20240223042929_add_remember_token_to_users.rb
+db/migrate/20240227003318_create_active_sessions.rb
+db/migrate/20240227003828_add_request_columns_to_active_sessions.rb
+db/migrate/20240227004536_move_remember_token_from_users_to_active_sessions.rb
+
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for 172.21.0.1 at 2024-03-19 23:54:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-03-19 23:54:00.356504', '2024-03-19 23:54:00.356512') RETURNING "key"[0m
+Migrating to CreateArticles (20240213210737)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240213210737') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20240219214140)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "email" character varying NOT NULL, "phone_number" character varying NOT NULL, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "confirmed_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219214140') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListings (20240220200814)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "title" character varying NOT NULL, "category" character varying NOT NULL, "size" character varying NOT NULL, "brand" character varying, "color" character varying, "new_with_tags" boolean DEFAULT FALSE, "style_tags" character varying[] DEFAULT '{}', "sell" boolean DEFAULT TRUE, "rent" boolean DEFAULT FALSE, "original_price" decimal, "listing_price" decimal, "rental_price" decimal, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE INDEX "index_listings_on_user_id" ON "listings" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240220200814') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240220201021)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240220201021') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUnconfirmedEmailToUsers (20240223042447)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240223042447') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRememberTokenToUsers (20240223042929)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_token" character varying NOT NULL[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240223042929') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveSessions (20240227003318)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "active_sessions" ("id" bigserial primary key, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9bca355624"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_active_sessions_on_user_id" ON "active_sessions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227003318') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRequestColumnsToActiveSessions (20240227003828)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "active_sessions" ADD "user_agent" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "active_sessions" ADD "ip_address" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227003828') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to MoveRememberTokenFromUsersToActiveSessions (20240227004536)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "remember_token"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_sessions" ADD "remember_token" character varying NOT NULL[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_sessions_on_remember_token" ON "active_sessions" ("remember_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240227004536') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3891601795866635445)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sign_up" for 172.21.0.1 at 2024-03-19 23:54:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_form_errors.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3324)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3792)
+Completed 200 OK in 85ms (Views: 9.0ms | ActiveRecord: 3.7ms | Allocations: 29129)
+
+
+Started POST "/sign_up" for 172.21.0.1 at 2024-03-19 23:54:12 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Cole", "last_name"=>"Sullivan", "email"=>"acsullivan6@crimson.ua.edu", "phone_number"=>"6156317066", "username"=>"acsullivan6", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "acsullivan6"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "6156317066"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "phone_number", "first_name", "last_name", "confirmed_at", "created_at", "updated_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["username", "acsullivan6"], ["password_digest", "[FILTERED]"], ["email", "acsullivan6@crimson.ua.edu"], ["phone_number", "6156317066"], ["first_name", "cole"], ["last_name", "sullivan"], ["confirmed_at", nil], ["created_at", "2024-03-19 23:54:12.591113"], ["updated_at", "2024-03-19 23:54:12.591113"], ["unconfirmed_email", nil]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/confirmation.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 270)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.9ms | Allocations: 487)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/confirmation.text.erb within layouts/mailer (Duration: 0.2ms | Allocations: 156)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.5ms | Allocations: 348)
+UserMailer#confirmation: processed outbound mail in 6.4ms
+Delivered mail 65fa25a4a055d_137c8385f7@e2dbfdafa344.mail (4.5ms)
+Date: Tue, 19 Mar 2024 23:54:12 +0000
+From: no-reply@example.com
+To: acsullivan6@crimson.ua.edu
+Message-ID: <65fa25a4a055d_137c8385f7@e2dbfdafa344.mail>
+Subject: Confirmation Instructions
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65fa25a49fce9_137c83847f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65fa25a49fce9_137c83847f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmation Instructions
+
+http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowNDoxMi41OTZaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--6d92b652c257b13486d46f707c0408e51952bdef1171dbadda355b6b3dd20e2d/edit
+
+
+----==_mimepart_65fa25a49fce9_137c83847f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmation Instructions</h1>
+
+<a href="http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowNDoxMi41OTZaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--6d92b652c257b13486d46f707c0408e51952bdef1171dbadda355b6b3dd20e2d/edit">Click here to confirm your email.</a>
+
+  </body>
+</html>
+
+----==_mimepart_65fa25a49fce9_137c83847f--
+
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 279ms (ActiveRecord: 4.8ms | Allocations: 37075)
+
+
+Started GET "/login" for 172.21.0.1 at 2024-03-19 23:54:12 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1054)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1262)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2102)
+
+
+Started POST "/login" for 172.21.0.1 at 2024-03-19 23:54:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"acsullivan6@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+Redirected to http://0.0.0.0:3000/confirmations/new
+Completed 302 Found in 203ms (ActiveRecord: 0.3ms | Allocations: 1314)
+
+
+Started GET "/confirmations/new" for 172.21.0.1 at 2024-03-19 23:54:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ConfirmationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering confirmations/new.html.erb within layouts/application
+  Rendered confirmations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 353)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 589)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1395)
+
+
+Started POST "/confirmations" for 172.21.0.1 at 2024-03-19 23:54:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ConfirmationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"acsullivan6@crimson.ua.edu"}, "commit"=>"Confirm Email"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/confirmations_controller.rb:5:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/confirmation.html.erb within layouts/mailer
+  Rendered user_mailer/confirmation.html.erb within layouts/mailer (Duration: 0.6ms | Allocations: 58)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.0ms | Allocations: 155)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/confirmation.text.erb within layouts/mailer
+  Rendered user_mailer/confirmation.text.erb within layouts/mailer (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.5ms | Allocations: 146)
+UserMailer#confirmation: processed outbound mail in 8.1ms
+Delivered mail 65fa25ab104c6_137f03879@e2dbfdafa344.mail (3.0ms)
+Date: Tue, 19 Mar 2024 23:54:19 +0000
+From: no-reply@example.com
+To: acsullivan6@crimson.ua.edu
+Message-ID: <65fa25ab104c6_137f03879@e2dbfdafa344.mail>
+Subject: Confirmation Instructions
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65fa25abf7b5_137f0386ee";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65fa25abf7b5_137f0386ee
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmation Instructions
+
+http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowNDoxOS4wNTZaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--d8248f02d37b8db4d9d8b91da23200e3bed7da1c4df3f64d7f1414475d4aef22/edit
+
+
+----==_mimepart_65fa25abf7b5_137f0386ee
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmation Instructions</h1>
+
+<a href="http://localhost:3000/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowNDoxOS4wNTZaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--d8248f02d37b8db4d9d8b91da23200e3bed7da1c4df3f64d7f1414475d4aef22/edit">Click here to confirm your email.</a>
+
+  </body>
+</html>
+
+----==_mimepart_65fa25abf7b5_137f0386ee--
+
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.7ms | Allocations: 12372)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:54:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 390)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Started GET "/confirmations/eyJfcmFpbHMiOnsiZGF0YSI6MSwiZXhwIjoiMjAyNC0wMy0yMFQwMDowNDoxOS4wNTZaIiwicHVyIjoidXNlci9jb25maXJtX2VtYWlsIn19--d8248f02d37b8db4d9d8b91da23200e3bed7da1c4df3f64d7f1414475d4aef22/edit" for 172.21.0.1 at 2024-03-19 23:54:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ConfirmationsController#edit as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/confirmations_controller.rb:16:in `edit'
+  [1m[36mUser Update (3.8ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = $1 WHERE "users"."id" = $2[0m  [["confirmed_at", "2024-03-19 23:54:29.297343"], ["id", 1]]
+  ↳ app/models/user.rb:24:in `confirm!'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (2.5ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-19 23:54:29.359609"], ["updated_at", "2024-03-19 23:54:29.359609"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0"], ["ip_address", "172.21.0.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 10.9ms | Allocations: 21484)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:54:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 267)
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 3035)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:54:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 256)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 739)
+
+
+Started GET "/login" for 172.21.0.1 at 2024-03-19 23:54:34 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 688)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1189)
+
+
+Started POST "/login" for 172.21.0.1 at 2024-03-19 23:54:38 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"acsullivan6@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "acsullivan6@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (1.4ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-19 23:54:39.017040"], ["updated_at", "2024-03-19 23:54:39.017040"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0"], ["ip_address", "172.21.0.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 216ms (ActiveRecord: 5.8ms | Allocations: 2792)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:54:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 260)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1653)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:54:42 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 256)
+Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 1649)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:56:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 268)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 975)
+Completed 200 OK in 55ms (Views: 2.7ms | ActiveRecord: 8.2ms | Allocations: 45284)
+
+
+Started GET "/login" for 172.21.0.1 at 2024-03-19 23:56:36 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_if_authenticated rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1636)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:56:36 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 262)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 1702)
+
+
+Started GET "/" for 172.21.0.1 at 2024-03-19 23:58:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  [1m[36mActiveSession Load (0.1ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 627)
+Completed 200 OK in 17ms (Views: 1.8ms | ActiveRecord: 3.3ms | Allocations: 14181)
+
+
+Started GET "/login" for 172.21.0.1 at 2024-03-19 23:58:21 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account
+Filter chain halted as :redirect_if_authenticated rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms | Allocations: 1508)
+
+
+Started GET "/account" for 172.21.0.1 at 2024-03-19 23:58:21 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#index as HTML
+  [1m[36mActiveSession Load (0.7ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/index.html.erb within layouts/application
+  Rendered listings/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 393)
+Completed 200 OK in 25ms (Views: 1.4ms | ActiveRecord: 1.3ms | Allocations: 8816)
+
+
