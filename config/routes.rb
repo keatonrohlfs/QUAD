@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # # Can be used by load balancers and uptime monitors to verify that the app is live.
   # Defines the root path route ("/")
-  root "static_pages#home"
+  root "listings#index"
 
   post "sign_up", to: "users#create"
   get "sign_up", to: "users#new"
@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   put "account", to: "users#update"
   get "account", to: "users#edit"
   delete "account", to: "users#destroy"
+
+  post "listings", to: "listings#create"
+  get "listings", to: "listings#new"
 
   resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
   resources :passwords, only: [:create, :edit, :new, :update], param: :password_reset_token
