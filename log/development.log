@@ -15871,3 +15871,157 @@ Processing by ListingsController#new as HTML
 Completed 200 OK in 31ms (Views: 5.8ms | ActiveRecord: 3.4ms | Allocations: 26282)
 
 
+Started GET "/" for 192.168.65.1 at 2024-03-20 23:02:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms | Allocations: 5396)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-03-20 23:02:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2920)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3361)
+Completed 200 OK in 57ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 9930)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-20 23:02:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-20 23:02:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#index as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 418)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-03-20 23:02:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 688)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1196)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-20 23:02:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/login" for 192.168.65.1 at 2024-03-20 23:02:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"kwrohlfs@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kwrohlfs@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (1.5ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-20 23:02:49.932984"], ["updated_at", "2024-03-20 23:02:49.932984"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"], ["ip_address", "192.168.65.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://0.0.0.0:3000/account
+Completed 302 Found in 338ms (ActiveRecord: 9.8ms | Allocations: 50486)
+
+
+Started GET "/account" for 192.168.65.1 at 2024-03-20 23:02:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#index as HTML
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/index.html.erb within layouts/application
+  Rendered listings/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 492)
+Completed 200 OK in 38ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 13829)
+
+
+Started GET "/listings" for 192.168.65.1 at 2024-03-20 23:02:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#new as HTML
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2942)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3175)
+Completed 200 OK in 35ms (Views: 7.2ms | ActiveRecord: 1.8ms | Allocations: 22235)
+
+
+Started POST "/listings" for 192.168.65.1 at 2024-03-20 23:02:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing"=>{"photos"=>[""], "title"=>"", "description"=>"", "category"=>"", "size"=>"", "brand"=>"", "color"=>"", "new_with_tags"=>"0"}, "commit"=>"Next"}
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2791)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'description' for Listing.):
+  
+app/controllers/listings_controller.rb:11:in `create'
+Started GET "/listings" for 192.168.65.1 at 2024-03-20 23:11:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#new as HTML
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3366)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3826)
+Completed 200 OK in 39ms (Views: 7.3ms | ActiveRecord: 2.4ms | Allocations: 30769)
+
+
+Started GET "/listings" for 192.168.65.1 at 2024-03-20 23:17:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListingsController#new as HTML
+  [1m[36mActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4207)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4667)
+Completed 200 OK in 46ms (Views: 10.5ms | ActiveRecord: 3.1ms | Allocations: 31488)
+
+
