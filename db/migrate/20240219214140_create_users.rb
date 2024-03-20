@@ -8,12 +8,12 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.datetime :confirmed_at
+      t.boolean :admin, default: false
       # t.integer :graduation_year
       # t.string :sorority
       # t.string :social_media, null: false
       # t.string :profile_picture, null: false
 
-      t.timestamps
     end
     add_index :users, :username, unique: true
     add_index :users, :email, unique: true
