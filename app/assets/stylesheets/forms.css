@@ -10,7 +10,7 @@ body {
     background: linear-gradient(135deg, #fff 50%, #f4f4f4 50%);
 }
 
-.login-container {
+.centered-container {
     width: 100%;
     max-width: 400px;
     text-align: center;
@@ -39,8 +39,7 @@ h1 {
     color: #555;
 }
 
-.email-input,
-.password-input {
+.text-input {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
@@ -48,7 +47,7 @@ h1 {
     border-radius: 4px;
 }
 
-.login-button {
+.primary-button {
     width: calc(100% - 20px);
     background-color: #ff017d;
     color: #fff;
@@ -60,7 +59,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.login-button:hover {
+.primary-button:hover {
     background-color: #e6006c;
 }
 
