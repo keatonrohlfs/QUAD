@@ -72,3 +72,14 @@ h1 {
     text-decoration: none;
     font-weight: bold;
 }
+
+select {
+    width: 100%;
+    padding: 0.675em 6em 0.675em 1em;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+}

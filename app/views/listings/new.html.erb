@@ -1,90 +1,97 @@
-<%= form_with model: @listing, local: true, html: { class: 'form-container' } do |form| %>
-    <% if @listing.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
-        <ul>
-        <% @listing.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Listing</title>
+    <%= stylesheet_link_tag 'forms', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="centered-container">
+    <%= image_tag 'main-logo.png', alt: 'Quad Logo', class: 'logo' %>
+    <h2>Create New Listing</h2>
+
+    <%= form_with model: @listing, local: true, html: { class: 'form-container' } do |form| %>
+      <% if @listing.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+          <ul>
+          <% @listing.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
+      <!-- Pictures -->
+      <div class="field">
+        <%= form.label :photos, 'Photos (at least 2, front & back)' %>
+        <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg' %>
       </div>
+      
+      <!-- Title -->
+      <div class="field">
+        <%= form.text_field :title, placeholder: 'Title (e.g., ALL Maxi Pink Formal Dress)', class: 'text-input' %>
+      </div>
+      
+      <!-- Category -->
+      <div class="field">
+        <%= form.select :category, ['Select Category', 'Accessories', 'Jeans', 'Skirts', 'Shorts', 'Shoes', 'Jewelry', 'Tops', 'Dresses', 'Swim'], {}, { prompt: 'Select Category' } %>
+      </div>
+
+      <!-- Size -->
+      <div class="field">
+        <%= form.select :size, ['Select Size', '00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], {}, { prompt: 'Select Size' } %>
+      </div>
+      
+      <!-- Brand -->
+      <div class="field">
+        <%= form.text_field :brand, placeholder: 'Brand (e.g., Nike)', class: 'text-input' %>
+      </div>
+      
+      <!-- Color -->
+      <div class="field">
+        <%= form.select :color, ['Select Color', 'Red', 'Pink', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Gold', 'Silver', 'Black', 'Gray', 'White', 'Cream', 'Brown', 'Tan', 'Floral', 'Multi Color'], {}, { prompt: 'Select Color' } %>
+      </div>
+      
+      <!-- New With Tags -->
+      <div class="field">
+        <%= form.select :new_with_tags, ['New with Tags?', ['Yes', true], ['No', false]], {}, { prompt: 'New With Tags?' } %>
+      </div>
+      
+      <!-- Style Tags -->
+      <div class="field">
+        <%= form.label :style_tags, 'Style Tags (select up to 3)' %>
+        <%= form.select :style_tags, ['Game Day', 'Date Party', 'Formal', 'Night Out', 'Weekend', 'Everyday Athleisure', 'Special Event', 'Vacation', 'Work'], {}, { multiple: true, size: 3 } %>
+      </div>
+      
+      <!-- Sell or Rent -->
+      <div class="field">
+        <%= form.select :sell_or_rent, ['Sell or Rent?', 'Sell', 'Rent', 'Sell & Rent'], {}, { prompt: 'Are you selling or renting?' } %>
+      </div>
+      
+      <!-- Original Price -->
+      <div class="field">
+        <%= form.label :original_price %>
+        <%= form.number_field :original_price, step: 0.01, placeholder: 'Original Price' %>
+      </div>
+      
+      <!-- Listing Price -->
+      <div class="field">
+        <%= form.label :listing_price, 'Listing Price (if selling)' %>
+        <%= form.number_field :listing_price, step: 0.01, placeholder: 'Listing Price' %>
+      </div>
+      
+      <!-- Rental Price -->
+      <div class="field">
+        <%= form.label :rental_price, 'Rental Price (if renting)' %>
+        <%= form.number_field :rental_price, step: 0.01, placeholder: 'Rental Price' %>
+      </div>
+      
+      <div class="actions">
+        <%= form.submit "Next", class: 'primary-button' %>
+      </div>
+      
     <% end %>
-    
-    <!-- Pictures -->
-    <div class="field">
-      <%= form.label :photos, 'Photos (at least 2, front & back)' %>
-      <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg' %>
-    </div>
-    
-    <!-- Title -->
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title, placeholder: 'e.g., ALL Maxi Pink Formal Dress' %>
-    </div>
-    
-    <!-- Category -->
-    <div class="field">
-      <%= form.label :category %>
-      <%= form.select :category, ['Accessories', 'Jeans', 'Skirts', 'Shorts', 'Shoes', 'Jewelry', 'Tops', 'Dresses', 'Swim'], {}, { prompt: 'Select Category' } %>
-    </div>
-    
-    <!-- Size -->
-    <div class="field">
-      <%= form.label :size %>
-      <%= form.select :size, ['00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], {}, { prompt: 'Select Size' } %>
-    </div>
-    
-    <!-- Brand -->
-    <div class="field">
-      <%= form.label :brand %>
-      <%= form.text_field :brand %>
-    </div>
-    
-    <!-- Color -->
-    <div class="field">
-      <%= form.label :color %>
-      <%= form.select :color, ['Red', 'Pink', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Gold', 'Silver', 'Black', 'Gray', 'White', 'Cream', 'Brown', 'Tan', 'Floral', 'Multi Color'], {}, { prompt: 'Select Color' } %>
-    </div>
-    
-    <!-- New With Tags -->
-    <div class="field">
-      <%= form.label :new_with_tags %>
-      <%= form.select :new_with_tags, [['Yes', true], ['No', false]], {}, { prompt: 'New With Tags?' } %>
-    </div>
-    
-    <!-- Style Tags -->
-    <div class="field">
-      <%= form.label :style_tags, 'Style Tags (select up to 3)' %>
-      <%= form.select :style_tags, ['Game Day', 'Date Party', 'Formal', 'Night Out', 'Weekend', 'Everyday Athleisure', 'Special Event', 'Vacation', 'Work'], {}, { multiple: true, size: 3 } %>
-    </div>
-    
-    <!-- Sell or Rent -->
-    <div class="field">
-      <%= form.label :sell_or_rent %>
-      <%= form.select :sell_or_rent, ['Sell', 'Rent', 'Sell & Rent'], {}, { prompt: 'Are you selling or renting?' } %>
-    </div>
-    
-    <!-- Original Price -->
-    <div class="field">
-      <%= form.label :original_price %>
-      <%= form.number_field :original_price, step: 0.01, placeholder: 'Original Price' %>
-    </div>
-    
-    <!-- Listing Price -->
-    <div class="field">
-      <%= form.label :listing_price, 'Listing Price (if selling)' %>
-      <%= form.number_field :listing_price, step: 0.01, placeholder: 'Listing Price' %>
-    </div>
-    
-    <!-- Rental Price -->
-    <div class="field">
-      <%= form.label :rental_price, 'Rental Price (if renting)' %>
-      <%= form.number_field :rental_price, step: 0.01, placeholder: 'Rental Price' %>
-    </div>
-    
-    <div class="actions">
-      <%= form.submit "Next" %>
-    </div>
-    
-    <% end %>
+  </div>
+</body>
+</html>
     
