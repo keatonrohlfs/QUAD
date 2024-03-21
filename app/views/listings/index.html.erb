@@ -52,5 +52,6 @@
   <div class="add_listing">
     <%= button_to "+ ADD LISTING", listings_path, method: :get %>
   </div>
+  <%= button_to "Log out of all other sessions", destroy_all_active_sessions_path, method: :delete %>
 </body>
 </html>
