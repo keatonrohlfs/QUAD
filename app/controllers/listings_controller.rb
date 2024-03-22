@@ -8,7 +8,7 @@ class ListingsController < ApplicationController
   
     # POST /listings
     def create
-      @listing = Listing.new(listing_params)
+      @listing = current_user.listings.build(listing_params)
       if @listing.save
         redirect_to @listing, notice: 'Listing was successfully created.'
       else

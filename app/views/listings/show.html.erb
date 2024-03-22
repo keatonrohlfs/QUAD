@@ -1,0 +1,9 @@
+<p>
+  <strong>Title:</strong>
+  <%= @listing.title %>
+</p>
+
+<!-- Include other fields as necessary -->
+
+<%= link_to 'Edit Listing', edit_listing_path(@listing) %> |
+<%= link_to 'Back to Listings', listings_path %>

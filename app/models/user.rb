@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validates :unconfirmed_email, format: {with: URI::MailTo::EMAIL_REGEXP, allow_blank: true}
 
   has_many :active_sessions, dependent: :destroy
-
+  has_many :listings
   def confirm!
     if unconfirmed_or_reconfirming?
       if unconfirmed_email.present?
