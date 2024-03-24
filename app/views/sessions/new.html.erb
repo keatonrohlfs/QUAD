@@ -8,7 +8,9 @@
     <div class="centered-container">
         <%= image_tag 'main-logo.png', alt: 'Quad Logo', class: 'logo' %>
         <h1>Welcome back to Quad</h1>
+        <p class="notice"><%= flash[:notice] %></p>
         <p class="alert"><%= flash[:alert] %></p>
+        <p class="error"><%= flash[:error] %></p>
         <p class="sign-in-text">Sign In</p>
         <%= form_with url: login_path, scope: :user do |form| %>
             <%= form.email_field :email, placeholder: 'Enter your crimson email', autofocus: true, required: true, class: 'text-input' %>

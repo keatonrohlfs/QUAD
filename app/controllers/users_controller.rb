@@ -41,14 +41,14 @@ class UsersController < ApplicationController
             @user.send_confirmation_email!
             redirect_to root_path, notice: "Check your email for confirmation instructions."
           else
-            redirect_to root_path, notice: "Account updated."
+            redirect_to account_settings_path, notice: "Account updated."
           end
         else
-          render :settings, status: :unprocessable_entity
+          render :account_settings, status: :unprocessable_entity
         end
       else
         flash.now[:error] = "Incorrect password"
-        render :settings, status: :unprocessable_entity
+        render :account_settings, status: :unprocessable_entity
       end
     end
 

@@ -16,13 +16,15 @@ Rails.application.routes.draw do
 
   
   get "account", to: "users#profile"
+  put "/account/settings", to: "users#update"
+  get "/account/settings", to: "users#settings"
   delete "account", to: "users#destroy"
 
-  put "settings", to: "users#update"
-  get "settings", to: "users#settings"
+  
+ 
 
   get "/listings", to: "listings#index"
-  get "/listings/new", to: "listings#new"
+  get "/listings/new", to: "listings#new" 
   post "/listings", to: "listings#create"
 
 

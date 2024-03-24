@@ -42,6 +42,10 @@
   <%=@user.last_name%>
   </h1>
 
+  <p class="notice"><%= flash[:notice] %></p>
+  <p class="alert"><%= flash[:alert] %></p>
+  <p class="error"><%= flash[:error] %></p>
+
   <h2>Listings</h2>
   <% @listings.each do |listing| %>
     <%= render partial: 'listings/listing', locals: {listing: listing} %>
@@ -52,6 +56,6 @@
   <div class="add_listing">
     <%= button_to "+ ADD LISTING", listings_new_path, method: :get%>
   </div>
-  <%= link_to "Profile", account_path%>
+  <%= button_to "Profile", account_path, method: :get%>
 </body>
 </html>

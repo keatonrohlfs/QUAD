@@ -1,4 +1,2 @@
 <%= render partial: 'listings/listing', locals: {listing: @listing} %>
-
-<%= link_to 'Edit Listing', edit_listing_path(@listing) %> |
-<%= link_to 'Back to Listings', listings_path %>
+<%= button_to 'Back to Listings', listings_path, method: :get %>
