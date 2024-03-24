@@ -3,6 +3,52 @@
 <head>
     <title>Create New Listing</title>
     <%= stylesheet_link_tag 'forms', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Update sell or rent field to show/hide price fields
+            const sellOrRentSelect = document.querySelector("#listing_sell_or_rent");
+            const listingPriceField = document.querySelector(".listing-price");
+            const rentalPriceField = document.querySelector(".rental-price");
+            function updatePriceFields() {
+                const value = sellOrRentSelect.value;
+                listingPriceField.classList.toggle("hidden", value !== "Sell" && value !== "Sell & Rent");
+                rentalPriceField.classList.toggle("hidden", value !== "Rent" && value !== "Sell & Rent");
+            }
+            sellOrRentSelect.addEventListener("change", updatePriceFields);
+            updatePriceFields(); // Initial update
+
+            // Make style tags selectable with a regular click and limit to 3 selections
+            const styleTagsSelect = document.querySelector("#listing_style_tags");
+            styleTagsSelect.addEventListener("mousedown", function(event) {
+                event.preventDefault();
+                const option = event.target;
+                if (styleTagsSelect.selectedOptions.length < 3 || option.selected) {
+                    option.selected = !option.selected;
+                }
+                return false; // Prevent selection with the mouse
+            });
+
+            // Prevent "Select (whatever group it is)" option from being selected again in all select elements
+            function disableFirstOption(selectElement) {
+                selectElement.addEventListener("change", function() {
+                    const firstOption = selectElement.options[0];
+                    if (selectElement.value !== firstOption.value) {
+                        firstOption.disabled = true;
+                    }
+                });
+            }
+
+            const selectElements = document.querySelectorAll("select");
+            selectElements.forEach(selectElement => {
+                disableFirstOption(selectElement);
+            });
+        });
+    </script>
 </head>
 <body>
   <div class="centered-container">
@@ -20,78 +66,113 @@
           </ul>
         </div>
       <% end %>
-      
-      <!-- Pictures -->
+
+      <!-- Photos -->
       <div class="field">
         <%= form.label :photos, 'Photos (at least 2, front & back)' %>
         <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg' %>
       </div>
-      
+
       <!-- Title -->
       <div class="field">
         <%= form.text_field :title, placeholder: 'Title (e.g., ALL Maxi Pink Formal Dress)', class: 'text-input' %>
       </div>
-      
+
       <!-- Category -->
       <div class="field">
-        <%= form.select :category, ['Select Category', 'Accessories', 'Jeans', 'Skirts', 'Shorts', 'Shoes', 'Jewelry', 'Tops', 'Dresses', 'Swim'], {}, { prompt: 'Select Category' } %>
+        <%= form.select :category, ['Accessories', 'Jeans', 'Skirts', 'Shorts', 'Shoes', 'Jewelry', 'Tops', 'Dresses', 'Swim'], { include_blank: 'Select Category' } %>
       </div>
 
       <!-- Size -->
       <div class="field">
-        <%= form.select :size, ['Select Size', '00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], {}, { prompt: 'Select Size' } %>
+        <%= form.select :size, ['00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], { include_blank: 'Select Size' } %>
       </div>
-      
+
       <!-- Brand -->
       <div class="field">
         <%= form.text_field :brand, placeholder: 'Brand (e.g., Nike)', class: 'text-input' %>
       </div>
-      
+
       <!-- Color -->
       <div class="field">
-        <%= form.select :color, ['Select Color', 'Red', 'Pink', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Gold', 'Silver', 'Black', 'Gray', 'White', 'Cream', 'Brown', 'Tan', 'Floral', 'Multi Color'], {}, { prompt: 'Select Color' } %>
+        <%= form.select :color, ['Select Color', 'Red', 'Pink', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Gold', 'Silver', 'Black', 'Gray', 'White', 'Cream', 'Brown', 'Tan', 'Floral', 'Multi Color'], {}, { id: 'listing_color' } %>
       </div>
-      
+
+
       <!-- New With Tags -->
       <div class="field">
-        <%= form.select :new_with_tags, ['New with Tags?', ['Yes', true], ['No', false]], {}, { prompt: 'New With Tags?' } %>
+        <%= form.select :new_with_tags, [['Yes', true], ['No', false]], { include_blank: 'New With Tags?' } %>
       </div>
-      
+
       <!-- Style Tags -->
       <div class="field">
         <%= form.label :style_tags, 'Style Tags (select up to 3)' %>
         <%= form.select :style_tags, ['Game Day', 'Date Party', 'Formal', 'Night Out', 'Weekend', 'Everyday Athleisure', 'Special Event', 'Vacation', 'Work'], {}, { multiple: true, size: 3 } %>
       </div>
-      
+
       <!-- Sell or Rent -->
       <div class="field">
-        <%= form.select :sell_or_rent, ['Sell or Rent?', 'Sell', 'Rent', 'Sell & Rent'], {}, { prompt: 'Are you selling or renting?' } %>
+        <%= form.select :sell_or_rent, ['Sell', 'Rent', 'Sell & Rent'], { include_blank: 'Are you selling or renting?' } %>
       </div>
-      
+
       <!-- Original Price -->
       <div class="field">
         <%= form.label :original_price %>
-        <%= form.number_field :original_price, step: 0.01, placeholder: 'Original Price' %>
+        <%= form.number_field :original_price, step: 0.01, placeholder: 'Original Price', id: 'original_price', class: 'text-input' %>
       </div>
-      
+
       <!-- Listing Price -->
-      <div class="field">
-        <%= form.label :listing_price, 'Listing Price (if selling)' %>
-        <%= form.number_field :listing_price, step: 0.01, placeholder: 'Listing Price' %>
+      <div class="field listing-price hidden">
+        <%= form.label :listing_price, 'Listing Price' %>
+        <%= form.number_field :listing_price, step: 0.01, placeholder: 'Listing Price', id: 'listing_price', class: 'text-input', data: { suggested: '' } %>
       </div>
       
       <!-- Rental Price -->
-      <div class="field">
-        <%= form.label :rental_price, 'Rental Price (if renting)' %>
-        <%= form.number_field :rental_price, step: 0.01, placeholder: 'Rental Price' %>
-      </div>
-      
+      <div class="field rental-price hidden">
+        <%= form.label :rental_price, 'Rental Price' %>
+        <%= form.number_field :rental_price, step: 0.01, placeholder: 'Rental Price', id: 'rental_price', class: 'text-input', data: { suggested: '' } %>
+      </div>      
+
       <div class="actions">
         <%= form.submit "Next", class: 'primary-button' %>
       </div>
-      
+
     <% end %>
   </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const originalPriceInput = document.querySelector('#original_price');
+    const newWithTagSelect = document.querySelector('#listing_new_with_tags');
+  
+    function updateSuggestedPrices() {
+      const originalPrice = parseFloat(originalPriceInput.value);
+      const newWithTag = newWithTagSelect.value === 'true';
+  
+      let suggestedListingPriceRange;
+      if (newWithTag) {
+        suggestedListingPriceRange = '$' + Math.round(originalPrice * 0.4 * 1000) / 1000 + ' - $' + Math.round(originalPrice * 0.5 * 1000) / 1000;
+      } else {
+        suggestedListingPriceRange = '$' + Math.round(originalPrice * 0.3 * 1000) / 1000 + ' - $' + Math.round(originalPrice * 0.4 * 1000) / 1000;
+      }
+      document.querySelector('#listing_price').placeholder = 'Suggested Price ' + suggestedListingPriceRange;
+  
+      const suggestedRentalPriceRange = '$' + Math.round(originalPrice * 0.2 * 1000) / 1000 + ' - $' + Math.round(originalPrice * 0.3 * 1000) / 1000;
+      document.querySelector('#rental_price').placeholder = 'Suggested Rental Price ' + suggestedRentalPriceRange;
+    }
+  
+    originalPriceInput.addEventListener('input', updateSuggestedPrices);
+    newWithTagSelect.addEventListener('change', updateSuggestedPrices);
+  });
+  
+  // Update sell or rent field to show/hide price fields
+  document.querySelector("#listing_sell_or_rent").addEventListener("change", function() {
+    const value = this.value;
+    document.querySelector(".listing-price").classList.toggle("hidden", value !== "Sell" && value !== "Sell & Rent");
+    document.querySelector(".rental_price").classList.toggle("hidden", value !== "Rent" && value !== "Sell & Rent");
+  });
+  
+  
+  </script>
 </body>
 </html>
-    

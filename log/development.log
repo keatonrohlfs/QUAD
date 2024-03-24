@@ -32301,3 +32301,27 @@ Processing by ListingsController#new as HTML
 Completed 200 OK in 46ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 23010)
 
 
+Started GET "/listings/new" for 192.168.65.1 at 2024-03-24 21:26:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#new as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (Duration: 329.5ms | Allocations: 33604)
+  Rendered layout layouts/application.html.erb (Duration: 331.7ms | Allocations: 34050)
+Completed 200 OK in 579ms (Views: 344.1ms | ActiveRecord: 9.9ms | Allocations: 118866)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-24 21:26:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
