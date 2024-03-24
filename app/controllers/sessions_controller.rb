@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         if @user.unconfirmed?
           redirect_to new_confirmation_path, alert: "Incorrect email or password."
         else
-          after_login_path = session[:user_return_to] || account_path
+          after_login_path = session[:user_return_to] || listings_path
           active_session = login @user
           remember(active_session) if params[:user][:remember_me] == "1"
           redirect_to after_login_path, notice: "Signed in."

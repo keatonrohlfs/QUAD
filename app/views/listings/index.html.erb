@@ -37,7 +37,10 @@
   </style>
 </head>
 <body>
-  <h1>FIRSTNAME LASTNAME</h1>
+  <h1>
+  <%= @user.first_name%> 
+  <%=@user.last_name%>
+  </h1>
   <p># listings</p>
   
   <div class="container">
@@ -50,8 +53,8 @@
   </div>
 
   <div class="add_listing">
-    <%= button_to "+ ADD LISTING", listings_path, method: :get %>
+    <%= button_to "+ ADD LISTING", listings_path%>
   </div>
-  <%= button_to "Log out of all other sessions", destroy_all_active_sessions_path, method: :delete %>
+  <%= link_to "Profile", account_path%>
 </body>
 </html>

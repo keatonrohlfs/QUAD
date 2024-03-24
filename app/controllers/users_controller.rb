@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authenticate_user!, only: [:edit, :destroy, :update]
+    before_action :authenticate_user!, only: [:profile, :settings, :destroy, :update]
     before_action :redirect_if_authenticated, only: [:create, :new]
     
     def create
@@ -18,7 +18,12 @@ class UsersController < ApplicationController
       redirect_to login_path, alert: "Your account has been deleted."
     end
 
-    def edit
+    def profile
+      @user = current_user
+      @active_sessions = @user.active_sessions.order(created_at: :desc)
+    end
+
+    def settings
       @user = current_user
       @active_sessions = @user.active_sessions.order(created_at: :desc)
     end
@@ -39,11 +44,11 @@ class UsersController < ApplicationController
             redirect_to root_path, notice: "Account updated."
           end
         else
-          render :edit, status: :unprocessable_entity
+          render :settings, status: :unprocessable_entity
         end
       else
         flash.now[:error] = "Incorrect password"
-        render :edit, status: :unprocessable_entity
+        render :settings, status: :unprocessable_entity
       end
     end
 

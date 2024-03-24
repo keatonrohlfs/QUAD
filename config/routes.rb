@@ -14,10 +14,14 @@ Rails.application.routes.draw do
   delete "logout", to: "sessions#destroy"
   get "login", to: "sessions#new"
 
-  put "account", to: "users#update"
+  
+  get "account", to: "users#profile"
   delete "account", to: "users#destroy"
 
-  get "account", to: "listings#index"
+  put "settings", to: "users#update"
+  get "settings", to: "users#settings"
+
+  get "listings", to: "listings#index"
   post "listings", to: "listings#create"
   get "listings", to: "listings#new"
 
