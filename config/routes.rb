@@ -21,8 +21,6 @@ Rails.application.routes.draw do
   delete "account", to: "users#destroy"
 
   
- 
-
   get "/listings", to: "listings#index"
   get "/listings/new", to: "listings#new" 
   post "/listings", to: "listings#create"

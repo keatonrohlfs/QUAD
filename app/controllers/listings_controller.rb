@@ -16,12 +16,6 @@ class ListingsController < ApplicationController
       end
     end
   
-    # GET /listings
-    def index
-      @user = current_user
-      @listings = @user.listings
-    end
-  
     # GET /listings/:id
     def show
       @listing = Listing.find(params[:id])
