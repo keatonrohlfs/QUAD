@@ -25,6 +25,10 @@
       background-color: #f0f0f0;
       border: 1px solid #ccc;
       margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     button {
@@ -48,16 +52,19 @@
   <p class="error"><%= flash[:error] %></p>
   
   <%= render @active_sessions %>
-  <%= button_to "settings", account_settings_path, method: :get%>
-  <%= button_to "listings", listings_path, method: :get%>
+  <%= button_to "Settings", account_settings_path, method: :get %>
+  <div class="add_listing">
+    <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+  </div>
 
+  <h2>Your Listings</h2>
+  <div class="container">
+    <% @listings.each do |listing| %>
+      <div class="box">
+        <%= render partial: 'listings/listing', locals: {listing: listing} %>
+      </div>
+    <% end %>
+  </div>
 
 </body>
 </html>
-
-
-
-
-
-
-

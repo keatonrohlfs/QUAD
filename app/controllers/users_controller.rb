@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
     def profile
       @user = current_user
+      @listings = @user.listings || []
       @active_sessions = @user.active_sessions.order(created_at: :desc)
     end
 
