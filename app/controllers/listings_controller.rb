@@ -8,7 +8,7 @@ class ListingsController < ApplicationController
   
     # POST /listings
     def create
-      @listing = current_user.listing.build(listing_params)
+      @listing = current_user.listings.build(listing_params)
       if @listing.save
         redirect_to @listing, notice: 'Listing was successfully created.'
       else
@@ -19,7 +19,7 @@ class ListingsController < ApplicationController
     # GET /listings
     def index
       @user = current_user
-      @active_sessions = @user.active_sessions.order(created_at: :desc)
+      @listings = @user.listings
     end
   
     # GET /listings/:id

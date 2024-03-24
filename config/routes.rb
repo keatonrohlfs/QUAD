@@ -21,9 +21,10 @@ Rails.application.routes.draw do
   put "settings", to: "users#update"
   get "settings", to: "users#settings"
 
-  get "listings", to: "listings#index"
-  post "listings", to: "listings#create"
-  get "listings", to: "listings#new"
+  get "/listings", to: "listings#index"
+  get "/listings/new", to: "listings#new"
+  post "/listings", to: "listings#create"
+
 
   resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
   resources :passwords, only: [:create, :edit, :new, :update], param: :password_reset_token
