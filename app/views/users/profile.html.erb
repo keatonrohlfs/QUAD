@@ -22,13 +22,22 @@
     .box {
       width: 150px;
       height: 150px;
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
+      background-color: #A9A9A9;
       margin: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      flex-direction: column; 
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 1em; /* Adjust the size as needed */
+    }
+  
+    .box h2, .box .listing_price {
+      padding: 5px 0; /* Adds some padding to top and bottom */
     }
 
     button {
