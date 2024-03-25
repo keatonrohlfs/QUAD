@@ -24,7 +24,11 @@ class ListingsController < ApplicationController
     def update
       @listing = Listing.find(params[:id])
       @listing.status = "Verified"
-      render :show
+      if @listing.save
+        redirect_to root_path, notice: 'Listing was successfully verified.'
+      else
+        redirect_to root_path, notice: 'Listing was not able to be verified.'
+      end
     end
   
     private
