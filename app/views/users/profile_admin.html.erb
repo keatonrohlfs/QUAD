@@ -71,6 +71,9 @@
     <% @listings.each do |listing| %>
       <div class="box">
         <%= render partial: 'listings/listing', locals: {listing: listing} %>
+        <% if listing.status == "Unverified"%>
+        <%= button_to "Verify Listings", listing_path(listing.id), method: :put%>
+        <% end %>
       </div>
     <% end %>
   </div>

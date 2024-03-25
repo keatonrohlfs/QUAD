@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.datetime :confirmed_at
-      t.boolean :admin, default: false
+      t.string :role, default: "normal"
       # t.integer :graduation_year
       # t.string :sorority
       # t.string :social_media, null: false

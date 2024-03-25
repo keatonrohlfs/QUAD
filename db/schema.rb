@@ -62,6 +62,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_004536) do
 
   create_table "listings", force: :cascade do |t|
     t.string "title", null: false
+    t.string "status", default: "Unverified"
     t.string "category", null: false
     t.string "size", null: false
     t.string "brand"
@@ -87,7 +88,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_004536) do
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.datetime "confirmed_at", precision: nil
-    t.boolean "admin", default: false
+    t.string "role", default: "normal"
     t.string "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true

@@ -20,6 +20,12 @@ class ListingsController < ApplicationController
     def show
       @listing = Listing.find(params[:id])
     end
+
+    def update
+      @listing = Listing.find(params[:id])
+      @listing.status = "Verified"
+      render :show
+    end
   
     private
   
@@ -31,7 +37,7 @@ class ListingsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def listing_params
       params.require(:listing).permit(
-        :title, :category, :size, :brand, :color, 
+        :title, :category, :size, :brand, :color, :status,
         :new_with_tags, :sell, :rent, :original_price, 
         :listing_price, :rental_price, style_tags: [], photos: []
       )

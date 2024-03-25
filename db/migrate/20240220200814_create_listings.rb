@@ -2,6 +2,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
   def change
     create_table :listings do |t|
       t.string :title, null: false
+      t.string :status,  default: "Unverified"
       t.string :category, null: false
       t.string :size, null: false
       t.string :brand
