@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authenticate_user!, only: [:profile, :settings, :destroy, :update]
+    before_action :authenticate_user!, only: [:profile_admin, :profile_normal, :settings, :destroy, :update]
     before_action :redirect_if_authenticated, only: [:create, :new]
     
     def create
@@ -18,9 +18,17 @@ class UsersController < ApplicationController
       redirect_to login_path, alert: "Your account has been deleted."
     end
 
-    def profile
+    def profile_normal
       @user = current_user
       @listings = @user.listings || []
+    
+      @active_sessions = @user.active_sessions.order(created_at: :desc)
+    end
+
+    def profile_admin
+      @user = current_user
+      @listings = Listing.all
+
       @active_sessions = @user.active_sessions.order(created_at: :desc)
     end
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Normal Profile</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #A9A9A9;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column; 
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 1em; /* Adjust the size as needed */
+    }
+  
+    .box h2, .box .listing_price {
+      padding: 5px 0; /* Adds some padding to top and bottom */
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= @user.username%></h1>
+  <h2>
+  <%= @user.first_name%> 
+  <%=@user.last_name%>
+  </h2>
+
+  <p class="notice"><%= flash[:notice] %></p>
+  <p class="alert"><%= flash[:alert] %></p>
+  <p class="error"><%= flash[:error] %></p>
+  
+  <%= render @active_sessions %>
+  <%= button_to "Settings", account_settings_path, method: :get %>
+  <div class="add_listing">
+    <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+  </div>
+
+  <h2>Your Listings</h2>
+  <div class="container">
+    <% @listings.each do |listing| %>
+      <div class="box">
+        <%= render partial: 'listings/listing', locals: {listing: listing} %>
+      </div>
+    <% end %>
+  </div>
+
+
+</body>
+</html>

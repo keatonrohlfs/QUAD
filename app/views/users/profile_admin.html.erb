@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Profile</title>
+  <title>Admin Profile</title>
   <style>
     body {
       text-align: center;
@@ -66,7 +66,7 @@
     <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
   </div>
 
-  <h2>Your Listings</h2>
+  <h2>All Listings</h2>
   <div class="container">
     <% @listings.each do |listing| %>
       <div class="box">
@@ -74,6 +74,7 @@
       </div>
     <% end %>
   </div>
+
 
 </body>
 </html>

@@ -33939,3 +33939,2695 @@ Processing by UsersController#profile as HTML
 Completed 200 OK in 30ms (Views: 13.7ms | ActiveRecord: 1.9ms | Allocations: 4013)
 
 
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:25:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (1.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.8ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 3.7ms | Allocations: 501)
+  [1m[36mListing Load (2.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:71
+  Rendered listings/_listing_admin.html.erb (Duration: 1.4ms | Allocations: 163)
+  Rendered listings/_listing.html.erb (Duration: 1.2ms | Allocations: 131)
+  Rendered users/profile.html.erb within layouts/application (Duration: 105.2ms | Allocations: 21352)
+  Rendered layout layouts/application.html.erb (Duration: 109.2ms | Allocations: 21937)
+Completed 200 OK in 557ms (Views: 118.7ms | ActiveRecord: 42.6ms | Allocations: 76734)
+
+
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:32:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 1.8ms | Allocations: 501)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 17.7ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4336)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 16.4ms | Allocations: 59078)
+
+
+  
+ActionView::Template::Error (Missing partial profile/_profile_normal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/quad/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/turbo-rails-2.0.1/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actiontext-7.1.3/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actionmailbox-7.1.3/app/views"
+):
+    69:   <% if current_user.admin? %>
+    70:         <%= render partial: 'profile/profile_admin'%>
+    71:         <% else %>
+    72:         <%= render partial: 'profile/profile_normal'%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:35:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 2.0ms | Allocations: 501)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 17.2ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4336)
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 16.3ms | Allocations: 59082)
+
+
+  
+ActionView::Template::Error (Missing partial profile/_profile_normal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/quad/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/turbo-rails-2.0.1/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actiontext-7.1.3/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actionmailbox-7.1.3/app/views"
+):
+    69:   <% if current_user.admin? %>
+    70:         <%= render partial: 'profile/profile_admin'%>
+    71:         <% else %>
+    72:         <%= render partial: "profile/profile_normal"%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:35:24 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (1.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1808)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1942)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 18.5ms | Allocations: 56717)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Normal Profile</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #A9A9A9;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column; 
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 1em; /* Adjust the size as needed */
+    }
+  
+    .box h2, .box .listing_price {
+      padding: 5px 0; /* Adds some padding to top and bottom */
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= @user.username%></h1>
+  <h2>
+  <%= @user.first_name%> 
+  <%=@user.last_name%>
+  </h2>
+
+  <p class="notice"><%= flash[:notice] %></p>
+  <p class="alert"><%= flash[:alert] %></p>
+  <p class="error"><%= flash[:error] %></p>
+  
+  <%= render @active_sessions %>
+  <%= button_to "Settings", account_settings_path, method: :get %>
+  <div class="add_listing">
+    <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+  </div>
+
+  <% if current_user.admin? %>
+        <%= render partial: 'profile/profile_admin'%>
+        <% else %>
+        <%= render partial: "profile/profile_normal", locals: {@listings: @listings}%>
+  <% end %>
+
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Normal Profile</title>
+5:      <style>
+6:        body {
+7:          text-align: center;
+8:          font-family: Arial, sans-serif;
+9:        }
+10:    
+11:        h1 {
+12:          color: blue;
+13:        }
+14:    
+15:        .container {
+16:          display: flex;
+17:          flex-wrap: wrap;
+18:          justify-content: center;
+19:          margin-bottom: 20px;
+20:        }
+21:    
+22:        .box {
+23:          width: 150px;
+24:          height: 150px;
+25:          background-color: #A9A9A9;
+26:          margin: 10px;
+27:          display: flex;
+28:          justify-content: center;
+29:          align-items: center;
+30:          text-align: center;
+31:          flex-direction: column; 
+32:        }
+33:    
+34:        .box h2 {
+35:          margin: 0;
+36:          font-size: 1em; /* Adjust the size as needed */
+37:        }
+38:      
+39:        .box h2, .box .listing_price {
+40:          padding: 5px 0; /* Adds some padding to top and bottom */
+41:        }
+42:    
+43:        button {
+44:          padding: 10px 20px;
+45:          background-color: purple;
+46:          color: white;
+47:          border: none;
+48:          cursor: pointer;
+49:        }
+50:      </style>
+51:    </head>
+52:    <body>
+53:      <h1><%= @user.username%></h1>
+54:      <h2>
+55:      <%= @user.first_name%> 
+56:      <%=@user.last_name%>
+57:      </h2>
+58:    
+59:      <p class="notice"><%= flash[:notice] %></p>
+60:      <p class="alert"><%= flash[:alert] %></p>
+61:      <p class="error"><%= flash[:error] %></p>
+62:      
+63:      <%= render @active_sessions %>
+64:      <%= button_to "Settings", account_settings_path, method: :get %>
+65:      <div class="add_listing">
+66:        <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+67:      </div>
+68:    
+69:      <% if current_user.admin? %>
+70:            <%= render partial: 'profile/profile_admin'%>
+71:            <% else %>
+72:            <%= render partial: "profile/profile_normal", locals: {@listings: @listings}%>
+73:      <% end %>
+74:    
+75:    
+76:    </body>
+77:    </html>
+  
+app/views/users/profile.html.erb:72: syntax error, unexpected ':', expecting =>
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:36:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 2.0ms | Allocations: 501)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 18.1ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4336)
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 15.9ms | Allocations: 59085)
+
+
+  
+ActionView::Template::Error (Missing partial profile/_profile_normal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/quad/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/turbo-rails-2.0.1/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actiontext-7.1.3/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actionmailbox-7.1.3/app/views"
+):
+    69:   <% if current_user.admin? %>
+    70:         <%= render partial: 'profile/profile_admin'%>
+    71:         <% else %>
+    72:         <%= render partial: "profile/profile_normal", locals: {}%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:36:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 0.5ms | Allocations: 139)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2643)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2734)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.6ms | Allocations: 5064)
+
+
+  
+ActionView::Template::Error (Missing partial profile/_profile_normal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/quad/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/turbo-rails-2.0.1/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actiontext-7.1.3/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actionmailbox-7.1.3/app/views"
+):
+    69:   <% if current_user.admin? %>
+    70:         <%= render partial: 'profile/profile_admin'%>
+    71:         <% else %>
+    72:         <%= render partial: "profile/profile_normal", locals: {}%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:37:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.1ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 2.8ms | Allocations: 501)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 24.1ms | Allocations: 4195)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 4312)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 16.0ms | Allocations: 59063)
+
+
+  
+ActionView::Template::Error (Missing partial profile/_profile_normal with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/quad/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/turbo-rails-2.0.1/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actiontext-7.1.3/app/views"
+  * "/usr/local/bundle/ruby/3.2.0/gems/actionmailbox-7.1.3/app/views"
+):
+    69:   <% if current_user.admin? %>
+    70:         <%= render 'profile/profile_admin'%>
+    71:         <% else %>
+    72:         <%= render "profile/profile_normal"%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:39:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1817)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1954)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 16.1ms | Allocations: 56736)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Normal Profile</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #A9A9A9;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column; 
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 1em; /* Adjust the size as needed */
+    }
+  
+    .box h2, .box .listing_price {
+      padding: 5px 0; /* Adds some padding to top and bottom */
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= @user.username%></h1>
+  <h2>
+  <%= @user.first_name%> 
+  <%=@user.last_name%>
+  </h2>
+
+  <p class="notice"><%= flash[:notice] %></p>
+  <p class="alert"><%= flash[:alert] %></p>
+  <p class="error"><%= flash[:error] %></p>
+  
+  <%= render @active_sessions %>
+  <%= button_to "Settings", account_settings_path, method: :get %>
+  <div class="add_listing">
+    <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+  </div>
+
+  <% if current_user.admin? %>
+        <%= render: 'profile/profile_admin'%>
+        <% else %>
+        <%= render: "profile/profile_normal"%>
+  <% end %>
+
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Normal Profile</title>
+5:      <style>
+6:        body {
+7:          text-align: center;
+8:          font-family: Arial, sans-serif;
+9:        }
+10:    
+11:        h1 {
+12:          color: blue;
+13:        }
+14:    
+15:        .container {
+16:          display: flex;
+17:          flex-wrap: wrap;
+18:          justify-content: center;
+19:          margin-bottom: 20px;
+20:        }
+21:    
+22:        .box {
+23:          width: 150px;
+24:          height: 150px;
+25:          background-color: #A9A9A9;
+26:          margin: 10px;
+27:          display: flex;
+28:          justify-content: center;
+29:          align-items: center;
+30:          text-align: center;
+31:          flex-direction: column; 
+32:        }
+33:    
+34:        .box h2 {
+35:          margin: 0;
+36:          font-size: 1em; /* Adjust the size as needed */
+37:        }
+38:      
+39:        .box h2, .box .listing_price {
+40:          padding: 5px 0; /* Adds some padding to top and bottom */
+41:        }
+42:    
+43:        button {
+44:          padding: 10px 20px;
+45:          background-color: purple;
+46:          color: white;
+47:          border: none;
+48:          cursor: pointer;
+49:        }
+50:      </style>
+51:    </head>
+52:    <body>
+53:      <h1><%= @user.username%></h1>
+54:      <h2>
+55:      <%= @user.first_name%> 
+56:      <%=@user.last_name%>
+57:      </h2>
+58:    
+59:      <p class="notice"><%= flash[:notice] %></p>
+60:      <p class="alert"><%= flash[:alert] %></p>
+61:      <p class="error"><%= flash[:error] %></p>
+62:      
+63:      <%= render @active_sessions %>
+64:      <%= button_to "Settings", account_settings_path, method: :get %>
+65:      <div class="add_listing">
+66:        <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+67:      </div>
+68:    
+69:      <% if current_user.admin? %>
+70:            <%= render: 'profile/profile_admin'%>
+71:            <% else %>
+72:            <%= render: "profile/profile_normal"%>
+73:      <% end %>
+74:    
+75:    
+76:    </body>
+77:    </html>
+  
+app/views/users/profile.html.erb:70: syntax error, unexpected label
+app/views/users/profile.html.erb:72: syntax error, unexpected label
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:40:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1817)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1954)
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 16.5ms | Allocations: 56736)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Normal Profile</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #A9A9A9;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column; 
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 1em; /* Adjust the size as needed */
+    }
+  
+    .box h2, .box .listing_price {
+      padding: 5px 0; /* Adds some padding to top and bottom */
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= @user.username%></h1>
+  <h2>
+  <%= @user.first_name%> 
+  <%=@user.last_name%>
+  </h2>
+
+  <p class="notice"><%= flash[:notice] %></p>
+  <p class="alert"><%= flash[:alert] %></p>
+  <p class="error"><%= flash[:error] %></p>
+  
+  <%= render @active_sessions %>
+  <%= button_to "Settings", account_settings_path, method: :get %>
+  <div class="add_listing">
+    <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+  </div>
+
+  <% if current_user.admin? %>
+        <%= render: "profile/profile_admin"%>
+        <% else %>
+        <%= render: "profile/profile_normal"%>
+  <% end %>
+
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Normal Profile</title>
+5:      <style>
+6:        body {
+7:          text-align: center;
+8:          font-family: Arial, sans-serif;
+9:        }
+10:    
+11:        h1 {
+12:          color: blue;
+13:        }
+14:    
+15:        .container {
+16:          display: flex;
+17:          flex-wrap: wrap;
+18:          justify-content: center;
+19:          margin-bottom: 20px;
+20:        }
+21:    
+22:        .box {
+23:          width: 150px;
+24:          height: 150px;
+25:          background-color: #A9A9A9;
+26:          margin: 10px;
+27:          display: flex;
+28:          justify-content: center;
+29:          align-items: center;
+30:          text-align: center;
+31:          flex-direction: column; 
+32:        }
+33:    
+34:        .box h2 {
+35:          margin: 0;
+36:          font-size: 1em; /* Adjust the size as needed */
+37:        }
+38:      
+39:        .box h2, .box .listing_price {
+40:          padding: 5px 0; /* Adds some padding to top and bottom */
+41:        }
+42:    
+43:        button {
+44:          padding: 10px 20px;
+45:          background-color: purple;
+46:          color: white;
+47:          border: none;
+48:          cursor: pointer;
+49:        }
+50:      </style>
+51:    </head>
+52:    <body>
+53:      <h1><%= @user.username%></h1>
+54:      <h2>
+55:      <%= @user.first_name%> 
+56:      <%=@user.last_name%>
+57:      </h2>
+58:    
+59:      <p class="notice"><%= flash[:notice] %></p>
+60:      <p class="alert"><%= flash[:alert] %></p>
+61:      <p class="error"><%= flash[:error] %></p>
+62:      
+63:      <%= render @active_sessions %>
+64:      <%= button_to "Settings", account_settings_path, method: :get %>
+65:      <div class="add_listing">
+66:        <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+67:      </div>
+68:    
+69:      <% if current_user.admin? %>
+70:            <%= render: "profile/profile_admin"%>
+71:            <% else %>
+72:            <%= render: "profile/profile_normal"%>
+73:      <% end %>
+74:    
+75:    
+76:    </body>
+77:    </html>
+  
+app/views/users/profile.html.erb:70: syntax error, unexpected label
+app/views/users/profile.html.erb:72: syntax error, unexpected label
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:41:14 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 2.0ms | Allocations: 501)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 22.1ms | Allocations: 4209)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 4326)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 16.4ms | Allocations: 59076)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    69:   <% if current_user.admin? %>
+    70:         <%= render @profile_admin%>
+    71:         <% else %>
+    72:         <%= render @profile_normal%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:41:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 2.1ms | Allocations: 501)
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendered users/profile.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4139)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 4256)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 16.9ms | Allocations: 59000)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    69:   <% if current_user.admin? %>
+    70:         <%= render @profile_admin%>
+    71:         <% else %>
+    72:         <%= render partial: @profile_normal%>
+    73:   <% end %>
+    74: 
+    75: 
+  
+app/views/users/profile.html.erb:72
+Started GET "/account" for 192.168.65.1 at 2024-03-25 02:58:52 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/account" for 192.168.65.1 at 2024-03-25 03:01:52 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/account" for 192.168.65.1 at 2024-03-25 03:01:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/account" for 192.168.65.1 at 2024-03-25 03:03:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/account"):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:03:15 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:04:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:04:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:05:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:06:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:06:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:07:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:07:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/sign_up" for 192.168.65.1 at 2024-03-25 03:09:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  [1m[36mActiveSession Load (1.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_if_authenticated rendered or redirected
+Completed 302 Found in 310ms (ActiveRecord: 27.4ms | Allocations: 41160)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:09:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-25 03:09:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started GET "/signin" for 192.168.65.1 at 2024-03-25 03:09:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/login" for 192.168.65.1 at 2024-03-25 03:09:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_if_authenticated rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms | Allocations: 1491)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:09:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PassthroughController):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:10:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 14.4ms | Allocations: 42383)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:3:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:11:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 214ms (ActiveRecord: 15.9ms | Allocations: 43027)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:11:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'profile_profile' could not be found for UsersController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:11:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'profile_profile' could not be found for UsersController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:11:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'profile_profile' could not be found for UsersController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:11:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms | Allocations: 2042)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:11:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'profile_profile' could not be found for UsersController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:12:05 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'profile_profile' could not be found for UsersController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:12:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'profile_profile' could not be found for UsersController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:12:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 224ms (ActiveRecord: 17.1ms | Allocations: 43026)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:12:14 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms | Allocations: 2049)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:12:14 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_admin.html.erb within layouts/application
+  Rendered users/profile_admin.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1398)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1501)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms | Allocations: 3514)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    50:   </style>
+    51: </head>
+    52: <body>
+    53:   <h1><%= @user.username%></h1>
+    54:   <h2>
+    55:   <%= @user.first_name%> 
+    56:   <%=@user.last_name%>
+  
+app/views/users/profile_admin.html.erb:53
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:13:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_admin.html.erb within layouts/application
+  Rendered users/profile_admin.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 1889)
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 16.7ms | Allocations: 45487)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    50:   </style>
+    51: </head>
+    52: <body>
+    53:   <h1><%= @user.username%></h1>
+    54:   <h2>
+    55:   <%= @user.first_name%> 
+    56:   <%=@user.last_name%>
+  
+app/views/users/profile_admin.html.erb:53
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:13:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_admin.html.erb within layouts/application
+  Rendered users/profile_admin.html.erb within layouts/application (Duration: 1.1ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1084)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms | Allocations: 2490)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    50:   </style>
+    51: </head>
+    52: <body>
+    53:   <h1><%= @user.username%></h1>
+    54:   <h2>
+    55:   <%= @user.first_name%> 
+    56:   <%=@user.last_name%>
+  
+app/views/users/profile_admin.html.erb:53
+Started GET "/account/settings" for 192.168.65.1 at 2024-03-25 03:13:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#settings as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/settings.html.erb within layouts/application
+  Rendered shared/_form_errors.html.erb (Duration: 1.8ms | Allocations: 193)
+  Rendered users/settings.html.erb within layouts/application (Duration: 22.5ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 2936)
+Completed 200 OK in 61ms (Views: 29.9ms | ActiveRecord: 1.8ms | Allocations: 6551)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:13:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.8ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 22ms (ActiveRecord: 1.7ms | Allocations: 2221)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:13:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1357)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1448)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.9ms | Allocations: 2831)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    50:   </style>
+    51: </head>
+    52: <body>
+    53:   <h1><%= @user.username%></h1>
+    54:   <h2>
+    55:   <%= @user.first_name%> 
+    56:   <%=@user.last_name%>
+  
+app/views/users/profile_normal.html.erb:53
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:15:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 404 Not Found in 229ms (ActiveRecord: 13.3ms | Allocations: 44274)
+
+
+  
+AbstractController::ActionNotFound (The profile action could not be found for the :authenticate_user!
+callback on UsersController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.1) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.1) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:16:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/quad/app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting ']'
+...rofile_admin, :profile_normal :settings, :destroy, :update]
+...                              ^
+):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting ']'
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:16:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 1.9ms | Allocations: 501)
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 1.1ms | Allocations: 166)
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 68.7ms | Allocations: 21047)
+  Rendered layout layouts/application.html.erb (Duration: 71.9ms | Allocations: 21632)
+Completed 200 OK in 337ms (Views: 78.3ms | ActiveRecord: 17.5ms | Allocations: 76412)
+
+
+Started GET "/account/settings" for 192.168.65.1 at 2024-03-25 03:16:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#settings as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/settings.html.erb within layouts/application
+  Rendered shared/_form_errors.html.erb (Duration: 1.1ms | Allocations: 192)
+  Rendered users/settings.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2162)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2395)
+Completed 200 OK in 33ms (Views: 18.2ms | ActiveRecord: 0.8ms | Allocations: 4770)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:16:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms | Allocations: 2238)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:16:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 0.7ms | Allocations: 139)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1453)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 1686)
+Completed 200 OK in 27ms (Views: 13.5ms | ActiveRecord: 1.8ms | Allocations: 3997)
+
+
+Started DELETE "/active_sessions/3" for 192.168.65.1 at 2024-03-25 03:16:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 AND "active_sessions"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/active_sessions_controller.rb:5:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Destroy (4.2ms)[0m  [1m[31mDELETE FROM "active_sessions" WHERE "active_sessions"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 7.3ms | Allocations: 4741)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:16:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 813)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:17:12 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 772)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:17:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 770)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:18:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 3124)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:18:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 771)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:18:14 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 771)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:18:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 771)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 3124)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:31 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 771)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 771)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 771)
+
+
+  
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  
+app/controllers/passthrough_controller.rb:4:in `index'
+Started GET "/login" for 192.168.65.1 at 2024-03-25 03:20:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 362.0ms | Allocations: 25862)
+  Rendered layout layouts/application.html.erb (Duration: 370.3ms | Allocations: 26280)
+Completed 200 OK in 391ms (Views: 383.3ms | ActiveRecord: 0.0ms | Allocations: 27695)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-25 03:20:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/login" for 192.168.65.1 at 2024-03-25 03:20:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jsmith@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jsmith@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (7.1ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-25 03:20:40.532307"], ["updated_at", "2024-03-25 03:20:40.532307"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15"], ["ip_address", "192.168.65.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 467ms (ActiveRecord: 24.0ms | Allocations: 42853)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.1ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 16ms (ActiveRecord: 0.9ms | Allocations: 3448)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:20:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 1.9ms | Allocations: 312)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 1.2ms | Allocations: 163)
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 75.4ms | Allocations: 20588)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 20825)
+Completed 200 OK in 133ms (Views: 78.7ms | ActiveRecord: 4.6ms | Allocations: 31046)
+
+
+Started DELETE "/active_sessions/4" for 192.168.65.1 at 2024-03-25 03:20:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 AND "active_sessions"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/active_sessions_controller.rb:5:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Destroy (2.6ms)[0m  [1m[31mDELETE FROM "active_sessions" WHERE "active_sessions"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Load (0.8ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 31ms (ActiveRecord: 5.8ms | Allocations: 4585)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-03-25 03:20:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1415)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 1908)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-25 03:20:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/login" for 192.168.65.1 at 2024-03-25 03:20:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jsmith@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jsmith@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (4.5ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-25 03:20:45.598002"], ["updated_at", "2024-03-25 03:20:45.598002"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15"], ["ip_address", "192.168.65.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 300ms (ActiveRecord: 6.4ms | Allocations: 2808)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms | Allocations: 2017)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:20:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 0.8ms | Allocations: 142)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1456)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 1689)
+Completed 200 OK in 27ms (Views: 13.5ms | ActiveRecord: 1.7ms | Allocations: 4009)
+
+
+Started GET "/account/settings" for 192.168.65.1 at 2024-03-25 03:20:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#settings as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/settings.html.erb within layouts/application
+  Rendered shared/_form_errors.html.erb (Duration: 1.0ms | Allocations: 187)
+  Rendered users/settings.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1483)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1716)
+Completed 200 OK in 25ms (Views: 10.1ms | ActiveRecord: 0.8ms | Allocations: 4066)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 16ms (ActiveRecord: 0.6ms | Allocations: 2032)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:20:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.7ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 0.7ms | Allocations: 139)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1452)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 1685)
+Completed 200 OK in 27ms (Views: 13.4ms | ActiveRecord: 1.9ms | Allocations: 4021)
+
+
+Started DELETE "/active_sessions/5" for 192.168.65.1 at 2024-03-25 03:20:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 AND "active_sessions"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/active_sessions_controller.rb:5:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Destroy (2.7ms)[0m  [1m[31mDELETE FROM "active_sessions" WHERE "active_sessions"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 30ms (ActiveRecord: 5.8ms | Allocations: 4269)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-03-25 03:20:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1415)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 1926)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-25 03:20:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/login" for 192.168.65.1 at 2024-03-25 03:20:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jsmith@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jsmith@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (4.5ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-25 03:20:56.475060"], ["updated_at", "2024-03-25 03:20:56.475060"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15"], ["ip_address", "192.168.65.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 312ms (ActiveRecord: 6.5ms | Allocations: 2797)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:20:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/normal
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms | Allocations: 1995)
+
+
+Started GET "/account/normal" for 192.168.65.1 at 2024-03-25 03:20:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_normal as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_normal.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 0.7ms | Allocations: 142)
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_normal.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered users/profile_normal.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1456)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 1689)
+Completed 200 OK in 27ms (Views: 12.7ms | ActiveRecord: 1.8ms | Allocations: 4006)
+
+
+Started DELETE "/active_sessions/6" for 192.168.65.1 at 2024-03-25 03:20:59 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 AND "active_sessions"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/active_sessions_controller.rb:5:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Destroy (3.3ms)[0m  [1m[31mDELETE FROM "active_sessions" WHERE "active_sessions"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/active_sessions_controller.rb:6:in `destroy'
+  [1m[36mActiveSession Load (0.7ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 30ms (ActiveRecord: 7.2ms | Allocations: 4278)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-03-25 03:20:59 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1415)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 1901)
+
+
+Started GET "/path-to-your-logo.png" for 192.168.65.1 at 2024-03-25 03:20:59 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path-to-your-logo.png"):
+  
+Started POST "/login" for 192.168.65.1 at 2024-03-25 03:21:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jsmith@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jsmith@crimson.ua.edu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:76:in `authenticate_by'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mActiveSession Create (4.5ms)[0m  [1m[32mINSERT INTO "active_sessions" ("user_id", "created_at", "updated_at", "user_agent", "ip_address", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2024-03-25 03:21:30.761248"], ["updated_at", "2024-03-25 03:21:30.761248"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15"], ["ip_address", "192.168.65.1"], ["remember_token", "[FILTERED]"]]
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/authentication.rb:12:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 519ms (ActiveRecord: 22.1ms | Allocations: 45391)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:21:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.1ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 22ms (ActiveRecord: 1.3ms | Allocations: 3477)
+
+
+Started POST "/login" for 192.168.65.1 at 2024-03-25 03:21:31 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jsmith@crimson.ua.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 752)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.1.3) lib/action_controller/metal/request_forgery_protection.rb:293:in `handle_unverified_request'
+actionpack (7.1.3) lib/action_controller/metal/request_forgery_protection.rb:388:in `handle_unverified_request'
+actionpack (7.1.3) lib/action_controller/metal/request_forgery_protection.rb:377:in `verify_authenticity_token'
+activesupport (7.1.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/login" for 192.168.65.1 at 2024-03-25 03:21:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_if_authenticated rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms | Allocations: 1339)
+
+
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:21:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms | Allocations: 1999)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:21:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms | Allocations: 2493)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:21:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms | Allocations: 2026)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:21:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.2ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms | Allocations: 2367)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/root" for 192.168.65.1 at 2024-03-25 03:21:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:21:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms | Allocations: 2016)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:21:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms | Allocations: 2372)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:21:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms | Allocations: 2034)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:21:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.1ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms | Allocations: 2357)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:21:59 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms | Allocations: 2357)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/" for 192.168.65.1 at 2024-03-25 03:22:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PassthroughController#index as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Redirected to http://localhost:3000/account/admin
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms | Allocations: 2007)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:22:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms | Allocations: 2378)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:23:24 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 14.7ms | Allocations: 43231)
+
+
+  
+NameError (uninitialized constant UsersController::Listings):
+  
+app/controllers/users_controller.rb:30:in `profile_admin'
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:25:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_admin.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_admin.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 1.8ms | Allocations: 511)
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/users/profile_admin.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 1.0ms | Allocations: 166)
+  Rendered users/profile_admin.html.erb within layouts/application (Duration: 66.7ms | Allocations: 19632)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 20217)
+Completed 200 OK in 335ms (Views: 72.8ms | ActiveRecord: 18.3ms | Allocations: 74571)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:26:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.6ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_admin.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.5ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_admin.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 2.2ms | Allocations: 501)
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/users/profile_admin.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 1.3ms | Allocations: 166)
+  Rendered users/profile_admin.html.erb within layouts/application (Duration: 70.3ms | Allocations: 19620)
+  Rendered layout layouts/application.html.erb (Duration: 73.7ms | Allocations: 20205)
+Completed 200 OK in 352ms (Views: 79.0ms | ActiveRecord: 18.3ms | Allocations: 74561)
+
+
+Started GET "/account/admin" for 192.168.65.1 at 2024-03-25 03:26:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#profile_admin as HTML
+  [1m[36mActiveSession Load (0.3ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE ActiveSession Load (0.0ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:50:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile_admin.html.erb within layouts/application
+  [1m[36mActiveSession Load (0.4ms)[0m  [1m[34mSELECT "active_sessions".* FROM "active_sessions" WHERE "active_sessions"."user_id" = $1 ORDER BY "active_sessions"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/users/profile_admin.html.erb:63
+  Rendered collection of active_sessions/_active_session.html.erb [1 times] (Duration: 0.6ms | Allocations: 139)
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/users/profile_admin.html.erb:71
+  Rendered listings/_listing.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered users/profile_admin.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1323)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1556)
+Completed 200 OK in 24ms (Views: 10.9ms | ActiveRecord: 1.8ms | Allocations: 3877)
+
+
