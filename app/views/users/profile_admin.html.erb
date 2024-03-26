@@ -5,12 +5,20 @@
   <title>Admin Profile</title>
   <style>
     body {
-      text-align: center;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      padding-top: 60px;
     }
 
     h1 {
       color: blue;
+    }
+
+    .listing-header{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.5em;
     }
 
     .container {
@@ -18,6 +26,40 @@
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 20px;
+    }
+
+    .header {
+      position: absolute; 
+      top: 0; 
+      left: 0;
+      right: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header .username {
+      font-size: 1.5em;
+      margin: 0;
+      color: black;
+      font-weight: Normal;
+    }
+
+    .header .left-section {
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start;
+    }
+    .header .fullName {
+      font-size: 1.5em;
+      margin: 0;
+      color: black;
+      font-weight: Normal;
+    }
+    .header .right-section {
+      display: flex;
+      justify-content: flex-end;
     }
 
     .box {
@@ -51,23 +93,26 @@
   </style>
 </head>
 <body>
-  <h1><%= @user.username%></h1>
-  <h2>
+  <div class="header">
+  <div class="left-section">
+  <h1 class="username">Username: <%= @user.username%> </h1>
+  <h2 class="fullName"> Name:
   <%= @user.first_name%> 
-  <%=@user.last_name%>
+  <%= @user.last_name%>
   </h2>
+  </div>
+  <div class="right-section">
+  <%= button_to "Settings", account_settings_path, method: :get %>
+  <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
+  <%= button_to "Sign Out", logout_path, method: :delete %>
+  </div>
+  </div>
 
   <p class="notice"><%= flash[:notice] %></p>
   <p class="alert"><%= flash[:alert] %></p>
   <p class="error"><%= flash[:error] %></p>
-  
-  <%= render @active_sessions %>
-  <%= button_to "Settings", account_settings_path, method: :get %>
-  <div class="add_listing">
-    <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
-  </div>
 
-  <h2>All Listings</h2>
+  <h2 class:="listing-header">All Listings</h2>
   <div class="container">
     <% @listings.each do |listing| %>
       <div class="box">
