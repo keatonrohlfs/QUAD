@@ -1,3 +1,18 @@
+@font-face {
+   font-family: 'Americana';
+   src: url('/assets/AmericanaFontRegular.otf')
+}
+
+@font-face {
+   font-family: 'Sofia Pro';
+   src: url('/assets/SofiaProRegular.ttf')
+}
+
+@font-face {
+    font-family: 'Sofia Pro Light';
+    src: url('/assets/SofiaProLight.ttf')
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -32,6 +47,11 @@ body {
 h1 {
     color: #000;
     margin-bottom: 10px;
+    font-family: Americana
+}
+
+p {
+    font-family: Sofia Pro
 }
 
 .sign-in-text {
@@ -45,6 +65,7 @@ h1 {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-family: Sofia Pro Light;
 }
 
 .primary-button {
@@ -56,21 +77,12 @@ h1 {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-family: Sofia Pro;
     transition: background-color 0.3s;
 }
 
 .primary-button:hover {
     background-color: #e6006c;
-}
-
-.signup-link {
-    margin-top: 20px;
-}
-
-.signup-link a {
-    color: #ff017d;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 select {
@@ -82,4 +94,30 @@ select {
     border-radius: 0.25rem;
     color: #000;
     cursor: pointer;
+}
+
+.label {
+    font-family: Sofia Pro Light;
+}
+
+.parent {
+  text-align: center;
+  font-family: Sofia Pro Light;
+  margin-top: 10px;
+}
+.child {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  vertical-align: middle;
+}
+
+.child a {
+    color: #ffd9ea;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Sofia Pro;
+}
+
+.child a:hover {
+    color: #ff017d;
 }

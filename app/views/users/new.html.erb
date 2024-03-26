@@ -7,8 +7,8 @@
 <body>
     <div class="centered-container">
         <%= image_tag 'main-logo.png', alt: 'Quad Logo', class: 'logo' %>
-        <h2>Create Account</h2>
-
+        <h1>Create Account</h2>
+        <br>
         <%= form_with model: @user, url:sign_up_path do |form| %>
             <%= render partial: "shared/form_errors", locals: { object: form.object } %>
             <%= form.text_field :first_name, placeholder: 'First name', id: :user_first_name, autofocus: true, required: true, class: 'text-input' %>
