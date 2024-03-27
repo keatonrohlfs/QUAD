@@ -1,44 +1,114 @@
+@font-face {
+   font-family: 'Sofia Pro';
+   src: url('/assets/SofiaProRegular.ttf')
+}
+
+@font-face {
+    font-family: 'Sofia Pro Light';
+    src: url('/assets/SofiaProLight.ttf')
+}
+
 body {
   background: #f4f4f4;
 }
 
+h1 {
+  color: #000;
+  font-family: Sofia Pro;
+  font-size: 2em;
+}
+
+.header {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: #fff;
+  border-bottom: 2px solid #ffd9ea;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  display: inline-block;
+}
+
+.user-name {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
 .dropdown {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 20px;
   display: inline-block;
 }
 
 .dropdown-toggle {
-  background-color: #f1f1f1;
-  color: #333;
+  background-color: transparent;
   padding: 10px;
   border: none;
   cursor: pointer;
 }
 
+.dropdown-toggle img {
+  position: relative;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  opacity: 100%;
+  transition: opacity 0.2s;
+}
+
+.dropdown:hover .dropdown-toggle img {
+  opacity: 0%;
+}
+
 .dropdown-menu {
-  display: none;
+  display: block;
   position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 0;
+  right: -300%;
+  opacity: 0%;
+  background-color: transparent;
+  min-width: 120px;
   padding: 12px 16px;
   z-index: 1;
+  transition: right 0.3s, opacity 0.3s;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  right: 0;
+  opacity: 100%;
+}
+
+.dropdown:hover .dropdown-toggle img {
+  opacity: 0%;
 }
 
 .dropdown-item {
-  color: #333;
+  font-family: Sofia Pro Light;
+  background-color: transparent;
+  color: #000;
   text-decoration: none;
   display: block;
   padding: 5px 0;
+  float: right;
+  transition: color 0.3s;
 }
 
 .dropdown-item:hover {
-  color: #000;
+  color: #e6006c;
 }
