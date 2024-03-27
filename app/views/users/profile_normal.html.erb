@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Normal Profile</title>
+  <title>User Profile</title>
+  <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -79,8 +80,8 @@
 
     button {
       padding: 10px 20px;
-      background-color: purple;
-      color: white;
+      background-color: white;
+      color: black;
       border: none;
       cursor: pointer;
     }
@@ -95,10 +96,16 @@
   <%= @user.last_name%>
   </h2>
   </div>
-  <div class="right-section">
-  <%= button_to "Settings", account_settings_path, method: :get %>
-  <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
-  <%= button_to "Sign Out", logout_path, method: :delete %>
+  <div class="dropdown">
+    <button class="dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Menu
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+      <%= button_to 'Add Listing', listings_new_path, method: :get, class: 'dropdown-item' %>
+      <%= button_to 'Account Settings', account_settings_path, method: :get, class: 'dropdown-item' %>
+      <%= button_to 'Sign Out', logout_path, method: :delete, class: 'dropdown-item' %>
+    </div>
+  </div> 
   </div>
   </div>
 
