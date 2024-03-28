@@ -68,11 +68,8 @@
     </div> 
   </div>
 
-
-  <p class="notice"><%= flash[:notice] %></p>
   <p class="alert"><%= flash[:alert] %></p>
   <p class="error"><%= flash[:error] %></p>
-  
 
   <h2 class="listing-header">Your Listings</h2> 
   <div class="container">
@@ -83,6 +80,7 @@
     <% end %>
   </div>
 
+  <%= render 'shared/flashes' %>
 
 </body>
 </html>

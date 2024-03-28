@@ -6,6 +6,11 @@ class ListingsController < ApplicationController
       @listing = Listing.new
     end
   
+    def clear_flash
+      flash.discard # Or flash.clear to remove all flash values
+      redirect_back(fallback_location: root_path)
+    end
+
     # POST /listings
     def create
       @listing = current_user.listings.build(listing_params)

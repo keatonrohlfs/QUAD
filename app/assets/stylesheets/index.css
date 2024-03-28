@@ -51,7 +51,7 @@ h1 {
 
 .dropdown {
   position: absolute;
-  top: 5px;
+  top: 0px;
   right: 20px;
   display: inline-block;
 }
@@ -65,7 +65,7 @@ h1 {
 
 .dropdown-toggle img {
   position: relative;
-  top: 20px;
+  top: 25px;
   width: 30px;
   height: 30px;
   opacity: 100%;
@@ -111,4 +111,8 @@ h1 {
 
 .dropdown-item:hover {
   color: #e6006c;
+}
+
+::selection {
+  background: #ffd9ea;
 }

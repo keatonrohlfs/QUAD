@@ -16,17 +16,16 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/login", to: "sessions#new"
 
-  
+  get '/clear_flash', to: 'application#clear_flash'
+
   get "/account/admin", to: "users#profile_admin"
   get "/account/normal", to: "users#profile_normal"
   put "/account/settings", to: "users#update"
   get "/account/settings", to: "users#settings"
   delete "/account", to: "users#destroy"
 
-
   get "/listings/new", to: "listings#new" 
   post "/listings", to: "listings#create"
-
 
   resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
   resources :passwords, only: [:create, :edit, :new, :update], param: :password_reset_token

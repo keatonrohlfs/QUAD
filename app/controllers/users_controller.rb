@@ -12,6 +12,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def clear_flash
+      flash.discard # Or flash.clear to remove all flash values
+      redirect_back(fallback_location: root_path)
+    end
+
     def destroy
       current_user.destroy
       reset_session

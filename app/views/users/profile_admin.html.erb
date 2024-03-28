@@ -3,63 +3,18 @@
 <html>
 <head>
   <title>Admin Profile</title>
+  <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      padding-top: 60px;
-    }
-
-    h1 {
-      color: blue;
-    }
-
     .listing-header{
       text-align: center;
       margin-top: 20px;
       font-size: 1.5em;
     }
-
     .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 20px;
-    }
-
-    .header {
-      position: absolute; 
-      top: 0; 
-      left: 0;
-      right: 0;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .header .username {
-      font-size: 1.5em;
-      margin: 0;
-      color: black;
-      font-weight: Normal;
-    }
-
-    .header .left-section {
-      display: flex;
-      flex-direction: column; 
-      align-items: flex-start;
-    }
-    .header .fullName {
-      font-size: 1.5em;
-      margin: 0;
-      color: black;
-      font-weight: Normal;
-    }
-    .header .right-section {
-      display: flex;
-      justify-content: flex-end;
     }
 
     .box {
@@ -85,8 +40,7 @@
 
     button {
       padding: 10px 20px;
-      background-color: purple;
-      color: white;
+      color: black;
       border: none;
       cursor: pointer;
     }
@@ -94,18 +48,25 @@
 </head>
 <body>
   <div class="header">
-  <div class="left-section">
-  <h1 class="username">Username: <%= @user.username%> </h1>
-  <h2 class="fullName"> Name:
-  <%= @user.first_name%> 
-  <%= @user.last_name%>
-  </h2>
-  </div>
-  <div class="right-section">
-  <%= button_to "Settings", account_settings_path, method: :get %>
-  <%= button_to "+ ADD LISTING", listings_new_path, method: :get %>
-  <%= button_to "Sign Out", logout_path, method: :delete %>
-  </div>
+    <%= image_tag 'main-logo.png', alt: 'Quad Logo', class: 'logo' %>
+
+    <div class="user-name">
+      <h1>
+        <%= @user.first_name.capitalize %> 
+        <%= @user.last_name.capitalize %>
+      </h1>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= image_tag 'menu-icon.png', alt: 'Menu' %>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+        <%= button_to 'Create New Listing', listings_new_path, method: :get, class: 'dropdown-item' %>
+        <%= button_to 'Account Settings', account_settings_path, method: :get, class: 'dropdown-item' %>
+        <%= button_to 'Sign Out', logout_path, method: :delete, class: 'dropdown-item' %>
+      </div>
+    </div> 
   </div>
 
   <p class="notice"><%= flash[:notice] %></p>

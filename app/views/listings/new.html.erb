@@ -53,7 +53,7 @@
 <body>
   <div class="centered-container">
     <%= image_tag 'main-logo.png', alt: 'Quad Logo', class: 'logo' %>
-    <h2>Create New Listing</h2>
+    <h1>Create New Listing</h1>
 
     <%= form_with model: @listing, local: true, html: { class: 'form-container' } do |form| %>
       <% if @listing.errors.any? %>
@@ -80,12 +80,12 @@
 
       <!-- Category -->
       <div class="field">
-        <%= form.select :category, ['Accessories', 'Jeans', 'Skirts', 'Shorts', 'Shoes', 'Jewelry', 'Tops', 'Dresses', 'Swim'], { include_blank: 'Select Category' } %>
+        <%= form.select :category, ['Accessories', 'Jeans', 'Skirts', 'Shorts', 'Shoes', 'Jewelry', 'Tops', 'Dresses', 'Swim'], { prompt: 'Select Category', selected: '', disabled: '' } %>
       </div>
 
       <!-- Size -->
       <div class="field">
-        <%= form.select :size, ['00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], { include_blank: 'Select Size' } %>
+        <%= form.select :size, ['00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], { prompt: 'Select Size', selected: '', disabled: '' } %>
       </div>
 
       <!-- Brand -->
@@ -95,14 +95,13 @@
 
       <!-- Color -->
       <div class="field">
-        <%= form.select :color, ['Select Color', 'Red', 'Pink', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Gold', 'Silver', 'Black', 'Gray', 'White', 'Cream', 'Brown', 'Tan', 'Floral', 'Multi Color'], {}, { id: 'listing_color' } %>
+        <%= form.select :color, ['Red', 'Pink', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Gold', 'Silver', 'Black', 'Gray', 'White', 'Cream', 'Brown', 'Tan', 'Floral', 'Multi Color'], { prompt: 'Select Color', selected: '', disabled: '' }, { id: 'listing_color' } %>
       </div>
-
 
       <!-- New With Tags -->
       <div class="field">
-        <%= form.select :new_with_tags, [['Yes', true], ['No', false]], { include_blank: 'New With Tags?' } %>
-      </div>
+        <%= form.select :new_with_tags, [['Yes', true], ['No', false]], { prompt: 'New With Tags?', selected: '', disabled: '' } %>
+      </div> 
 
       <!-- Style Tags -->
       <div class="field">
@@ -112,24 +111,21 @@
 
       <!-- Sell or Rent -->
       <div class="field">
-        <%= form.select :sell_or_rent, ['Sell', 'Rent', 'Sell & Rent'], { include_blank: 'Are you selling or renting?' } %>
+        <%= form.select :sell_or_rent, ['Sell', 'Rent', 'Sell & Rent'], { prompt: 'Sell or Rent?', selected: '', disabled: '' }, { class: 'form-control' } %>
       </div>
 
       <!-- Original Price -->
       <div class="field">
-        <%= form.label :original_price %>
         <%= form.number_field :original_price, step: 0.01, placeholder: 'Original Price', id: 'original_price', class: 'text-input' %>
       </div>
 
       <!-- Listing Price -->
       <div class="field listing-price hidden">
-        <%= form.label :listing_price, 'Listing Price' %>
         <%= form.number_field :listing_price, step: 0.01, placeholder: 'Listing Price', id: 'listing_price', class: 'text-input', data: { suggested: '' } %>
       </div>
       
       <!-- Rental Price -->
       <div class="field rental-price hidden">
-        <%= form.label :rental_price, 'Rental Price' %>
         <%= form.number_field :rental_price, step: 0.01, placeholder: 'Rental Price', id: 'rental_price', class: 'text-input', data: { suggested: '' } %>
       </div>      
 

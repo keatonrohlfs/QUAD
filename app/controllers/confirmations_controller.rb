@@ -18,7 +18,8 @@ class ConfirmationsController < ApplicationController
       if @user.present? && @user.unconfirmed_or_reconfirming?
         if @user.confirm!
           login @user
-          redirect_to root_path, notice: "Your account has been confirmed."
+          redirect_to root_path
+          flash[:notice] = "Your account has been confirmed."
         else
           redirect_to new_confirmation_path, alert: "Something went wrong."
         end
