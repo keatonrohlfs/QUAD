@@ -4,47 +4,6 @@
 <head>
   <title>Admin Profile</title>
   <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <style>
-    .listing-header{
-      text-align: center;
-      margin-top: 20px;
-      font-size: 1.5em;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .box {
-      width: 150px;
-      height: 150px;
-      background-color: #A9A9A9;
-      margin: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column; 
-    }
-
-    .box h2 {
-      margin: 0;
-      font-size: 1em; /* Adjust the size as needed */
-    }
-  
-    .box h2, .box .listing_price {
-      padding: 5px 0; /* Adds some padding to top and bottom */
-    }
-
-    button {
-      padding: 10px 20px;
-      color: black;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
   <div class="header">
@@ -69,22 +28,22 @@
     </div> 
   </div>
 
-  <p class="notice"><%= flash[:notice] %></p>
   <p class="alert"><%= flash[:alert] %></p>
   <p class="error"><%= flash[:error] %></p>
 
-  <h2 class:="listing-header">All Listings</h2>
-  <div class="container">
+  <h2>All Listings</h2>
+  <div class="content">
     <% @listings.each do |listing| %>
       <div class="box">
         <%= render partial: 'listings/listing', locals: {listing: listing} %>
         <% if listing.status == "Unverified"%>
-        <%= button_to "Verify Listings", listing_path(listing.id), method: :put%>
+        <%= button_to "VERIFY LISTING", listing_path(listing.id), method: :put, class: 'verify-button' %>
         <% end %>
       </div>
     <% end %>
   </div>
 
+  <%= render 'shared/flashes' %>
 
 </body>
 </html>

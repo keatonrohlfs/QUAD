@@ -3,42 +3,6 @@
 <head>
   <title>User Profile</title>
   <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .box {
-      width: 150px;
-      height: 150px;
-      background-color: #A9A9A9;
-      margin: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column; 
-    }
-
-    .box h2 {
-      margin: 0;
-      font-size: 1em; /* Adjust the size as needed */
-    }
-  
-    .box h2, .box .listing_price {
-      padding: 5px 0; /* Adds some padding to top and bottom */
-    }
-
-    button {
-      padding: 10px 20px;
-      color: black;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
   <div class="header">
@@ -67,7 +31,7 @@
   <p class="error"><%= flash[:error] %></p>
 
   <h2>Your Listings</h2> 
-  <div class="container">
+  <div class="content">
     <% @listings.each do |listing| %>
       <div class="box">
         <%= render partial: 'listings/listing', locals: {listing: listing} %>

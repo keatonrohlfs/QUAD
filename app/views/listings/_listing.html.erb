@@ -1,6 +1,5 @@
 <div class="box"> 
-  <h2><%= listing.title %></h2>
-  <div class="listing_price"><%= listing.listing_price %> </div>
-  <%= listing.status %>
-  
+  <%= image_tag 'shoes-example.jpeg', alt: 'Example image', class: 'box-image' %>
+  <h3><%= listing.title %>: $<%= listing.listing_price %>0</h3>
+  <h4><%= listing.status.upcase %></h4>
 </div>

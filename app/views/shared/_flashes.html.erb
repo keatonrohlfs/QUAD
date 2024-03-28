@@ -1,6 +1,10 @@
+<%= stylesheet_link_tag 'flashes', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <% if notice %>
+  <div class="flash"
   <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
     <%= notice %>
     <%= link_to "×", clear_flash_path, class: "close", "aria-label" => "Close", method: :get %>
+  </div>
   </div>
 <% end %>

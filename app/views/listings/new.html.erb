@@ -68,10 +68,11 @@
       <% end %>
 
       <!-- Photos -->
+      <br>
       <div class="field">
-        <%= form.label :photos, 'Photos (at least 2, front & back)' %>
-        <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg' %>
-      </div>
+        <%= form.label :photos, 'Photos (at least 2, front & back)', class: 'label' %>
+        <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label' %>
+      </div> <br>
 
       <!-- Title -->
       <div class="field">
@@ -105,8 +106,7 @@
 
       <!-- Style Tags -->
       <div class="field">
-        <%= form.label :style_tags, 'Style Tags (select up to 3)' %>
-        <%= form.select :style_tags, ['Game Day', 'Date Party', 'Formal', 'Night Out', 'Weekend', 'Everyday Athleisure', 'Special Event', 'Vacation', 'Work'], {}, { multiple: true, size: 3 } %>
+        <%= form.select :style_tags, ['Game Day', 'Date Party', 'Formal', 'Night Out', 'Weekend', 'Everyday Athleisure', 'Special Event', 'Vacation', 'Work'], { prompt: 'Style Tags (select up to 3)', disabled: '' }, { multiple: true, size: 3 } %>
       </div>
 
       <!-- Sell or Rent -->

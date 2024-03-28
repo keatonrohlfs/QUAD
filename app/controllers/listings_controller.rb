@@ -30,9 +30,9 @@ class ListingsController < ApplicationController
       @listing = Listing.find(params[:id])
       @listing.status = "Verified"
       if @listing.save
-        redirect_to root_path, notice: 'Listing was successfully verified.'
+        redirect_to account_admin_path, notice: 'Listing was successfully verified.'
       else
-        redirect_to root_path, notice: 'Listing was not able to be verified.'
+        redirect_to account_admin_path, notice: 'Listing was not able to be verified.'
       end
     end
   
