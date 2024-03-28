@@ -18,8 +18,16 @@ h1 {
   font-size: 2em;
 }
 
+h2 {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  font-family: Sofia Pro;
+  font-size: 1.5em;
+}
+
 .header {
-  position: absolute; 
+  position: fixed; 
   top: 0; 
   left: 0;
   right: 0;
@@ -30,6 +38,7 @@ h1 {
   height: 80px;
   background: #fff;
   border-bottom: 2px solid #ffd9ea;
+  z-index: 99;
 }
 
 .logo {
