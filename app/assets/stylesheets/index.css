@@ -171,7 +171,7 @@ h4 {
 }
 
 .box-image {
-  position: fixed;
+  position: absolute;
   margin-top: 5px;
   margin-left: 25px;
   border-radius: 25px;
@@ -181,13 +181,17 @@ h4 {
 }
 
 .verify-button {
+  background-color: #ffd9ea;
+  color: #fff;
   position: relative;
   top: -36px;
   left: 89px;
   font-family: Sofia Pro Bold;
   font-size: 12pt;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  background-color: #fff;
+  transition: background-color 0.3s;
   text-shadow: 2px 3px 5px rgba(0,0,0,0.15); 
+
 }
