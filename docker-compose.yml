@@ -20,6 +20,8 @@ services:
     environment:
       RAILS_ENV: development
       DATABASE_URL: postgresql://QUADuser:QUADMarket@db/QUADdb
+    env_file:
+      - .env
     depends_on:
       - db
 

@@ -1,2 +1,24 @@
-<%= render partial: 'listings/listing', locals: {listing: @listing} %>
-<%= button_to 'Back to Profile', root_path, method: :get %>
+<div class="listing-details">
+  <h1><%= @listing.title %></h1>
+  
+  <% if @listing.photos.attached? %>
+    <div class="listing-photos">
+      <% @listing.photos.each do |photo| %>
+        <%= image_tag(photo, alt: @listing.title, class: "box-image", style: "max-width: 300px;") %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <p>Category: <%= @listing.category %></p>
+  <p>Size: <%= @listing.size %></p>
+  <p>Brand: <%= @listing.brand %></p>
+  <p>Color: <%= @listing.color %></p>
+  <p>New With Tags: <%= @listing.new_with_tags ? 'Yes' : 'No' %></p>
+  <p>Style Tags: <%= @listing.style_tags.join(', ') if @listing.style_tags.present? %></p>
+  <p>Available for: <%= @listing.sell ? 'Sell' : '' %> <%= @listing.rent ? 'Rent' : '' %></p>
+  <p>Original Price: $<%= @listing.original_price %></p>
+  <p>Listing Price: $<%= @listing.listing_price %></p>
+  <p>Rental Price: $<%= @listing.rental_price %></p>
+  
+  <%= button_to 'Back to Profile', root_path, method: :get, class: 'btn' %>
+</div>
