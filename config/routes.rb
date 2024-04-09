@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/clear_flash', to: 'application#clear_flash'
 
   get "/account/admin", to: "users#profile_admin"
-  get "/account/normal", to: "users#profile_normal"
+  get "/account/user", to: "users#profile_normal"
   put "/account/settings", to: "users#update"
   get "/account/settings", to: "users#settings"
   delete "/account", to: "users#destroy"

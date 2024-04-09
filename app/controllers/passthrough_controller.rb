@@ -5,7 +5,7 @@ class PassthroughController < ApplicationController
       if @user.first_name == "admin"
         redirect_to account_admin_path
       elsif @user.role == "normal"
-        redirect_to account_normal_path
+        redirect_to account_user_path
       end
     else
       redirect_to login_path
