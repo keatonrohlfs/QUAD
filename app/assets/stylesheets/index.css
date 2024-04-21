@@ -31,14 +31,6 @@ h2 {
   font-size: 1.5em;
 }
 
-.sorting {
-  position: absolute;
-  top: 133px;
-  right: 70px;
-  font-family: Sofia Pro;
-  font-size: 1.25em;
-}
-
 h3 {
   position: relative;
   top: 80%;
@@ -160,6 +152,25 @@ h4 {
 
 ::selection {
   background: #ffd9ea;
+}
+
+.sorting {
+  position: absolute;
+  top: 123px;
+  right: 70px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-size: 14px;
+    font-family: Sofia Pro Light;
 }
 
 .content {

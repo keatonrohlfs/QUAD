@@ -32,6 +32,19 @@
   <p class="error"><%= flash[:error] %></p>
 
   <h2>All Listings</h2>
+  <div class="sorting">
+    <%= form_with url: account_admin_path, method: :get, id: 'sort_form' do |form| %>
+      <%= form.select :sort_by, options_for_select([
+        ['Date (Newest to Oldest)', 'createdat_desc'],
+        ['Date (Oldest to Newest)', 'createdat_asc'],
+        ['Title (A-Z)', 'title_asc'],
+        ['Title (Z-A)', 'title_desc'],
+        ['Price (Low to High)', 'listingprice_asc'],
+        ['Price (High to Low)', 'listingprice_desc'] 
+      ], params[:sort_by]), {}, onchange: 'this.form.submit()' %>
+    <% end %>
+  </div>
+
   <div class="content">
     <% @listings.each do |listing| %>
       <div class="box">

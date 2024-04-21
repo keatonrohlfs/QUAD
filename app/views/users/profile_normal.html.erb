@@ -32,13 +32,16 @@
  
   <h2>Your Listings</h2>
   <div class="sorting">
-    Sort by:
-    <%= link_to 'Title (A-Z)', account_user_path(sort: 'title', direction: 'asc') %>
-    <%= link_to 'Title (Z-A)', account_user_path(sort: 'title', direction: 'desc') %>
-    <%= link_to 'Price (Low to High)', account_user_path(sort: 'listing_price', direction: 'asc') %>
-    <%= link_to 'Price (High to Low)', account_user_path(sort: 'listing_price', direction: 'desc') %>
-    <%= link_to 'Date (Oldest to Newest)', account_user_path(sort: 'created_at', direction: 'asc') %>
-    <%= link_to 'Date (Newest to Oldest)', account_user_path(sort: 'created_at', direction: 'desc') %>
+    <%= form_with url: account_user_path, method: :get, id: 'sort_form' do |form| %>
+      <%= form.select :sort_by, options_for_select([
+        ['Date (Newest to Oldest)', 'createdat_desc'],
+        ['Date (Oldest to Newest)', 'createdat_asc'],
+        ['Title (A-Z)', 'title_asc'],
+        ['Title (Z-A)', 'title_desc'],
+        ['Price (Low to High)', 'listingprice_asc'],
+        ['Price (High to Low)', 'listingprice_desc'] 
+      ], params[:sort_by]), {}, onchange: 'this.form.submit()' %>
+    <% end %>
   </div>
 
   <div class="content">

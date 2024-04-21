@@ -25,14 +25,55 @@ class UsersController < ApplicationController
 
     def profile_normal
       @user = current_user
-      @listings = @user.listings.order(sort_column => sort_direction) || []
-    
+      @listings = @user.listings || []
+
+      if params[:sort_by].present?
+        sort_column, sort_direction = params[:sort_by].split('_')
+        sort_column = case sort_column
+                      when 'title'
+                        'title'
+                      when 'listingprice'
+                        'listing_price'
+                      when 'createdat'
+                        'created_at'
+                      else
+                        'created_at'
+                      end
+
+        sort_direction = sort_direction == 'asc' ? 'asc' : 'desc'
+
+        @listings = @listings.order("#{sort_column} #{sort_direction}")
+      else
+        @listings = @listings.order(created_at: :desc)
+      end
+
+      # @listings = @user.listings.order(sort_column => sort_direction) || []
       @active_sessions = @user.active_sessions.order(created_at: :desc)
     end
 
     def profile_admin
       @user = current_user
       @listings = Listing.all
+
+      if params[:sort_by].present?
+        sort_column, sort_direction = params[:sort_by].split('_')
+        sort_column = case sort_column
+                      when 'title'
+                        'title'
+                      when 'listingprice'
+                        'listing_price'
+                      when 'createdat'
+                        'created_at'
+                      else
+                        'created_at'
+                      end
+
+        sort_direction = sort_direction == 'asc' ? 'asc' : 'desc'
+
+        @listings = @listings.order("#{sort_column} #{sort_direction}")
+      else
+        @listings = @listings.order(created_at: :desc)
+      end
 
       @active_sessions = @user.active_sessions.order(created_at: :desc)
     end
