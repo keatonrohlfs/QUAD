@@ -1,7 +1,18 @@
-# QUAD
-QUAD Marketplace
+# QUAD Marketplace
 
-### To run
+## Sprint 3 features
+- No-reply email
+- Sort listings by name, price, and upload date (user and admin)
+- Toggle to only show unverified listings (admin only)
+- Search for users (admin only)
+- Shopify integration
+- S3 image hosting 
+#### If we have time:
+- Rework listing page
+- HTTPS support
+
+## Usage
+### To start
 ```
 docker compose build
 docker compose up
