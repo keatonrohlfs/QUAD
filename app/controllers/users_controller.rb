@@ -55,6 +55,10 @@ class UsersController < ApplicationController
       @user = current_user
       @listings = Listing.all
 
+      if params[:unverified_only] == '1'
+        @listings = @listings.where(status: 'Unverified')
+      end
+
       if params[:sort_by].present?
         sort_column, sort_direction = params[:sort_by].split('_')
         sort_column = case sort_column
