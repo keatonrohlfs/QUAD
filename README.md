@@ -1,8 +1,8 @@
 # QUAD Marketplace
 
 ## Sprint 3 features
-- No-reply email
-- Sort listings by name, price, and upload date (user and admin)
+- No-reply email <- Michael
+- Sort listings by name, price, and upload date (user and admin) <- Cole
 - Toggle to only show unverified listings (admin only)
 - Search for users (admin only)
 - Shopify integration
