@@ -29,8 +29,18 @@
 
   <p class="alert"><%= flash[:alert] %></p>
   <p class="error"><%= flash[:error] %></p>
+ 
+  <h2>Your Listings</h2>
+  <div class="sorting">
+    Sort by:
+    <%= link_to 'Title (A-Z)', account_user_path(sort: 'title', direction: 'asc') %>
+    <%= link_to 'Title (Z-A)', account_user_path(sort: 'title', direction: 'desc') %>
+    <%= link_to 'Price (Low to High)', account_user_path(sort: 'listing_price', direction: 'asc') %>
+    <%= link_to 'Price (High to Low)', account_user_path(sort: 'listing_price', direction: 'desc') %>
+    <%= link_to 'Date (Oldest to Newest)', account_user_path(sort: 'created_at', direction: 'asc') %>
+    <%= link_to 'Date (Newest to Oldest)', account_user_path(sort: 'created_at', direction: 'desc') %>
+  </div>
 
-  <h2>Your Listings</h2> 
   <div class="content">
     <% @listings.each do |listing| %>
       <div class="box">

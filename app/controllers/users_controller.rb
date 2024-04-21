@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
     def profile_normal
       @user = current_user
-      @listings = @user.listings || []
+      @listings = @user.listings.order(sort_column => sort_direction) || []
     
       @active_sessions = @user.active_sessions.order(created_at: :desc)
     end
@@ -74,5 +74,13 @@ class UsersController < ApplicationController
 
     def update_user_params
       params.require(:user).permit(:current_password, :password, :password_confirmation, :unconfirmed_email)
+    end
+
+    def sort_column
+      %w[title listing_price created_at].include?(params[:sort]) ? params[:sort] : 'created_at'
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
     end
 end
