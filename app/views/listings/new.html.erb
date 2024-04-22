@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Include Select2 CSS and JS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <title>Create New Listing</title>
     <%= stylesheet_link_tag 'forms', media: 'all', 'data-turbolinks-track': 'reload' %>
     <style>
         .hidden {
             display: none;
+        }
+        .file-input {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1;
+        }
+
+        .custom-file-upload {
+          display: inline-block;
+          padding: 12px 24px;
+          cursor: pointer;
+          background-color: #2196F3;
+          color: white;
+          border-radius: 4px;
+          margin-top: 8px;
+          text-align: center;
+        }
+
+        .upload-instructions {
+          margin-top: 10px;
+          padding: 10px;
+          background-color: #e7f3fe;
+          border-left: 4px solid #2196F3;
+          color: #333;
+          font-size: 14px;
+        }
+
+        .upload-instructions ul {
+          padding-left: 20px;
+          margin-top: 5px;
+        }
+
+        .upload-instructions li {
+          list-style-type: disc;
         }
     </style>
     <script>
@@ -67,12 +110,22 @@
         </div>
       <% end %>
 
-      <!-- Photos -->
-      <br>
+      <!-- Photos Upload Section -->
       <div class="field">
-        <%= form.label :photos, 'Photos (at least 2, front & back)', class: 'label' %>
-        <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label' %>
-      </div> <br>
+        <label for="photos" class="label">Photos (at least 2, front & back, 3-4 suggested)</label>
+        <input type="file" id="photos" name="photos" multiple accept="image/*" capture="environment" class="file-input" />
+        <label for="photos" class="custom-file-upload">
+          Choose Files or Take a Picture
+        </label>
+        <div class="upload-instructions">
+          <p>Accepted Picture types:</p>
+          <ul>
+            <li>From internet, on model</li>
+            <li>Mirror Selfie</li>
+            <li>From a game day, Date party, etc.</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Title -->
       <div class="field">
@@ -86,12 +139,12 @@
 
       <!-- Size -->
       <div class="field">
-        <%= form.select :size, ['00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'Custom'], { prompt: 'Select Size', selected: '', disabled: '' } %>
+        <%= form.select :size, [], { prompt: 'Select Size' }, { id: 'listing_size', class: 'form-control' } %>
       </div>
 
       <!-- Brand -->
       <div class="field">
-        <%= form.text_field :brand, placeholder: 'Brand (e.g., Nike)', class: 'text-input' %>
+        <%= form.select :brand, [], { prompt: 'Select Brand' }, { id: 'listing_brand', class: 'form-control' } %>
       </div>
 
       <!-- Color -->
@@ -138,6 +191,30 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", function() {
+  const sellOrRentSelect = document.querySelector('#listing_sell_or_rent');
+  const listingPriceField = document.querySelector('.listing-price');
+  const rentalPriceField = document.querySelector('.rental-price');
+  const listingPriceInput = document.querySelector('#listing_price');
+  const rentalPriceInput = document.querySelector('#rental_price');
+
+  function updatePriceFields() {
+    const value = sellOrRentSelect.value;
+    const isSell = value === 'Sell' || value === 'Sell & Rent';
+    const isRent = value === 'Rent' || value === 'Sell & Rent';
+
+    listingPriceField.classList.toggle('hidden', !isSell);
+    rentalPriceField.classList.toggle('hidden', !isRent);
+
+    // Set required attribute based on the visibility of the fields
+    listingPriceInput.required = listingPriceField.classList.contains('hidden') ? false : isSell;
+    rentalPriceInput.required = rentalPriceField.classList.contains('hidden') ? false : isRent;
+  }
+
+  // Initial call to set up the correct display
+  updatePriceFields();
+
+  sellOrRentSelect.addEventListener('change', updatePriceFields);
+
     const originalPriceInput = document.querySelector('#original_price');
     const newWithTagSelect = document.querySelector('#listing_new_with_tags');
   
@@ -160,15 +237,416 @@
     originalPriceInput.addEventListener('input', updateSuggestedPrices);
     newWithTagSelect.addEventListener('change', updateSuggestedPrices);
   });
-  
-  // Update sell or rent field to show/hide price fields
-  document.querySelector("#listing_sell_or_rent").addEventListener("change", function() {
-    const value = this.value;
-    document.querySelector(".listing-price").classList.toggle("hidden", value !== "Sell" && value !== "Sell & Rent");
-    document.querySelector(".rental_price").classList.toggle("hidden", value !== "Rent" && value !== "Sell & Rent");
+
+  const categoryStyles = {
+  "Accessories": ['Belts', 'Sunglasses', 'Purses'],
+  "Jeans": [],
+  "Skirts": [],
+  "Shorts": ['Athletic shorts', 'High Waist', 'Jean Shorts', 'Skorts'],
+  "Shoes": ['Boots', 'Heels'],
+  "Jewelry": ['Bracelets', 'Earrings', 'Necklaces', 'Rings'],
+  "Tops": ['Blouses', 'Bodysuits', 'Crop top', 'Sweatshirts & Hoodies', 'Jackets & Coats', 'Tank Top', 'Active wear', 'Sweater'],
+  "Dresses": ['Maxi', 'Midi', 'Mini'],
+  "Swim": []
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+  const categorySelect = document.querySelector("#listing_category");
+  const styleContainer = document.createElement('div');
+  styleContainer.id = 'style_container';
+  styleContainer.classList.add('hidden', 'field');
+  const styleSelect = document.createElement('select');
+  styleSelect.id = 'listing_style';
+  styleSelect.name = 'listing[style]';
+  styleContainer.appendChild(styleSelect);
+
+  function updateStyleDropdown(category) {
+    while (styleSelect.firstChild) styleSelect.removeChild(styleSelect.firstChild); // Remove previous options
+
+    if (categoryStyles[category] && categoryStyles[category].length > 0) {
+      styleContainer.classList.remove('hidden');
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = 'Select Style';
+      defaultOption.disabled = true;
+      defaultOption.selected = true;
+      styleSelect.appendChild(defaultOption);
+
+      categoryStyles[category].forEach(function(style) {
+        const option = document.createElement('option');
+        option.value = style;
+        option.textContent = style;
+        styleSelect.appendChild(option);
+      });
+    } else {
+      styleContainer.classList.add('hidden');
+    }
+  }
+
+  categorySelect.addEventListener('change', function() {
+    updateStyleDropdown(this.value);
   });
-  
-  
+
+  // Insert styleContainer after the category dropdown
+  categorySelect.parentNode.insertBefore(styleContainer, categorySelect.nextSibling);
+
+});
+
+const sizeOptions = {
+  'Standard': ['00', '0', '2', '4', '6', '8', '10', '12', 'XXS', 'XS', 'S', 'M', 'L', 'XL'],
+  'Standard Waist': ['23', '24', '25', '26', '27', '28', '29', '30', '31', '00', '0', '2', '4', '6', '8', '10', '12'],
+  'Accessories': ['One Size'],
+  'Shoes': ['5', '5.5', '6', '6.5', '7', '7.5', '8', '8.5', '9', '9.5', '10', '10.5', '11', '11.5', '12', '12.5', '13'],
+};
+
+// Category to size mapping
+const categoryToSizeType = {
+  'Accessories': 'Accessories',
+  'Jewelry': 'Accessories',
+  'Tops': 'Standard',
+  'Dresses': 'Standard',
+  'Swim': 'Standard',
+  'Jeans': 'Standard Waist',
+  'Skirts': 'Standard Waist',
+  'Shorts': 'Standard Waist',
+  'Shoes': 'Shoes',
+  // Add other categories if needed
+};
+
+// Function to update size options
+function updateSizeOptions(category) {
+  const sizeType = categoryToSizeType[category] || 'Standard'; // Default to 'Standard' if not specified
+  const sizes = sizeOptions[sizeType];
+  const sizeSelect = document.querySelector('#listing_size');
+
+  // Clear out the current options
+  sizeSelect.innerHTML = '';
+
+  // Add a prompt option
+  const promptOption = document.createElement('option');
+  promptOption.textContent = 'Select Size';
+  promptOption.disabled = true;
+  promptOption.selected = true;
+  sizeSelect.appendChild(promptOption);
+
+  // Add new options based on the selected category
+  sizes.forEach(size => {
+    const option = document.createElement('option');
+    option.value = size;
+    option.textContent = size;
+    sizeSelect.appendChild(option);
+  });
+}
+
+// Listen for changes on the category select
+const categorySelect = document.querySelector("#listing_category");
+categorySelect.addEventListener('change', function() {
+  updateSizeOptions(this.value);
+});
+
+const brands = [
+  "Show me your Mumu",
+  "Karlie",
+  "Gianni Bini",
+  "Superdown",
+  "Fame and Partners",
+  "Zadig and Voltaire",
+  "Bear Dance",
+  "Farm Rio for Anthropologie",
+  "Carolina Herrera",
+  "Aidan Mattox",
+  "Misa",
+  "Monrow",
+  "Michael Costello",
+  "SHUG!",
+  "Sage the Label",
+  "Norma Kamali",
+  "NBD",
+  "Likely",
+  "Agua Bendita",
+  "Saylor",
+  "Bailey/44",
+  "Zara",
+  "Lovers + Friends",
+  "Mango",
+  "Victoria + Sophia",
+  "ASOS Design",
+  "PLM",
+  "MISHA",
+  "Amanda Uprichard",
+  "Sundress",
+  "Katie May",
+  "Veronica Beard",
+  "Amur",
+  "Free People",
+  "BCBG Maxazria",
+  "Amanada Uprichard",
+  "Ronny Kobo",
+  "Significant Other",
+  "Koch",
+  "Alice and Olivia",
+  "Generation Love",
+  "Saks Fifth Avenue",
+  "Agolde",
+  "Daily Drills",
+  "Current Air",
+  "Alice + Olivia",
+  "The Bright Side",
+  "Amylynn",
+  "Trina Turk",
+  "lola & sophie",
+  "Nasty Gal",
+  "Who What Wear",
+  "Do+Be",
+  "ASTR",
+  "Olivaceous",
+  "Free the roses",
+  "Ramy Brook",
+  "Baobab",
+  "LoveShackFancy",
+  "Alexis",
+  "Retrofete",
+  "Love the Label",
+  "Strut and Bolt",
+  "Tularosa",
+  "Vestique",
+  "Sweet lemon",
+  "Love x design",
+  "Rhode",
+  "Jack",
+  "One and only",
+  "Day+moon",
+  "Oliviaceous",
+  "Miou muse",
+  "Monsoon and beyond",
+  "Pink diamond",
+  "Ck Bradley",
+  "Anna Cate",
+  "BLANKNYC",
+  "Lululemon",
+  "Honey Plum Clothing",
+  "Crosby",
+  "Molly bracken",
+  "Sam Edelmom",
+  "Mariacher",
+  "Luxedo",
+  "CALI",
+  "Caroline Constas",
+  "MILLY",
+  "Natalie Busby",
+  "7 For All Mankind Top",
+  "Vitamin A",
+  "Lâ€™Academie",
+  "Elliatt",
+  "Sabina Musayev",
+  "Majorelle",
+  "For Love & Lemons",
+  "Camila Coelho",
+  "Frame",
+  "Ulla Johnson",
+  "Pistola",
+  "Mable",
+  "Hemline",
+  "Hausen",
+  "Lucy Paris",
+  "Lucy in the Sky",
+  "A.L.C.",
+  "Hemant and Nadita",
+  "Jonathan Simkhai",
+  "Good American",
+  "The Truffle/Shop Triple",
+  "Threads",
+  "BCBGMAXAZRIA",
+  "French Connection Dress",
+  "One Teaspoon",
+  "J.O.A.",
+  "C/MEO Collective",
+  "Endless Rose",
+  "MinkPink",
+  "Loft",
+  "English Factory",
+  "The Fifth Label",
+  "Young Fabulous and Broke",
+  "525 America",
+  "Keepsake",
+  "Rails",
+  "Hudson",
+  "Black Halo",
+  "Pink Queen",
+  "French Connection",
+  "Rag and Bone",
+  "Luxxel",
+  "ASTR the label",
+  "Maniju",
+  "Lulus",
+  "Calvin Klein",
+  "ALLISON New York",
+  "Sundays",
+  "S-W-F",
+  "Michael Costello X REVOLVE",
+  "Paige",
+  "Denim",
+  "STAUD",
+  "Ser.o.y",
+  "H:ours",
+  "Dress the population",
+  "BOSKEMPER",
+  "Eliatt",
+  "Lioness",
+  "Lusana",
+  "Meshki",
+  "J. Brand",
+  "Citizens of Humanity",
+  "7 For All Mankind",
+  "Black Orchid",
+  "Aje",
+  "Steve Madden",
+  "The Kooples",
+  "Theory",
+  "SKEMO",
+  "Pilcro",
+  "Stuart Weitzman",
+  "BB Dakota",
+  "ATM",
+  "Joes 22",
+  "Buddy Love",
+  "Laundry by Shelli Segal",
+  "Cotton Candy LA",
+  "Aureum",
+  "Iro",
+  "BCBG Max Azria",
+  "Rumer",
+  "LPA",
+  "Emerson Fry",
+  "Altar'd State",
+  "Hours",
+  "Farm Rio",
+  "OW Intimates",
+  "Elle Zeitoune",
+  "Paloma Barcelo",
+  "Sofia",
+  "Loyd Ford",
+  "La Femme",
+  "Nookie",
+  "Day + Moon",
+  "En Saison",
+  "SWF",
+  "The Clothing Company",
+  "Esteban Cortazar",
+  "Toccin",
+  "Solid and Striped",
+  "Roller Rabbit",
+  "Karina Grimaldi",
+  "Glam",
+  "Cinq A Sept",
+  "SER.O.YA",
+  "Something Navy",
+  "Reset",
+  "MSG",
+  "Derek Lam",
+  "Alo Yoga",
+  "Free People Movement",
+  "Wrrakaylay",
+  "TCEC",
+  "Jonathan Simkhai",
+  "Anthropologie",
+  "Very J",
+  "Koral",
+  "Young, Fabulous & Broke",
+  "Flannel",
+  "Corey Lynn Calter",
+  "Express",
+  "Perry Walker",
+  "THML",
+  "Xirena",
+  "Maeve",
+  "Mimosa",
+  "Banana Republic",
+  "Let Me Be",
+  "ASOS",
+  "Sanctuary",
+  "WAYF",
+  "Birgitte Herskind",
+  "Heiress",
+  "Alpaca",
+  "BuDhaGirl",
+  "Mignonne Gavigan",
+  "Golden Goose",
+  "Birkenstock",
+  "Halston",
+  "These Three",
+  "SHILLA",
+  "Aniye By",
+  "SEA New York",
+  "Everly",
+  "ML Monique Lhuillier",
+  "Piexoto",
+  "GANNI",
+  "Karen Millen",
+  "SLVRLAKE",
+  "Mia Vesper",
+  "Simon Miller",
+  "Outdoor Voices",
+  "Susana Monaco",
+  "Sachin & Babi",
+  "Commando",
+  "Blu Pepper",
+  "Celia B",
+  "Lavish Alice",
+  "Bebe",
+  "Micas",
+  "Nicholas",
+  "Melody",
+  "ROW.A",
+  "Sau Lee",
+  "KanCan",
+  "Urban Outfitters",
+  "Showpo",
+  "Saints + Secrets",
+  "Adelyn Rae",
+  "Z Supply",
+  "Lena",
+  "American Tall",
+  "L' Academie",
+  "Michael Lauren",
+  "Poupette St. Barth",
+  "Muche & Muchette",
+  "Motel",
+  "S/W/F",
+  "Bardot",
+  "Tony Bianco",
+  "JBrand",
+  "Elliat",
+  "Soludos",
+  "Montserrat",
+  "Maje",
+  "Aviator Nation",
+  "Hill House",
+  "Corral",
+  "Gucci",
+  "Vuori",
+  "Jen's Pirate Booty",
+  "Beulah Style",
+  "Other"
+];
+
+brands.sort();
+
+// Populate the brand select with options
+const brandSelect = document.querySelector('#listing_brand');
+brands.forEach(function(brand) {
+  const option = document.createElement('option');
+  option.value = brand;
+  option.textContent = brand;
+  brandSelect.appendChild(option);
+});
+
+// Initialize Select2 on the brand <select> element to enable searching
+$(brandSelect).select2({
+  placeholder: "Select a brand",
+  allowClear: true
+});
+
   </script>
 </body>
 </html>

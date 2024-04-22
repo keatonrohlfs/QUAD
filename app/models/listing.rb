@@ -1,28 +1,35 @@
 class Listing < ApplicationRecord
   belongs_to :user
-  has_many_attached :photos  # Ensure this matches the form and your ActiveStorage setup
+  has_many_attached :photos
 
   # Validate presence of required fields as per your form and database constraints
   validates :title, presence: true
   validates :category, presence: true
   validates :size, presence: true
 
-  validate :sell_or_rent_present
+  # Validate numericality for prices but allow nil for flexibility in custom validation
+  validates :original_price, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true
+  validates :listing_price, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true
+  validates :rental_price, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true
 
-  # Validate listing_price if 'sell' is true
-  validates :listing_price, presence: true, if: -> { sell? }
-
-  # Validate rental_price if 'rent' is true
-  validates :rental_price, presence: true, if: -> { rent? }
-
-  validates :original_price, :listing_price, :rental_price, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true
-
-  validate :style_tags_are_valid
+  # Custom validation methods
+  validate :price_based_on_sell_or_rent_option
 
   private
 
-  def sell_or_rent_present
-    errors.add(:base, 'Must be available for sell or rent.') unless sell? || rent?
+  # Validation: Listing price is required if selling, Rental price is required if renting
+  def price_based_on_sell_or_rent_option
+    if sell && !rent && listing_price.blank?
+      errors.add(:listing_price, "can't be blank if item is for sell")
+    end
+
+    if rent && !sell && rental_price.blank?
+      errors.add(:rental_price, "can't be blank if item is for rent")
+    end
+
+    if sell && rent && (listing_price.blank? || rental_price.blank?)
+      errors.add(:base, "Both Listing and Rental prices can't be blank if item is for sell and rent")
+    end
   end
 
   def style_tags_are_valid
