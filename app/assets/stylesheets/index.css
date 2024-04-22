@@ -174,16 +174,18 @@ select {
 }
 
 .content {
- display: flex;
+ display: grid;
+ grid-template-columns: repeat(4, auto);
+ grid-auto-rows:  auto;
  column-gap: 50px;
+ gap: 50px;
  position: absolute;
  top: 180px;
- left: 60px;
 }
 
 .box {
  width: 300px;
- height: 300px;
+ height: 250px;
  border-radius: 35px;
  background-color: #fff;
  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;

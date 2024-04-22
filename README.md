@@ -5,13 +5,13 @@
 - ~Make admin page inaccessible to non-admins <- Keaton~
 - Re-add check box for unverified only listings <- Cole
 - Fix rent field in create listing form
-- Fix rendering of listings so that they display in a grid and not a row
+- Fix rendering of listings so that they display in a grid and not a row <- Michael
 - ~Sort listings by name, price, and upload date (user and admin) <- Cole~
 - ~Toggle to only show unverified listings (admin only) <- Cole~
 - ~Search for users (admin only) <- Deondre~
 - Shopify integration 
 - S3 image hosting 
-- Migrate and build existing database on compose <- Michael~
+- Migrate and build existing database on compose <- Michael
 #### If we have time:
 - ~Rework listing page <- Keaton~
 - HTTPS support
