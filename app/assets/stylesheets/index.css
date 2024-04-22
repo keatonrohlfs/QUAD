@@ -216,6 +216,9 @@ select {
 }
 
 .search-container {
+ position: absolute; 
+ top: 90px; 
+ right: 560px; 
  margin: 10px;
 }
 
