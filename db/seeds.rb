@@ -8,3 +8,13 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 # end
   
+User.find_or_create_by(username: 'admin') do |user|
+    user.email = 'admin@crimson.ua.edu'
+    user.password = 'password'
+    user.phone_number = '1234567890'
+    user.first_name = 'Quad Marketplace'
+    user.last_name = 'Admin'
+    user.role = 'admin'
+    user.confirmed_at = Time.now
+end
+  

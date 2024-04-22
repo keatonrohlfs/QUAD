@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!, only: [:profile_admin, :profile_normal, :settings, :destroy, :update]
     before_action :redirect_if_authenticated, only: [:create, :new]
-    
+    before_action :verify_admin, only: [:profile_admin]
+
     def create
         @user = User.new(create_user_params)
         if @user.save
             @user.send_confirmation_email!
-            redirect_to login_path, alert: "Please check your email for confirmation instructions."
+            redirect_to login_path, flash: "Please check your email for confirmation instructions."
         else
             render :new, status: :unprocessable_entity
         end
@@ -112,6 +113,14 @@ class UsersController < ApplicationController
     end
 
     private
+
+    def verify_admin
+      @user = current_user
+      if @user.admin?
+      else
+        redirect_to account_user_path, notice: 'Cannot perform action: not authorized'
+      end
+    end
 
     def create_user_params
       params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :username, :password, :password_confirmation, :admin)

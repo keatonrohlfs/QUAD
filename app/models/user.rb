@@ -81,6 +81,14 @@ class User < ApplicationRecord
     end
   end
 
+  def admin?
+    role == 'admin'
+  end
+
+  def normal?
+    role == 'normal'
+  end
+
   private
     def downcase_fields
       self.email = email.downcase
