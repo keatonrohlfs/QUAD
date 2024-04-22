@@ -11,6 +11,7 @@
 - ~Search for users (admin only) <- Deondre~
 - Shopify integration 
 - S3 image hosting 
+- Migrate and build existing database on compose <- Michael~
 #### If we have time:
 - ~Rework listing page <- Keaton~
 - HTTPS support

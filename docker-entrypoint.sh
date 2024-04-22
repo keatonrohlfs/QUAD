@@ -12,5 +12,9 @@ if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
   bundle exec rails db:prepare
   echo "Database prepared."
 fi
+# Leave here does not work in previouse if loop
+bundle exec rails db:reset
+bundle exec rails db:migrate
+bundle exec rails db:seed
 
 exec "${@}"
