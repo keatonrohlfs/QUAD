@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +25,12 @@
         <%= button_to 'Sign Out', logout_path, method: :delete, class: 'dropdown-item' %>
       </div>
     </div> 
+    <div class="search-container">
+  <%= form_tag(listings_path, method: :get) do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by name" %>
+    <%= submit_tag "Search", name: nil, class: "search-button" %>
+  <% end %>
+</div>
   </div>
 
   <p class="alert"><%= flash[:alert] %></p>
@@ -42,9 +47,6 @@
         ['Price (Low to High)', 'listingprice_asc'],
         ['Price (High to Low)', 'listingprice_desc'] 
       ], params[:sort_by]), {}, onchange: 'this.form.submit()' %>
-
-    <%= form.check_box :unverified_only, checked: params[:unverified_only] == '1', onchange: 'this.form.submit()' %>
-    <%= form.label :unverified_only, 'Show Unverified Listings Only' %>
     <% end %>
   </div>
 
