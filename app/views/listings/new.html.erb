@@ -53,17 +53,6 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Update sell or rent field to show/hide price fields
-            const sellOrRentSelect = document.querySelector("#listing_sell_or_rent");
-            const listingPriceField = document.querySelector(".listing-price");
-            const rentalPriceField = document.querySelector(".rental-price");
-            function updatePriceFields() {
-                const value = sellOrRentSelect.value;
-                listingPriceField.classList.toggle("hidden", value !== "Sell" && value !== "Sell & Rent");
-                rentalPriceField.classList.toggle("hidden", value !== "Rent" && value !== "Sell & Rent");
-            }
-            sellOrRentSelect.addEventListener("change", updatePriceFields);
-            updatePriceFields(); // Initial update
 
             // Make style tags selectable with a regular click and limit to 3 selections
             const styleTagsSelect = document.querySelector("#listing_style_tags");
@@ -112,11 +101,8 @@
 
       <!-- Photos Upload Section -->
       <div class="field">
-        <label for="photos" class="label">Photos (at least 2, front & back, 3-4 suggested)</label>
-        <input type="file" id="photos" name="photos" multiple accept="image/*" capture="environment" class="file-input" />
-        <label for="photos" class="custom-file-upload">
-          Choose Files or Take a Picture
-        </label>
+      <%= form.label :photos, 'Photos (at least 2, front & back)', class: 'label' %>
+      <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label' %>
         <div class="upload-instructions">
           <p>Accepted Picture types:</p>
           <ul>
