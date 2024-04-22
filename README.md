@@ -1,8 +1,9 @@
 # QUAD Marketplace
 
 ## Sprint 3 features
-- ~No-reply email <- Michael~
-- ~Make admin page inaccessible to non-admins <- Michael~
+- ~No-reply email <- Cole~
+- ~Make admin page inaccessible to non-admins <- Keaton~
+- Re-add check box for unverified only listings <- Cole
 - Fix rent field in create listing form
 - Fix rendering of listings so that they display in a grid and not a row
 - ~Sort listings by name, price, and upload date (user and admin) <- Cole~
