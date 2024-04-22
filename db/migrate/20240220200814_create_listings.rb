@@ -9,7 +9,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :color
       t.boolean :new_with_tags, default: false
       t.string :style_tags, array: true, default: []
-      t.boolean :sell, default: true
+      t.boolean :sell, default: false
       t.boolean :rent, default: false
       t.decimal :original_price
       t.decimal :listing_price
