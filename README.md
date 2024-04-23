@@ -5,6 +5,7 @@
 - Shopify integration
 - HTTPS support
 - Mobile support
+- Style alerts
 - Move email from shopbama => no-reply (if Ethan gets back to us in time)
 - General styling fixes
 #### Finished:
