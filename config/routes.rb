@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   get "/listings/new", to: "listings#new" 
   post "/listings", to: "listings#create"
+  delete "/listings/:id", to: "listings#destroy"
+ 
 
   resources :confirmations, only: [:create, :edit, :new], param: :confirmation_token
   resources :passwords, only: [:create, :edit, :new, :update], param: :password_reset_token
@@ -34,5 +36,5 @@ Rails.application.routes.draw do
       delete "destroy_all"
     end
   end
-  resources :listings, only: [:new, :create, :show, :index, :edit, :update]
+  resources :listings, only: [:new, :create, :show, :index, :edit, :update, :delete]
 end

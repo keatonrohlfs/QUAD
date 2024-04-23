@@ -46,7 +46,15 @@ end
       redirect_to account_admin_path, notice: 'Listing was not able to be verified.'
     end
   end
-
+  
+  def destroy
+    @listing = Listing.find(params[:id])
+    if @listing.destroy
+      redirect_to account_admin_path, notice: 'Listing was removed.'
+    else
+      redirect_to account_admin_path, notice: 'Listing was not able to be removed.'
+    end
+  end
   private
 
   # Use callbacks to share common setup or constraints between actions.

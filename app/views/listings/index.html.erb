@@ -34,7 +34,8 @@
     <div class="box">
       <%= render partial: 'listings/listing', locals: {listing: listing} %>
       <% if listing.status == "Unverified" %>
-        <%= button_to "VERIFY LISTING", listing_path(listing), method: :put, class: 'verify-button' %>
+        <%= button_to "VERIFY LISTING", listing_path(listing.id), method: :put, class: 'verify-button' %>
+        <%= button_to "DELETE LISTING", listing_path(listing.id), method: :delete, class: 'verify-button' %>
       <% end %>
     </div>
   <% end %>
