@@ -3,8 +3,8 @@
 ## Sprint 3 features
 - ~No-reply email <- Cole~
 - ~Make admin page inaccessible to non-admins <- Keaton~
-- Re-add check box for unverified only listings <- Cole
-- Fix rent field in create listing form
+- ~Re-add check box for unverified only listings <- Cole~
+- ~Fix rent field in create listing form~
 - ~Fix rendering of listings so that they display in a grid and not a row <- Michael~
 - ~Sort listings by name, price, and upload date (user and admin) <- Cole~
 - ~Toggle to only show unverified listings (admin only) <- Cole~
