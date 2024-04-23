@@ -10,8 +10,8 @@ class User < ApplicationRecord
   before_save :downcase_unconfirmed_email
 
   validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@crimson\.ua\.edu\z/, message: "must be a crimson.ua.edu account" }, presence: true, uniqueness: true
-  validates :username, :phone_number, presence: true, uniqueness: true
-  validates:first_name, :last_name, presence: true
+  validates :phone_number, presence: true, uniqueness: true
+  validates :first_name, :last_name, presence: true
   validates :unconfirmed_email, format: {with: URI::MailTo::EMAIL_REGEXP, allow_blank: true}
 
   has_many :active_sessions, dependent: :destroy
@@ -94,7 +94,6 @@ class User < ApplicationRecord
       self.email = email.downcase
       self.first_name = first_name.downcase
       self.last_name = last_name.downcase
-      self.username = username.downcase
     end
 
     def downcase_unconfirmed_email

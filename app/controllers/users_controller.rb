@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         @user = User.new(create_user_params)
         if @user.save
             @user.send_confirmation_email!
-            redirect_to login_path, flash: "Please check your email for confirmation instructions."
+            redirect_to login_path, flash: { notice: "Please check your email for confirmation instructions." }
         else
             render :new, status: :unprocessable_entity
         end
@@ -127,11 +127,7 @@ class UsersController < ApplicationController
     end
 
     def create_user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :username, :password, :password_confirmation, :admin)
-    end
-
-    def update_user_params
-      params.require(:user).permit(:current_password, :password, :password_confirmation, :unconfirmed_email)
+      params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :password, :password_confirmation, :admin)
     end
 
     def sort_column

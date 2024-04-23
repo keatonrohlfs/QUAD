@@ -1,21 +1,5 @@
 # QUAD Marketplace
-
-## Sprint 3 features
-- ~No-reply email <- Cole~
-- ~Make admin page inaccessible to non-admins <- Keaton~
-- ~Re-add check box for unverified only listings <- Cole~
-- ~Fix rent field in create listing form <- Michael~
-- ~Fix rendering of listings so that they display in a grid and not a row <- Michael~
-- ~Sort listings by name, price, and upload date (user and admin) <- Cole~
-- ~Toggle to only show unverified listings (admin only) <- Cole~
-- ~Search for users (admin only) <- Deondre~
-- Shopify integration 
-- S3 image hosting 
-- ~Migrate and build existing database on compose <- Michael~
-#### If we have time:
-- ~Rework listing page <- Keaton~
-- Reject listing button (admin only)
-- HTTPS support
+Created by Cole Sullivan, Keaton Rohlfs, Michael Reis, Deondre North, and Joe Zimmerman
 
 ## Usage
 ### To start

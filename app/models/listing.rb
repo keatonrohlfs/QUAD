@@ -6,7 +6,6 @@ class Listing < ApplicationRecord
   validates :title, presence: true
   validates :category, presence: true
   validates :size, presence: true
-  validates :photos, presence: true, comparison: { greater_than: 2}
 
   # Validate numericality for prices but allow nil for flexibility in custom validation
   validates :original_price, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true

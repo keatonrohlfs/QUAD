@@ -69,7 +69,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_004536) do
     t.string "color"
     t.boolean "new_with_tags", default: false
     t.string "style_tags", default: [], array: true
-    t.string "photos", null: false, array: true
     t.string "style"
     t.boolean "sell", default: false
     t.boolean "rent", default: false
@@ -83,9 +82,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_004536) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "password_digest", null: false
     t.string "email", null: false
+    t.string "password_digest", null: false
     t.string "phone_number", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
@@ -93,7 +91,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_004536) do
     t.string "role", default: "normal"
     t.string "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "active_sessions", "users", on_delete: :cascade
