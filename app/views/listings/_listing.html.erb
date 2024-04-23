@@ -7,9 +7,6 @@
     <% else %>
       <%= image_tag 'shoes-example.jpeg', alt: 'Placeholder image', class: 'box-image' %>
     <% end %>
-    <% if listing.sell? %>
-      <h3><%= listing.title %></h3>
-    <% end %>
     <h4><%= listing.status.upcase %></h4>
     <% end %>
 </div>
