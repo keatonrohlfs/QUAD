@@ -26,7 +26,7 @@ h1 {
 h2 {
  position: absolute;
  top: 110px;
- left: 70px;
+ left: 305px;
  font-family: Sofia Pro;
  font-size: 1.5em;
 }
@@ -157,7 +157,7 @@ h4 {
 .sorting {
  position: absolute;
  top: 123px;
- right: 70px;
+ right: 305px;
 }
 
 select {
@@ -171,6 +171,12 @@ select {
    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    font-size: 14px;
    font-family: Sofia Pro Light;
+}
+
+.toggle {
+   position: absolute;
+   top: 127px;
+   right: 550px;
 }
 
 .content {
@@ -214,17 +220,45 @@ select {
  cursor: pointer;
  transition: background-color 0.3s;
  text-shadow: 2px 3px 5px rgba(0,0,0,0.15); 
-
 }
 
 .search-container {
  position: absolute; 
- top: 90px; 
- right: 560px; 
+ top: 113px; 
+ right: 850px; 
  margin: 10px;
+}
+
+.search-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Sofia Pro Light;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.search-field:focus {
+    outline: none !important;
+    border: 2px solid #ffd9ea;
 }
 
 .search-button {
  padding: 5px 10px;
  margin-left: 5px;
+    background-color: #ffd9ea;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Sofia Pro;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #e6006c;
 }

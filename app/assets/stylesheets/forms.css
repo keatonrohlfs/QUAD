@@ -71,7 +71,7 @@ p {
 .text-input:focus {
     outline: none !important;
     border: 2px solid #ffd9ea;
-  }
+}
 
 .primary-button {
     width: calc(100% - 20px);

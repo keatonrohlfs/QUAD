@@ -14,7 +14,7 @@
         <%= @user.last_name.capitalize %>
       </h1>
     </div>
-
+Dress15
     <div class="dropdown">
       <button class="dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <%= image_tag 'menu-icon.png', alt: 'Menu' %>
@@ -26,9 +26,9 @@
       </div>
     </div> 
     <div class="search-container">
-  <%= form_tag(listings_path, method: :get) do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search by name" %>
-    <%= submit_tag "Search", name: nil, class: "search-button" %>
+      <%= form_tag(listings_path, method: :get) do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search by name", class: "search-field" %>
+      <%= submit_tag "Search", name: nil, class: "search-button" %>
   <% end %>
 </div>
   </div>
@@ -37,8 +37,8 @@
   <p class="error"><%= flash[:error] %></p>
 
   <h2>All Listings</h2>
-  <div class="sorting">
-    <%= form_with url: account_admin_path, method: :get, id: 'sort_form' do |form| %>
+  <%= form_with url: account_admin_path, method: :get, id: 'sort_form' do |form| %>
+    <div class="sorting">
       <%= form.select :sort_by, options_for_select([
         ['Date (Newest to Oldest)', 'createdat_desc'],
         ['Date (Oldest to Newest)', 'createdat_asc'],
@@ -46,9 +46,14 @@
         ['Title (Z-A)', 'title_desc'],
         ['Price (Low to High)', 'listingprice_asc'],
         ['Price (High to Low)', 'listingprice_desc'] 
-      ], params[:sort_by]), {}, onchange: 'this.form.submit()' %>
-    <% end %>
-  </div>
+      ], params[:sort_by]), {}, onchange: 'this.form.requestSubmit()' %>
+    </div>
+
+    <div class="toggle">
+      <%= form.check_box :unverified_only, checked: params[:unverified_only] == '1', onchange: 'this.form.submit()' %>
+      <%= form.label :unverified_only, 'Show Unverified Listings Only' %>
+    </div>
+  <% end %>
 
   <div class="content">
     <% @listings.each do |listing| %>

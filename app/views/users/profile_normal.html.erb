@@ -41,6 +41,9 @@
         ['Price (Low to High)', 'listingprice_asc'],
         ['Price (High to Low)', 'listingprice_desc'] 
       ], params[:sort_by]), {}, onchange: 'this.form.submit()' %>
+
+      <%= form.check_box :unverified_only, checked: params[:unverified_only] == '1', onchange: 'this.form.submit()' %>
+      <%= form.label :unverified_only, 'Show Unverified Listings Only' %>
     <% end %>
   </div>
 

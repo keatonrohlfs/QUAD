@@ -23,7 +23,7 @@
   <!-- Search container -->
   <div class="search-container">
     <%= form_tag(listings_path, method: :get) do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search by name" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search by name", class: "search-field" %>
       <%= submit_tag "Search", name: nil, class: "search-button" %>
     <% end %>
   </div>
