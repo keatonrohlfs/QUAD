@@ -100,9 +100,10 @@
       <% end %>
 
       <!-- Photos Upload Section -->
+
       <div class="field">
       <%= form.label :photos, 'Photos (at least 2, front & back)', class: 'label' %>
-      <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label' %>
+      <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label'%>
         <div class="upload-instructions">
           <p>Accepted Picture types:</p>
           <ul>
