@@ -34,6 +34,7 @@ Listing.find_or_create_by(title: 'Dress1') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end 
 Listing.find_or_create_by(title: 'Dress2') do |listing|
     listing.category = 'Dresses'
@@ -41,6 +42,7 @@ Listing.find_or_create_by(title: 'Dress2') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress3') do |listing|
     listing.category = 'Dresses'
@@ -48,6 +50,7 @@ Listing.find_or_create_by(title: 'Dress3') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress4') do |listing|
     listing.category = 'Dresses'
@@ -55,6 +58,7 @@ Listing.find_or_create_by(title: 'Dress4') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress5') do |listing|
     listing.category = 'Dresses'
@@ -62,6 +66,7 @@ Listing.find_or_create_by(title: 'Dress5') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress6') do |listing|
     listing.category = 'Dresses'
@@ -69,6 +74,7 @@ Listing.find_or_create_by(title: 'Dress6') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress7') do |listing|
     listing.category = 'Dresses'
@@ -76,6 +82,7 @@ Listing.find_or_create_by(title: 'Dress7') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress8') do |listing|
     listing.category = 'Dresses'
@@ -83,6 +90,7 @@ Listing.find_or_create_by(title: 'Dress8') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress9') do |listing|
     listing.category = 'Dresses'
@@ -90,6 +98,7 @@ Listing.find_or_create_by(title: 'Dress9') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress10') do |listing|
     listing.category = 'Dresses'
@@ -97,6 +106,7 @@ Listing.find_or_create_by(title: 'Dress10') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end 
 Listing.find_or_create_by(title: 'Dress11') do |listing|
     listing.category = 'Dresses'
@@ -104,6 +114,7 @@ Listing.find_or_create_by(title: 'Dress11') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress12') do |listing|
     listing.category = 'Dresses'
@@ -111,6 +122,7 @@ Listing.find_or_create_by(title: 'Dress12') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress13') do |listing|
     listing.category = 'Dresses'
@@ -118,6 +130,7 @@ Listing.find_or_create_by(title: 'Dress13') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress14') do |listing|
     listing.category = 'Dresses'
@@ -125,6 +138,7 @@ Listing.find_or_create_by(title: 'Dress14') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress15') do |listing|
     listing.category = 'Dresses'
@@ -132,6 +146,7 @@ Listing.find_or_create_by(title: 'Dress15') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress16') do |listing|
     listing.category = 'Dresses'
@@ -139,6 +154,7 @@ Listing.find_or_create_by(title: 'Dress16') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress17') do |listing|
     listing.category = 'Dresses'
@@ -146,6 +162,7 @@ Listing.find_or_create_by(title: 'Dress17') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end
 Listing.find_or_create_by(title: 'Dress18') do |listing|
     listing.category = 'Dresses'
@@ -153,4 +170,5 @@ Listing.find_or_create_by(title: 'Dress18') do |listing|
     listing.original_price = 10
     listing.listing_price = 8
     listing.user =  user
+    listing.sell = true
 end

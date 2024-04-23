@@ -23,6 +23,8 @@ end
   # POST /listings
   def create
     @listing = current_user.listings.build(listing_params)
+    @listing.sell = @listing.listing_price
+    @listing.rent = @listing.rental_price
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully created.'
     else
