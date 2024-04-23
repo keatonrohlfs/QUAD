@@ -67,7 +67,7 @@ end
     params.require(:listing).permit(
       :title, :category, :size, :brand, :color, :status,
       :new_with_tags, :sell, :rent, :original_price, 
-      :listing_price, :rental_price, style_tags: [], photos: []
+      :listing_price, :rental_price, style_tags: [], photos: [], :style
     )
   end
 end
