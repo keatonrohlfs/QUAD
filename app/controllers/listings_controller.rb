@@ -46,7 +46,6 @@ end
       redirect_to account_admin_path, notice: 'Listing was not able to be verified.'
     end
   end
-  
   def destroy
     @listing = Listing.find(params[:id])
     if @listing.destroy
@@ -67,7 +66,7 @@ end
     params.require(:listing).permit(
       :title, :category, :size, :brand, :color, :status,
       :new_with_tags, :sell, :rent, :original_price, 
-      :listing_price, :rental_price, style_tags: [], photos: [], :style
+      :listing_price, :style, :rental_price, style_tags: [], photos: []
     )
   end
 end

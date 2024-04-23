@@ -69,6 +69,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_004536) do
     t.string "color"
     t.boolean "new_with_tags", default: false
     t.string "style_tags", default: [], array: true
+    t.string "photos", null: false, array: true
+    t.string "style"
     t.boolean "sell", default: false
     t.boolean "rent", default: false
     t.decimal "original_price"
