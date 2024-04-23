@@ -85,7 +85,7 @@ h4 {
 }
 
 .dropdown {
- position: absolute;
+ position: fixed;
  top: 0px;
  right: 20px;
  display: inline-block;
@@ -156,7 +156,7 @@ h4 {
 
 .sorting {
  position: absolute;
- top: 123px;
+ top: 105px;
  right: 305px;
 }
 
@@ -175,8 +175,8 @@ select {
 
 .toggle {
    position: absolute;
-   top: 127px;
-   right: 550px;
+   top: 105px;
+   right: 48px;
 }
 
 .content {
@@ -224,7 +224,7 @@ select {
 
 .search-container {
  position: absolute; 
- top: 113px; 
+ top: 125px; 
  right: 50px
 }
 

@@ -26,10 +26,10 @@
     </div> 
     <div class="search-container">
       <%= form_tag(listings_path, method: :get) do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search by name", class: "search-field" %>
-      <%= submit_tag "Search", name: nil, class: "search-button" %>
-  <% end %>
-</div>
+        <%= text_field_tag :search, params[:search], placeholder: "Search by name", class: "search-field" %>
+        <%= submit_tag "Search", name: nil, class: "search-button" %>
+      <% end %>
+    </div>
   </div>
 
   <p class="alert"><%= flash[:alert] %></p>
@@ -47,7 +47,6 @@
         ['Price (High to Low)', 'listingprice_desc'] 
       ], params[:sort_by]), {}, onchange: 'this.form.requestSubmit()' %>
     </div>
-
     <div class="toggle">
       <%= form.check_box :unverified_only, checked: params[:unverified_only] == '1', onchange: 'this.form.submit()' %>
       <%= form.label :unverified_only, 'Show Unverified Listings Only' %>
