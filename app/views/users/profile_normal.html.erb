@@ -30,20 +30,22 @@
   <p class="alert"><%= flash[:alert] %></p>
   <p class="error"><%= flash[:error] %></p>
  
-  <h2>Your Listings</h2>
-  <div class="sorting">
+  <div class="sorting-bar">
+    <div class="sorting-bar-title">Your Listings</div>
     <%= form_with url: account_user_path, method: :get, id: 'sort_form' do |form| %>
-      <%= form.select :sort_by, options_for_select([
+      <div class="sorting-bar-item"> <%= form.select :sort_by, options_for_select([
         ['Date (Newest to Oldest)', 'createdat_desc'],
         ['Date (Oldest to Newest)', 'createdat_asc'],
         ['Title (A-Z)', 'title_asc'],
         ['Title (Z-A)', 'title_desc'],
         ['Price (Low to High)', 'listingprice_asc'],
         ['Price (High to Low)', 'listingprice_desc'] 
-      ], params[:sort_by]), {}, onchange: 'this.form.submit()' %>
+      ], params[:sort_by]), {}, onchange: 'this.form.submit()' %> </div>
 
-      <%= form.check_box :unverified_only, checked: params[:unverified_only] == '1', onchange: 'this.form.submit()' %>
-      <%= form.label :unverified_only, 'Show Unverified Listings Only' %>
+      <div class="sorting-bar-item">
+        <%= form.check_box :unverified_only, checked: params[:unverified_only] == '1', onchange: 'this.form.submit()' %>
+        <div class="checkbox-label">Show Unverified Listings Only</div>
+      </div>
     <% end %>
   </div>
 

@@ -64,6 +64,19 @@ class UsersController < ApplicationController
         @listings = @listings.where(status: 'Unverified')
       end
 
+      if params[:user_search].present?
+        search_query = params[:user_search].strip
+        first_name, last_name = search_query.split(' ')
+
+        if first_name.present? && last_name.present?
+          @listings = @listings.joins(:user).where("users.first_name ILIKE :first_name AND users.last_name ILIKE :last_name", first_name: "%#{first_name}%", last_name: "%#{last_name}%")
+        elsif first_name.present?
+          @listings = @listings.joins(:user).where("users.first_name ILIKE :search", search: "%#{first_name}%")
+        elsif last_name.present?
+          @listings = @listings.joins(:user).where("users.last_name ILIKE :search", search: "%#{last_name}%")
+        end
+      end
+
       if params[:sort_by].present?
         sort_column, sort_direction = params[:sort_by].split('_')
         sort_column = case sort_column

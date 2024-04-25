@@ -15,6 +15,8 @@
 
 body {
  background: #f4f4f4;
+ overflow-x: hidden;
+ overflow-y: scroll;
 }
 
 h1 {
@@ -23,12 +25,8 @@ h1 {
  font-size: 2em;
 }
 
-h2 {
- font-family: Sofia Pro;
- font-size: 1.5em;
- position: absolute; 
- top: 113px; 
- left: 50px
+@media (max-width: 750px) {
+ h1 { font-size: 1.25em; }
 }
 
 h3 {
@@ -154,44 +152,116 @@ h4 {
  background: #ffd9ea;
 }
 
-.sorting {
+.sorting-bar {
  position: absolute;
  top: 123px;
- right: 305px;
+ margin-left: 22vw;
+ width: 100%;
+ height: 60px;
+ display: flex;
+ overflow-x: auto;
+ overflow-y: hidden;
+ white-space: nowrap;
+}
+
+.sorting-bar-title {
+ display: inline-block;
+ margin-top: 3px;
+ padding-right: 60px;
+ font-family: Sofia Pro;
+ font-size: 1.5em;
+ font-weight: bold;
+}
+
+.sorting-bar-item {
+ display: inline-block;
+ padding-right: 25px;
+}
+
+.search-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Sofia Pro Light;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.search-field:focus {
+    outline: none !important;
+    border: 2px solid #ffd9ea;
+}
+
+.search-button {
+ padding: 5px 10px;
+ margin-left: 5px;
+ background-color: #ffd9ea;
+ color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 14px;
+ font-family: Sofia Pro;
+ transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #e6006c;
 }
 
 select {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 20px;
-   background-color: #fff;
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   cursor: pointer;
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-   font-size: 14px;
-   font-family: Sofia Pro Light;
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 20px;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ cursor: pointer;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ font-size: 14px;
+ font-family: Sofia Pro Light;
 }
 
-.toggle {
-   position: absolute;
-   top: 127px;
-   right: 550px;
+.checkbox-label {
+ display: inline-block;
+ margin-right: 75px;
+ font-family: Sofia Pro Light;
 }
 
 .content {
- display: grid;
- grid-template-columns: repeat(4, auto);
- grid-auto-rows:  auto;
- column-gap: 50px;
- gap: 50px;
  position: absolute;
  top: 180px;
+ display: grid;
+ gap: 50px;
+ grid-auto-rows: auto;
+ column-gap: 50px;
+}
+
+@media (min-width: 750px) {
+ .content { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1125px) {
+ .content { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1500px) {
+ .content { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1875px) {
+ .content { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (min-width: 2250px) {
+ .content { grid-template-columns: repeat(6, 1fr); }
 }
 
 .box {
  width: 300px;
- height: 250px;
+ height: 350px;
  border-radius: 35px;
  background-color: #fff;
  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -220,44 +290,4 @@ select {
  cursor: pointer;
  transition: background-color 0.3s;
  text-shadow: 2px 3px 5px rgba(0,0,0,0.15); 
-}
-
-.search-container {
- position: absolute; 
- top: 113px; 
- right: 50px
-}
-
-.search-field {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: Sofia Pro Light;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-.search-field:focus {
-    outline: none !important;
-    border: 2px solid #ffd9ea;
-}
-
-.search-button {
- padding: 5px 10px;
- margin-left: 5px;
-    background-color: #ffd9ea;
-    color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: Sofia Pro;
-    transition: background-color 0.3s;
-}
-
-.search-button:hover {
-    background-color: #e6006c;
 }

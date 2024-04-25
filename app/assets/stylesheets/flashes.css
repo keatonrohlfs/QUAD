@@ -12,6 +12,7 @@
   position: absolute;
   top: 120px;
   right: 20px;
+  z-index: 99;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
