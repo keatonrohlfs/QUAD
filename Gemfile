@@ -29,6 +29,8 @@ gem "jbuilder"
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'aws-sdk-s3'
+
+gem 'shopify_api'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
