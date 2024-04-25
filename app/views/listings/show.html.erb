@@ -1,85 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Listing Preview</title>
-<style>
-  .listing-details {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 300px;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: auto;
-    background-color: white;
-    font-family: Sofia Pro;
-  }
-  .listing-title {
-    text-align: center;
-    margin-bottom: 16px;
-    font-family: Sofia Pro;
-  }
-  .listing-photos {
-    text-align: center;
-    margin-bottom: 16px;
-    font-family: Sofia Pro;
-  }
-  .box-image {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 4px;
-    font-family: Sofia Pro;
-  }
-  .listing-info p {
-    margin: 4px 0;
-    font-family: Sofia Pro;
-  }
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-top: 16px;
-    text-align: center;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: Sofia Pro;
-  }
-</style>
+  <title><% @listing.title %></title>
+  <%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-
-<div class="listing-details">
-  <div class="listing-title">
-    <h1><%= @listing.title %></h1>
-  </div>
-
-  <% if @listing.photos.attached? %>
-    <div class="listing-photos">
-      <% @listing.photos.each do |photo| %>
-        <%= image_tag(photo, alt: @listing.title, class: "box-image") %>
-      <% end %>
+  <div class="listing-details">
+    <div class="listing-title">
+      <h1><%= @listing.title %></h1>
     </div>
-  <% end %>
+    
+    <% if @listing.photos.attached? %>
+      <div class="listing-photos">
+        <% @listing.photos.each do |photo| %>
+          <%= image_tag(photo, alt: @listing.title, class: "box-image") %>
+        <% end %>
+      </div>
+    <% end %>
 
-  <div class="listing-info">
-    <p>Category: <%= @listing.category %></p>
-    <p>Size: <%= @listing.size %></p>
-    <p>Brand: <%= @listing.brand %></p>
-    <p>Color: <%= @listing.color %></p>
-    <p>New With Tags: <%= @listing.new_with_tags ? 'Yes' : 'No' %></p>
-    <p>Style Tags: <%= @listing.style_tags.join(', ') if @listing.style_tags.present? %></p>
-    <p>Available for: <%= @listing.sell ? 'Sell' : '' %> <%= @listing.rent ? 'Rent' : '' %></p>
-    <p>Original Price: $<%= @listing.original_price %></p>
-    <p>Listing Price: $<%= @listing.listing_price %></p>
-    <p>Rental Price: $<%= @listing.rental_price %></p>
+    <div class="listing-info">
+      <p>Category: <%= @listing.category %></p>
+      <p>Size: <%= @listing.size %></p>
+      <p>Brand: <%= @listing.brand %></p>
+      <p>Color: <%= @listing.color %></p>
+      <p>New With Tags: <%= @listing.new_with_tags ? 'Yes' : 'No' %></p>
+      <p>Style Tags: <%= @listing.style_tags.join(', ') if @listing.style_tags.present? %></p>
+      <p>Available for: <%= @listing.sell ? 'Sell' : '' %> <%= @listing.rent ? 'Rent' : '' %></p>
+      <p>Original Price: $<%= @listing.original_price %></p>
+      <p>Listing Price: $<%= @listing.listing_price %></p>
+      <p>Rental Price: $<%= @listing.rental_price %></p>
+    </div>
+
+    <%= button_to 'Back to Profile', root_path, method: :get, class: 'btn' %>
   </div>
-
-  <%= button_to 'Back to Profile', root_path, method: :get, class: 'btn' %>
-</div>
-
 </body>
 </html>

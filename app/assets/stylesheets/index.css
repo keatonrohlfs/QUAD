@@ -15,6 +15,8 @@
 
 body {
  background: #f4f4f4;
+ overflow-x: hidden;
+ overflow-y: scroll;
 }
 
 h1 {
@@ -23,12 +25,8 @@ h1 {
  font-size: 2em;
 }
 
-h2 {
- font-family: Sofia Pro;
- font-size: 1.5em;
- position: absolute; 
- top: 113px; 
- left: 50px
+@media (max-width: 750px) {
+ h1 { font-size: 1.25em; }
 }
 
 h3 {
@@ -85,7 +83,7 @@ h4 {
 }
 
 .dropdown {
- position: fixed;
+ position: absolute;
  top: 0px;
  right: 20px;
  display: inline-block;
@@ -154,78 +152,30 @@ h4 {
  background: #ffd9ea;
 }
 
-.sorting {
+.sorting-bar {
  position: absolute;
- top: 105px;
- right: 305px;
+ top: 123px;
+ margin-left: 22vw;
+ width: 100%;
+ height: 60px;
+ display: flex;
+ overflow-x: auto;
+ overflow-y: hidden;
+ white-space: nowrap;
 }
 
-select {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 20px;
-   background-color: #fff;
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   cursor: pointer;
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-   font-size: 14px;
-   font-family: Sofia Pro Light;
+.sorting-bar-title {
+ display: inline-block;
+ margin-top: 3px;
+ padding-right: 60px;
+ font-family: Sofia Pro;
+ font-size: 1.5em;
+ font-weight: bold;
 }
 
-.toggle {
-   position: absolute;
-   top: 105px;
-   right: 48px;
-}
-
-.content {
- display: grid;
- grid-template-columns: repeat(4, auto);
- grid-auto-rows:  auto;
- column-gap: 50px;
- gap: 50px;
- position: absolute;
- top: 180px;
-}
-
-.box {
- width: 300px;
- height: 250px;
- border-radius: 35px;
- background-color: #fff;
- box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
-.box-image {
- position: absolute;
- margin-top: 5px;
- margin-left: 25px;
- border-radius: 25px;
- width: 250px;
- height: 208px;
- object-fit: cover;
-}
-
-.verify-button {
- background-color: #ffd9ea;
- color: #fff;
- position: relative;
- top: -36px;
- left: 89px;
- font-family: Sofia Pro Bold;
- font-size: 12pt;
- border: none;
- border-radius: 4px;
- cursor: pointer;
- transition: background-color 0.3s;
- text-shadow: 2px 3px 5px rgba(0,0,0,0.15); 
-}
-
-.search-container {
- position: absolute; 
- top: 125px; 
- right: 50px
+.sorting-bar-item {
+ display: inline-block;
+ padding-right: 25px;
 }
 
 .search-field {
@@ -246,18 +196,173 @@ select {
 .search-button {
  padding: 5px 10px;
  margin-left: 5px;
-    background-color: #ffd9ea;
-    color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: Sofia Pro;
-    transition: background-color 0.3s;
+ background-color: #ffd9ea;
+ color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 14px;
+ font-family: Sofia Pro;
+ transition: background-color 0.3s;
 }
 
 .search-button:hover {
     background-color: #e6006c;
+}
+
+select {
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 20px;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ cursor: pointer;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ font-size: 14px;
+ font-family: Sofia Pro Light;
+}
+
+.checkbox-label {
+ display: inline-block;
+ margin-right: 75px;
+ font-family: Sofia Pro Light;
+}
+
+.content {
+ position: absolute;
+ top: 180px;
+ display: grid;
+ gap: 50px;
+ grid-auto-rows: auto;
+ column-gap: 50px;
+}
+
+@media (min-width: 750px) {
+ .content { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1125px) {
+ .content { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1500px) {
+ .content { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1875px) {
+ .content { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (min-width: 2250px) {
+ .content { grid-template-columns: repeat(6, 1fr); }
+}
+
+.box {
+ width: 300px;
+ height: 350px;
+ border-radius: 35px;
+ background-color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.box-image {
+ position: absolute;
+ margin-top: 15px;
+ margin-left: 25px;
+ border-radius: 25px;
+ width: 250px;
+ height: 208px;
+ object-fit: cover;
+}
+
+.listing-title {
+ position: relative;
+ top: 230px;
+ text-align: center;
+ width: 95%;
+ font-family: Sofia Pro Bold;
+ font-size: 14pt;
+ color: #000;
+}
+
+.listing-status {
+ position: relative;
+ top: 235px;
+ text-align: center;
+ width: 95%;
+ font-family: Sofia Pro;
+ font-size: 12pt;
+ color: #000;
+}
+
+.listing-link:link {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.listing-link:visited {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.listing-link:hover {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.listing-link:active {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.box-admin-buttons {
+ position: relative;
+ bottom: 55px;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ pointer-events: none;
+} l
+
+.box-admin-button {
+ display: inline-block;
+ padding: 0 10px;
+}
+
+.verify-button {
+ padding: 5px 15px;
+ background-color: #ff9cc9;
+ color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 14px;
+ font-family: Sofia Pro;
+ pointer-events: auto;
+ transition: background-color 0.3s;
+}
+
+.verify-button:hover {
+ background-color: #e6006c;
+}
+
+.delete-button {
+ padding: 5px 15px;
+ background-color: #450a0a;
+ color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 14px;
+ font-family: Sofia Pro;
+ pointer-events: initial;
+ transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
 }

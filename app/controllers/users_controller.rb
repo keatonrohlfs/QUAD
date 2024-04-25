@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         @user = User.new(create_user_params)
         if @user.save
             @user.send_confirmation_email!
-            redirect_to login_path, flash: {notice: "Please check your email for confirmation instructions."}
+            redirect_to login_path, flash: { notice: "Please check your email for confirmation instructions." }
         else
             render :new, status: :unprocessable_entity
         end
@@ -62,6 +62,19 @@ class UsersController < ApplicationController
 
       if params[:unverified_only] == '1'
         @listings = @listings.where(status: 'Unverified')
+      end
+
+      if params[:user_search].present?
+        search_query = params[:user_search].strip
+        first_name, last_name = search_query.split(' ')
+
+        if first_name.present? && last_name.present?
+          @listings = @listings.joins(:user).where("users.first_name ILIKE :first_name AND users.last_name ILIKE :last_name", first_name: "%#{first_name}%", last_name: "%#{last_name}%")
+        elsif first_name.present?
+          @listings = @listings.joins(:user).where("users.first_name ILIKE :search", search: "%#{first_name}%")
+        elsif last_name.present?
+          @listings = @listings.joins(:user).where("users.last_name ILIKE :search", search: "%#{last_name}%")
+        end
       end
 
       if params[:sort_by].present?
@@ -127,11 +140,7 @@ class UsersController < ApplicationController
     end
 
     def create_user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :username, :password, :password_confirmation, :admin)
-    end
-
-    def update_user_params
-      params.require(:user).permit(:current_password, :password, :password_confirmation, :unconfirmed_email)
+      params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :password, :password_confirmation, :admin)
     end
 
     def sort_column

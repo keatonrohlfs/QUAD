@@ -100,10 +100,9 @@
       <% end %>
 
       <!-- Photos Upload Section -->
-
       <div class="field">
       <%= form.label :photos, 'Photos (at least 2, front & back)', class: 'label' %>
-      <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label'%>
+      <%= form.file_field :photos, multiple: true, accept: 'image/png,image/gif,image/jpeg', class: 'label' %>
         <div class="upload-instructions">
           <p>Accepted Picture types:</p>
           <ul>
@@ -113,6 +112,7 @@
           </ul>
         </div>
       </div>
+      <br>
 
       <!-- Title -->
       <div class="field">
@@ -133,6 +133,7 @@
       <div class="field">
         <%= form.select :brand, [], { prompt: 'Select Brand' }, { id: 'listing_brand', class: 'form-control' } %>
       </div>
+      <br>
 
       <!-- Color -->
       <div class="field">
@@ -170,7 +171,7 @@
       </div>      
 
       <div class="actions">
-        <%= form.submit "Next", class: 'primary-button' %>
+        <%= form.submit "Submit", class: 'primary-button' %>
       </div>
 
     <% end %>
