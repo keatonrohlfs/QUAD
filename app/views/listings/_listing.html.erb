@@ -1,5 +1,5 @@
-<div class="box">
-  <%= link_to listing_path(listing) do %>
+<%= link_to listing_path(listing), class: "listing-link" do %>
+  <div class="box">
     <% if listing.photos.attached? %>
       <% listing.photos.each do |photo| %>
         <%= image_tag(photo, alt: "#{listing.title} image", class: "box-image") %>
@@ -7,6 +7,13 @@
     <% else %>
       <%= image_tag 'shoes-example.jpeg', alt: 'Placeholder image', class: 'box-image' %>
     <% end %>
-    <h4><%= listing.status.upcase %></h4>
-    <% end %>
-</div>
+
+    <div class="listing-title">
+      <%= listing.title %>
+    </div>
+
+    <div class="listing-status">
+      <%= listing.status.downcase %>
+    </div>
+  </div>
+<% end %>

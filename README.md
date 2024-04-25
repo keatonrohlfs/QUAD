@@ -1,5 +1,4 @@
 # QUAD Marketplace
-Created by Cole Sullivan, Keaton Rohlfs, Michael Reis, Deondre North, and Joe Zimmerman
 
 ## Usage
 ### To start
@@ -16,3 +15,6 @@ Shutdown and clear databases
 ```
 docker compose down -v
 ```
+
+## Authors
+Cole Sullivan, Keaton Rohlfs, Michael Reis, Deondre North and Joe Zimmerman

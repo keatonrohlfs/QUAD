@@ -269,7 +269,7 @@ select {
 
 .box-image {
  position: absolute;
- margin-top: 5px;
+ margin-top: 15px;
  margin-left: 25px;
  border-radius: 25px;
  width: 250px;
@@ -277,17 +277,92 @@ select {
  object-fit: cover;
 }
 
-.verify-button {
- background-color: #ffd9ea;
- color: #fff;
+.listing-title {
  position: relative;
- top: -36px;
- left: 89px;
+ top: 230px;
+ text-align: center;
+ width: 95%;
  font-family: Sofia Pro Bold;
+ font-size: 14pt;
+ color: #000;
+}
+
+.listing-status {
+ position: relative;
+ top: 235px;
+ text-align: center;
+ width: 95%;
+ font-family: Sofia Pro;
  font-size: 12pt;
+ color: #000;
+}
+
+.listing-link:link {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.listing-link:visited {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.listing-link:hover {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.listing-link:active {
+ text-decoration: none;
+ text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.box-admin-buttons {
+ position: relative;
+ bottom: 55px;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ pointer-events: none;
+} l
+
+.box-admin-button {
+ display: inline-block;
+ padding: 0 10px;
+}
+
+.verify-button {
+ padding: 5px 15px;
+ background-color: #ff9cc9;
+ color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
  border: none;
  border-radius: 4px;
  cursor: pointer;
+ font-size: 14px;
+ font-family: Sofia Pro;
+ pointer-events: auto;
  transition: background-color 0.3s;
- text-shadow: 2px 3px 5px rgba(0,0,0,0.15); 
+}
+
+.verify-button:hover {
+ background-color: #e6006c;
+}
+
+.delete-button {
+ padding: 5px 15px;
+ background-color: #450a0a;
+ color: #fff;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 14px;
+ font-family: Sofia Pro;
+ pointer-events: initial;
+ transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
 }

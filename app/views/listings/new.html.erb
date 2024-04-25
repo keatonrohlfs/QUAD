@@ -112,6 +112,7 @@
           </ul>
         </div>
       </div>
+      <br>
 
       <!-- Title -->
       <div class="field">
@@ -132,6 +133,7 @@
       <div class="field">
         <%= form.select :brand, [], { prompt: 'Select Brand' }, { id: 'listing_brand', class: 'form-control' } %>
       </div>
+      <br>
 
       <!-- Color -->
       <div class="field">
@@ -169,7 +171,7 @@
       </div>      
 
       <div class="actions">
-        <%= form.submit "Next", class: 'primary-button' %>
+        <%= form.submit "Submit", class: 'primary-button' %>
       </div>
 
     <% end %>

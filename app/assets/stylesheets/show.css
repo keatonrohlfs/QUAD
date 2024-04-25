@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('/assets/SofiaProRegular.ttf')
+}
+
+@font-face {
+	font-family: 'Sofia Pro Light';
+	src: url('/assets/SofiaProLight.ttf')
+}
+
+@font-face {
+	font-family: 'Sofia Pro Bold';
+	src: url('/assets/SofiaProBold.ttf')
+}
+
+body {
+	background: #f4f4f4;
+}
+
+.listing-details {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	width: 300px;
+	padding: 16px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	margin: auto;
+	background-color: white;
+	font-family: Sofia Pro;
+}
+.listing-title {
+	text-align: center;
+	margin-bottom: 16px;
+	font-family: Sofia Pro;
+}
+.listing-photos {
+	text-align: center;
+	margin-bottom: 16px;
+	font-family: Sofia Pro;
+}
+.box-image {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 4px;
+	font-family: Sofia Pro;
+}
+.listing-info p {
+	margin: 4px 0;
+	font-family: Sofia Pro;
+}
+.btn {
+	padding: 5px 10px;
+	width: 100%;
+	padding: 8px;
+	margin-top: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: #ffd9ea;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: Sofia Pro;
+	transition: background-color 0.3s;
+}
+
+.btn:hover {
+	background-color: #e6006c;
+}
+
