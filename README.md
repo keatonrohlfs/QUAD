@@ -1,5 +1,5 @@
 # QUAD Marketplace
-Live [here](http://ec2-18-208-129-43.compute-1.amazonaws.com/login)
+Hosted [here](http://ec2-18-208-129-43.compute-1.amazonaws.com/login)
 
 ## Usage
 ### To start
